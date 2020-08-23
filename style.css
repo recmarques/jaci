@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: montserrat;
+    box-sizing: border-box;
+  }
+  
+  body{
+    min-height: 100vh;
+    background-image: linear-gradient(120deg,#5EC7A7,#00857B);
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .login-form{
+    width: 380px;
+    background: #282828;
+    height: 550px;
+    padding: 50px 40px !important;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .login-form .login {
+      text-align: center;
+      align-content: center;
+      font-family: 'Josefin Sans', sans-serif;
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+  }
+  
+  .login-form img{
+    text-align: center;
+    /* margin-bottom: 60px; */
+    /* font-family: 'Josefin Sans', sans-serif; */
+    width: 70%;
+    align-content: center;
+    padding-left: 90px;
+        
+  }
+
+
+  .txtb{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+  }
+  
+  .txtb input{
+    font-size: 15px;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 40px;
+  }
+  
+  .txtb span::before{
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .5s;
+  }
+  
+  .txtb span::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(120deg,#5EC7A7,#00857B);
+    transition: .5s;
+  }
+  
+  .focus + span::before{
+    top: -5px;
+  }
+  .focus + span::after{
+    width: 100%;
+  }
+  
+  .logbtn{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 12px;
+    background: linear-gradient(120deg,#5EC7A7,#3b9e81,#00857B);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .5s;
+    font-family: 'Poppins', sans-serif;
+        
+  }
+
+  .fsenha a{
+      color: #5EC7A7;
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      line-height: 40px;
+      font-weight: 700;
+  }
+  
+  .logbtn:hover{
+    background-position: right;
+  }
+  
+  .bottom-text{
+    /* margin-top: 60px; */
+    text-align: left;
+    line-height: 40px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Josefin Sans', sans-serif;
+        
+  }
+
+  .bottom-text a{
+    color: #5EC7A7;
+    font-family: 'Josefin Sans', sans-serif;
+        
+  }
+  
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+
+
