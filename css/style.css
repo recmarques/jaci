@@ -11,7 +11,7 @@
     background-image: linear-gradient(120deg,#5EC7A7,#00857B);
     font-family: 'Josefin Sans', sans-serif;
   }
-  
+
   .login-form{
     width: 380px;
     background: #282828;
@@ -145,6 +145,8 @@
   ::-ms-input-placeholder { /* Microsoft Edge */
     font-family: 'Josefin Sans', sans-serif;
   }
+
+  
 
 
 
