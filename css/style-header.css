@@ -52,7 +52,6 @@ letter-spacing: 0.0357143em;
 }
 
 
-
 .not-activate{
   color: black;
 }
@@ -85,18 +84,6 @@ letter-spacing: 0.0357143em;
   z-index: -1111;
 }
 
-.content{
-  padding: 0 20px;
-}
-.content img{
-  width: 100%;
-  max-width: 700px;
-  margin: 20px 0;
-}
-.content p{
-  text-align: justify;
-}
-
 ::-webkit-scrollbar{
   width: 10px;
 }
@@ -115,9 +102,6 @@ letter-spacing: 0.0357143em;
   border-radius: 3px;
 }
 
-.space{
-  display: none;
-}
 
 @media screen and (max-width:800px) {
   .show-menu-btn,.hide-menu-btn{

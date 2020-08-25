@@ -11,6 +11,8 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="css/style-home.css">
+      <!-- <link rel="stylesheet" href="css/style-header.css"> -->
       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       
@@ -424,12 +426,15 @@ padding: 0;
 @media screen and (max-width: 700px){
 
 .hero-image{
-  height: 560px;
+  height: 640px;
 }
 
 .bem-vindo{
   font-size: 23px;
   line-height: 37px;
+  text-align: center !important;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .button{
@@ -438,9 +443,10 @@ padding: 0;
 
 .banner{
   width: 100%;
-  height: 410px;
+  height: 430px;
   padding-left: 43px;
   /* display: table-row-group; */
+  padding-top: 60px;
 }
 
 .banner .titulo{
@@ -523,7 +529,8 @@ padding: 0;
 .img-banner img{
   width: 100%;
   padding-top: 0;
-  padding-left: 50px;
+  /* padding-left: 50px; */
+  padding-left: 0;
 }
 
 .footer .rede-social{
@@ -547,7 +554,37 @@ padding: 0;
   width: 30%;
 }
 
+.no-show-mobile{
+  display: none;
+}
+
+.hero-image .row{
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
+}
+
 }  
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  border: 7px solid rgb(19, 19, 19);
+  box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(
+    45deg,
+    #98cec3,
+    #98cec3
+  );
+  border-radius: 3px;
+}
+
+
 
     </style>
     
@@ -555,6 +592,28 @@ padding: 0;
     </head>
 
     <body>
+
+      <!-- <div class="header">
+        <h2 class="logo">
+          <img src="img/logo-black.png"/>
+        </h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+    
+        <ul class="menu">
+          <a class="activate" href="#">INÍCIO</a>
+          <a class="not-activate" href="#">PROJETOS</a>
+          <a class="not-activate" href="#">CRIAR PROJETO</a>
+          <a class="not-activate" href="#">ENTRAR</a>
+          <a class="not-activate" href="#">SAIR</a>
+          <label for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+          </label>
+        </ul>
+      </div> -->
+
         <nav>
             <div class="nav-wrapper">
               <a href="#" class="brand-logo">
@@ -565,7 +624,8 @@ padding: 0;
                 <li><a class="not-activate" href="badges.html">PROJETOS</a></li>
                 <li><a class="not-activate" href="collapsible.html">CRIAR PROJETO</a></li>
                 <li><a class="not-activate" href="login-teste.html">ENTRAR</a></li>
-                <li><a class="not-activate" href="#">SAIR</a></li>
+                <li><a class="not-activate" style="display: none;" href="#">SAIR</a></li>
+              
               </ul>
             </div>
           </nav>
@@ -663,7 +723,7 @@ padding: 0;
 
 
   <!-- TERCEIRA LINHA -->
-  <div class="row-2">
+  <div class="row-2 no-show-mobile">
     <div class="banner" style="background-color: #8EDDC5;">
       <div class="titulo">
       TUDO SOBRE AGROTÓXICOS
