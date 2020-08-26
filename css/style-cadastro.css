@@ -45,6 +45,35 @@ body{
       
 }
 
+.bottom-text-login{
+  /* margin-top: 60px; */
+  background-color: #5cc4a4 !important;
+  text-align: center;
+  line-height: 40px;
+  color: white !important;
+  transition: .5s;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+      
+}
+
+
+.bottom-text-login:hover{
+  /* margin-top: 60px; */
+  background-color: #23927a !important;
+  text-align: center;
+  line-height: 40px;
+  color: white !important;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+      
+}
+
+.bottom-text-login a{
+  font-family: 'Poppins', sans-serif;
+      
+}
 
 .txtb{
   border-bottom: 2px solid #adadad;
@@ -277,6 +306,38 @@ hr{
   color: white;
   font-size: 17px;
   font-weight: 700;
+}
+
+
+
+.bottom-text-login{
+  /* margin-top: 60px; */
+  background-color: #111111 !important;
+  text-align: center;
+  line-height: 40px;
+  color: white !important;
+  transition: .5s;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+      
+}
+
+
+.bottom-text-login:hover{
+  /* margin-top: 60px; */
+  background-color: #000000;
+  text-align: center;
+  line-height: 40px;
+  color: white !important;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+      
+}
+
+.bottom-text-login a{
+  font-family: 'Josefin Sans', sans-serif;
+      
 }
 
 }

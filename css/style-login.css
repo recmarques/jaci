@@ -135,6 +135,37 @@
     font-family: 'Josefin Sans', sans-serif;
         
   }
+
+  
+  .bottom-text-login{
+    /* margin-top: 60px; */
+    background-color: #4fb697;
+    text-align: center;
+    line-height: 40px;
+    color: white !important;
+    transition: .5s;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+        
+  }
+
+  
+  .bottom-text-login:hover{
+    /* margin-top: 60px; */
+    background-color: #239b81;
+    text-align: center;
+    line-height: 40px;
+    color: white !important;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+        
+  }
+
+  .bottom-text-login a{
+    font-family: 'Josefin Sans', sans-serif;
+        
+  }
   
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     font-family: 'Josefin Sans', sans-serif;
@@ -256,6 +287,13 @@
   font-weight: 900;
 }
 
+.bottom-text-login a{
+  color: #0c0c0c;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+}
+
 hr{
   border-top: 2px solid rgb(0, 0, 0);
 }
@@ -275,6 +313,37 @@ hr{
   color: white;
   font-size: 17px;
   font-weight: 700;
+}
+
+
+.bottom-text-login{
+  /* margin-top: 60px; */
+  background-color: #111111;
+  text-align: center;
+  line-height: 40px;
+  color: white !important;
+  transition: .5s;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+      
+}
+
+
+.bottom-text-login:hover{
+  /* margin-top: 60px; */
+  background-color: #000000;
+  text-align: center;
+  line-height: 40px;
+  color: white !important;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+      
+}
+
+.bottom-text-login a{
+  font-family: 'Josefin Sans', sans-serif;
+      
 }
 
 }
