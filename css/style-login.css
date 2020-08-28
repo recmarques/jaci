@@ -182,6 +182,16 @@
   .no-show-desktop{
     display: none;
   }
+
+  
+.aviso{
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  /* color: #C13131 !important; */
+  color: #D04141;
+  font-weight: 900;
+  padding-bottom: 10px;
+}
   
 
 @media screen and (max-width: 700px){
@@ -191,10 +201,20 @@
     font-family: 'Josefin Sans', sans-serif;
   }
 
+  
+.aviso{
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #C13131 !important;
+  /* color: #D04141 !important; */
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
   .login-form{
     width: 100%;
     background: #24AE91;
-    height: 600px;
+    height: 640px;
     padding: 70px 40px !important;
     border-radius: 10px;
     position: absolute;

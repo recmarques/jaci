@@ -31,7 +31,7 @@
 		$senha = mysqli_escape_string($conexao, $_POST['senha']);
 		
 		if(empty($email) or empty($senha)){
-			$erros[] = "<li> O campo e-mail/senha precisa ser preenchido </li>";
+			$erros[] = "O campo e-mail/senha precisa ser preenchido";
 		}
 		else{
 			
@@ -50,15 +50,15 @@
 					$_SESSION['logado'] = true;
 					
 					$_SESSION['ID'] = $dados['ID'];
-					header('Location: home.php');
+					header('Location: header.php');
 				}
 				else{
-					$erros[] = "<li> E-mail e senha não conferem! </li>";
+					$erros[] = "E-mail e senha não conferem!";
 				}
 			}
 			else{
 				
-				$erros[] = "<li> E-mail inexistente! </li>";
+				$erros[] = "E-mail inexistente!";
 			}
 			
 		}
@@ -73,7 +73,7 @@
     <head>
 
       <meta charset="utf-8">
-      <title>Login</title>
+      <title>Login | JACI</title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
       <link rel="stylesheet" href="css/style-login.css">
       <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
@@ -84,37 +84,55 @@
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
     </head>
-	<body>
-	
-	<h1> Login </h1>
 
-	<hr />
-		<form method="post" action="
+    <body>
+      
+      <form method="post" class="login-form" action="
 			<?php
 			echo $_SERVER['PHP_SELF'];
-			?>"
-		>
-		
-			<label>Login:</label><br />
-			<input type="text" name="email" id="email" size="40" maxlength="30" /><br /><br />
-			
-			<label>Senha:</label><br />
-			<input type="password" name="senha" id="senha" size="60" maxlength="50" /><br /><br />
-			
-			<?php
-	
-			if(!empty($erros)){
-				foreach($erros as $erro){
-					echo $erro;
-				}
-			}
-			
-			?>
-	
-			<button type="submit" name="btn-entrar">Entrar</button>
-		
-		</form>
-		
-	</body>
-			
-</html>
+			?>"> 
+      
+            <img src="img/jaci.png" class="no-show-mobile"/>
+            <img src="img/logo-black.png" class="no-show-desktop"/>
+            <br /><p class="login">Faça seu login</p>
+     
+            <div class="txtb">
+                <input type="text" placeholder="Email" name="email" id="email" size="40" maxlength="30" required>
+                <span data-placeholdr="Email"></span>
+            </div>
+
+            <div class="txtb">
+                <input type="password" placeholder="Senha" id="senha" name="senha" required>
+                <span data-placeholdr="Password"></span>
+            </div>
+
+
+            <p class="aviso">
+            <?php
+            
+            if(!empty($erros)){
+              foreach($erros as $erro){
+                echo $erro;
+              }
+            }
+            
+            ?>
+            </p>
+
+            <p class="fsenha"><a href="">Esqueci minha senha</a></p>
+            <input type="submit" class="logbtn" value="Entrar" name="btn-entrar">
+
+            <div class="bottom-text">
+                Não tem uma conta? <a href="cadastro.php">Registre-se</a>
+            </div>
+            <hr /><br />
+            <a href="header.php">
+            <div class="bottom-text-login">
+             Acesse sem login
+          </div></a>
+            <!-- <input type="submit" class="logbtn" value="Acessar sem login"> -->
+      </form> 
+      
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    </body>
+  </html>

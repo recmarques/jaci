@@ -72,11 +72,11 @@
 
                 <br /><br />
                 
-                <a href="../login.html">
+                <a href="../login.php">
                     <button class="button button1">ENTRAR</button><br />
                 </a>
                 <br />
-                <a href="../header.html">
+                <a href="../header.php">
                     <button class="button button1">ACESSAR SEM LOGIN</button><br />
                 </a>
                 <br />

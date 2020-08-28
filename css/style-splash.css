@@ -48,7 +48,9 @@ body{
 
 .button {
   border: none;
-  padding: 30px 100px;
+  height: 80px;
+  width: 300px;
+  /* padding: 30px 100px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;

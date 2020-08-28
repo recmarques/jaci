@@ -1,15 +1,59 @@
+<?php
+
+	// conexao
+    // require_once '../conexao.inc';
+    $servername = "localhost";
+	$username = "root";
+	$password = "";
+	$db_name = "jacidb";
+	
+	$conexao = mysqli_connect($servername, $username, $password);
+	mysqli_select_db($conexao, $db_name);
+	
+	if(mysqli_connect_error()):
+		echo "Falha na conexão: ".mysqli_connect_error();
+	endif;
+	// include 'conexao.inc';
+	
+	// Sessão
+    session_start();
+    
+    // Verificação
+    if(!isset($_SESSION['logado'])){
+        header('Location: login.php');
+    }else{
+
+    // Dados
+    
+    $id = $_SESSION['ID'];
+    $sql = "SELECT * FROM tb_cadastros WHERE ID = '$id'";
+    $res = mysqli_query($conexao, $sql);
+
+    $dados = mysqli_fetch_array($res);
+    
+    }
+
+    mysqli_close($conexao);
+
+?>
+
+
+
 <!DOCTYPE html>
   <html>
     <head>
+
       <meta charset="utf-8">
-      <title>Seja bem-vindo(a)! | JACI</title>
+      <title>Meu perfil | JACI</title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
       
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="author" content="Renata de Castro M. - EQUIPE SOL">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <link rel="stylesheet" href="css/style-splash.css">
+
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="css/style-perfil.css">
+      <!-- <link rel="stylesheet" href="testes/Responsive Navigation Menu/style.css"> -->
       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       
@@ -26,32 +70,21 @@
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    </head>
+</head>
+<style>
+    body{
+        padding: 250px 550px;
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: #24AE91 !important;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
 
-    <body>
+    }
+</style>
+<body>
+    TELA EM DESENVOLVIMENTO
 
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="img/splash-img.png" class="splash-img no-show-mobile"/>
-            </div>
-
-            <div class="col-sm-6 right-col">
-                <div class="right">
-                <img src="img/logo-black.png" class="logo-splash"/><br />
-                <img src="img/splash-img.png" class="splash-img no-show-desktop"/>
-                Sua plataforma de estudos<br />online!<br /><br />
-                
-                <a href="header.php">
-                <button class="button button1">ACESSAR A PLATAFORMA</button><br />
-                </a>
-
-                <a href="cadastro.php">
-                <button class="button button1">CADASTRAR</button>
-                </a>
-
-                </div>
-            </div>
-          </div>
-        
-    </body>
-  </html>
+</body>
+</html>

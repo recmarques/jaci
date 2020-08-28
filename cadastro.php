@@ -64,12 +64,12 @@
 			<p id="demo"></p>
 
 			<div class="bottom-text">
-				Já tem uma conta? <a href="login.html">Entre!</a>
+				Já tem uma conta? <a href="login.php">Entre!</a>
 			</div>
 
 			<input type="submit" class="logbtn" value="Cadastrar">
 			<br /><hr /><br />
-			<a href="header.html">
+			<a href="header.php">
             <div class="bottom-text-login">
              Acesse sem login
           </div></a>

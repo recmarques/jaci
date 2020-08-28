@@ -1,18 +1,3 @@
-body{
-    background-color: transparent;
-  }
-
-    .nav-wrapper{
-        background-color: #23a78a;
-        font-family: 'Josefin Sans', sans-serif;
-    }
-    .nav-wrapper .brand-logo{
-        padding-left: 80px;
-    }
-
-    .nav-wrapper .brand-logo img{
-        width: 30%;
-    }
 
   
 
@@ -59,8 +44,8 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero-image {
-background-color: #5EC7A7;
-height: 310px !important;
+background-color: #24AE91;
+height: 460px;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -74,51 +59,19 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
+color: white;
 }
 
-.autor{
-text-align: left !important;
-padding-top: 1% !important;
-color: #000 !important;
+.bem-vindo{
+text-align: right;
+padding-top: 8%;
+color: white;
 padding-right: 11%;
-max-width: 250px;
-line-height: 32px;
-font-weight: 900 !important;
-font-size:25px;
-font-family: 'Lato', sans-serif !important;
+line-height: 60px;
+font-size:35px;
+font-family: 'Poppins', sans-serif;
 letter-spacing: 1px;
 }
-
-.voltar{
-    display: absolute !important;
-    padding-left: 45px;
-    padding-top: 40px;
-    float: inline-start;
-    margin: 0;
-}
-
-.autor .ano{
-    color: #216C56 !important;
-    font-size:22px;
-}
-
-.autor .curso{
-    color: #216C56 !important;
-    font-size:22px;
-}
-
-.titulo-banner{
-    text-align: left;
-    padding-top: 2% !important;
-    color: #000;
-    padding-left: 11% !important;
-    line-height: 70px;
-    font-size:60px;
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    }
-    
 
 .banner{
 text-align: right;
@@ -205,7 +158,9 @@ padding-top: 0;
 padding-left: 150px;
 }
 
-.autor{
+
+
+.bem-vindo{
 text-align: right;
 padding-top: 8%;
 color: white;
@@ -215,6 +170,7 @@ font-size:40px;
 font-family: 'Poppins', sans-serif;
 letter-spacing: 1px;
 }
+
 
 .button {
 border: none;
@@ -239,10 +195,42 @@ transition: 0.3s;
 }
 
 
+.button-projeto {
+border: none;
+color: #ddd;
+padding: 1px 40px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 10px;
+margin: 4px 2px;
+cursor: pointer;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+.button1-projeto {
+background-color: transparent; 
+font-weight: 800;
+color: #000; 
+border: 2px solid #000;
+font-family: 'Josefin Sans', sans-serif;
+transition: 0.3s;
+}
+
+.button1-projeto:hover {
+background-color: #0B342C; 
+font-weight: 600;
+color: #fff; 
+border: 2px solid #000;
+font-family: 'Josefin Sans', sans-serif;
+transition: 0.5s;
+}
+
+
 .footer{
 background-color: #1D1D1D;
 width: 100%;
-height: 250px !important;
+height: 200px !important;
 }
 
 .footer .rede-social{
@@ -250,7 +238,7 @@ background-color: #1D1D1D;
 align-content: center;
 align-items: center;
 -moz-box-align: center;
-padding-left: 110px !important;
+padding-left: 110px;
 padding-top: 25px;
 }
 
@@ -259,7 +247,6 @@ background-color: #1D1D1D;
 align-content: center;
 align-items: center;
 -moz-box-align: center;
-padding-left: 110px !important;
 padding-left: 120px;
 }
 
@@ -331,11 +318,7 @@ padding: 0;
 
 .row{
 width: 100%;
-}
-
-.row-2{
-width: 100%;
-display: -webkit-inline-box;
+margin: 0 !important;
 padding: 0;
 }
 
@@ -390,35 +373,17 @@ width: 90%;
 @media screen and (max-width: 700px){
 
 .hero-image{
-height: 400px !important;
+height: 640px;
 }
 
-.texto{
-    padding: 50px 50px !important;
+.bem-vindo{
+font-size: 23px;
+line-height: 37px;
+text-align: center !important;
+padding-right: 0;
+padding-left: 0;
 }
 
-
-.descrição{
-    padding: 20px 50px !important;
-}
-
-.autor {
-    font-size: 22px;
-    line-height: 37px;
-    text-align: left !important;
-    padding-right: 0;
-    padding-left: 50px !important;
-}
-
-.titulo-banner {
-    text-align: left;
-    padding-top: 2% !important;
-    padding-left: 11% !important;
-    line-height: 55px !important;
-    font-size: 37px !important;
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: uppercase;
-}
 .button{
 padding: 16px 58px;
 }
@@ -516,22 +481,11 @@ padding-left: 0;
 }
 
 .footer .rede-social{
-    background-color: #1D1D1D;
-    align-content: center;
-    align-items: center;
-    -moz-box-align: center;
-    padding-left: 0 !important;
-    padding-top:55px;
-  }
-  
-  .footer .logo-footer{
-    background-color: #1D1D1D;
-    align-content: center;
-    align-items: center;
-    -moz-box-align: center;
-    padding-left: 0 !important;
-    padding-top:55px;
-  }
+text-align: center;
+align-content: center;
+align-items: center;
+padding: 10px;
+}
 
 .rede-social img{
 width: 10%;
@@ -551,11 +505,7 @@ width: 30%;
 display: none;
 }
 
-.hero-image .row{
-padding-right: 0;
-padding-left: 0;
-margin: 0;
-}
+
 
 }  
 
@@ -578,40 +528,73 @@ margin: 0;
     );
     border-radius: 3px;
     }
-    
-    .texto{
-        padding: 100px 130px;
-        line-height: 32px;
-        background-color: #272727;
-        font-weight: 700 !important;
-        font-size:16px;
-        font-family: 'Lato', sans-serif !important;
-        color: #fff;
-    }
-
-    .descrição{
-        padding: 60px 130px 5px 130px;
-        line-height: 32px;
-        background-color: #393939;
-        font-weight: 700 !important;
-        font-size:16px;
-        font-family: 'Lato', sans-serif !important;
-        color: #fff;
-    }
-
-    .go-up{
-        padding-right: 10px;
-        background-color: #272727;
-        padding-bottom: 10px;
+    .info{
+        background-color: #282727;
+        font-family: 'Josefin Sans', sans-serif;
+        height: 590px;
+        padding-top: 100px;
+        padding-left: 50px !important;
+        color: white;
         margin: 0;
-        text-align: right;
     }
 
-    .go-down{
-        /* padding-right: 10px; */
-        background-color: #393939;
+    .meus-projetos{
+        background-color: #353535;
+        height: 590px;
         padding: 0;
-        /* padding-bottom: 10px; */
+        color: white;
         margin: 0;
-        text-align: center;
+    }
+
+    .info .nome{
+        /* padding: 100px 22% 0 22%; */
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: left;
+    }
+
+    
+    .info .update{
+        /* padding: 10px 22% 0 22%; */
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 900;
+        
+        text-align: left;
+    }
+
+
+    .info .update a{
+        color: #ddd;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 900;
+    }
+
+    .info .update a:hover{
+        color: rgb(170, 170, 170);
+        transition: 0.5s;
+    }
+
+
+    .info .excluir{
+        /* padding: 300px 60px; */
+        padding-top: 300px;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-decoration: none;
+        color: #24AE91;
+    }
+
+    .info .excluir a{
+        text-transform: uppercase;
+        font-weight: 900;
+        text-decoration: none;
+        color: #24AE91;
+    }
+
+
+    .info .excluir a:hover{
+        color: #1b9278;
+        transition: 0.5s;
     }
