@@ -91,7 +91,7 @@ body{
 }
 
   .nav-wrapper{
-      background-color: #23a78a;
+      background-color: #404040;
       font-family: 'Josefin Sans', sans-serif;
   }
   .nav-wrapper .brand-logo{
@@ -133,7 +133,7 @@ body{
   }
 
   .not-activate{
-      color: black;
+      color: #5EC7A7;
   }
 
   .activate{
@@ -190,90 +190,167 @@ padding-top: 10px;
 width: 100% !important;
 }
 
-.footer{
-background-color: #1D1D1D;
-width: 100%;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-height: 185px;
-}
+      .footer{
+        background-color: #1D1D1D;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        height: 185px;
+      }
 
-.footer .rede-social{
-background-color: #1D1D1D;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-padding-left: 110px;
-padding-top: 45px;
-}
+      .footer .rede-social{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 110px;
+        padding-top: 45px;
+      }
 
-.footer .logo-footer{
-background-color: #1D1D1D;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-padding-left: 120px;
-padding-top: 25px;
+      .footer .logo-footer{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 120px;
+        padding-top: 25px;
+      }
 
-}
+
+      .footer .logo-footer img{
+        width: 65%;
+      }
+
+      .rede-social img{
+        width: 90%;
+      }
+
+      @media screen and (max-width: 700px){
+
+        .footer .rede-social{
+          text-align: center;
+          align-content: center;
+          align-items: center;
+          padding: 10px;
+        }
+
+        .rede-social img{
+          width: 10%;
+        }
+
+        .footer .logo-footer{
+          padding: 10px;
+          text-align: center;
+          padding-top: 40px;
+        }
+
+        .footer .logo-footer img{
+        width: 30%;
+        }
+
+        .no-show-mobile{
+        display: none;
+        }
+
+      }  
+
+        ::-webkit-scrollbar{
+          width: 10px;
+        }
+
+        ::-webkit-scrollbar-track{
+          border: 7px solid rgb(19, 19, 19);
+          box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
+        }
+
+        ::-webkit-scrollbar-thumb{
+          background: linear-gradient(
+          45deg,
+          #98cec3,
+          #98cec3
+        );
+          border-radius: 3px;
+        }
+
+        .popup{
+					position: absolute;
+					top: 0; bottom: 0; 
+					left: 0; right:0;
+					margin: auto;
+					width: 500px;
+					height: 450px;
+					padding: 40px;
+					border: solid 1px #4c4d4f;
+					background: #24AE91;
+          background-image: url("img/Background.png");
+					display: none;
+          font-size: 17px;
+          text-align: center;
+          /* font-family: 'Josefin Sans', sans-serif; */
+          font-family: 'Poppins', sans-serif;
+				}
 
 
-.footer .logo-footer img{
-width: 65%;
+        .info-popup{
+          color: black;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-weight: 900;
+          font-size: 20px;
+        }
 
-}
+        
+        .button {
+          border: none;
+          color: #ddd;
+          padding: 1px 40px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 10px;
+          margin: 4px 2px;
+          cursor: pointer;
+          font-family: 'Josefin Sans', sans-serif;
+        }
 
-.rede-social img{
-width: 90%;
-}
+        .button1 {
+          background-color: transparent; 
+          font-weight: 800;
+          color: #000; 
+          height: 70px !important;
+          width: 300px;
+          border: 2px solid #000;
+          font-family: 'Josefin Sans', sans-serif;
+          transition: 0.3s;
+        }
 
-@media screen and (max-width: 700px){
+        .button1:hover {
+          background-color: #0B342C; 
+          font-weight: 600;
+          color: #fff; 
+          border: 2px solid #000;
+          font-family: 'Josefin Sans', sans-serif;
+          transition: 0.5s;
+        }
 
-.footer .rede-social{
-text-align: center;
-align-content: center;
-align-items: center;
-padding: 10px;
-}
+        .info-close{
+          color: black;
+          padding-right: 0;
+          margin: 0;
+          float: right;
+          padding-top: 0;
+          font-weight: 900;
+        }
 
-.rede-social img{
-width: 10%;
-}
-
-.footer .logo-footer{
-padding: 10px;
-text-align: center;
-padding-top: 40px;
-}
-
-.footer .logo-footer img{
-width: 30%;
-}
-
-.no-show-mobile{
-display: none;
-}
-
-}  
-
-::-webkit-scrollbar{
-width: 10px;
-}
-
-::-webkit-scrollbar-track{
-border: 7px solid rgb(19, 19, 19);
-box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
-}
-
-::-webkit-scrollbar-thumb{
-background: linear-gradient(
-45deg,
-#98cec3,
-#98cec3
-);
-border-radius: 3px;
-}
+        .info-close a{
+          color: black;
+          padding-right: 0;
+          margin: 0;
+          font-size: 19px;
+          text-decoration: none;
+          font-weight: 900;
+        }
 
 
       </style>
@@ -287,16 +364,17 @@ border-radius: 3px;
         <nav>
             <div class="nav-wrapper">
               <a href="header.php" class="brand-logo">
-                  <img src="img/logo-black.png" />
+                  <!-- <img src="img/logo-black.png" /> -->
+                  <img src="img/logo.png" />
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="activate" href="header.php">INÍCIO</a></li>
+                <li><a class="not-activate" href="header.php">INÍCIO</a></li>
                 <li><a class="not-activate" href="projetos.php">PROJETOS</a></li>
                 <li><a class="not-activate" href="criar-projeto.php">CRIAR PROJETO</a></li>
                 
                 <?php 
                 if(isset($_SESSION['logado'])){
-                  echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
+                  echo "<li><a  class=activate href=meu-perfil.php>MEU PERFIL</a></li>";
                   echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
                 }
                 else{
@@ -326,10 +404,16 @@ border-radius: 3px;
                   echo $dados['Nome'];
                 }
                 ?>
+                </div><br />
+                <div class="update">
+                    <a href="javascript: abrir();">
+                    Minhas informações
+                    </a>
                 </div>
+
                 <div class="update">
                     <a href="#">
-                    Minhas informações
+                    Meus Projetos
                     </a>
                 </div>
 
@@ -340,7 +424,40 @@ border-radius: 3px;
                 </div>
             </div>
             <div class="col-sm-9 meus-projetos">
-                
+              
+            <div id="popup" class="popup">
+                <div class="info-close">
+                  <a href="javascript: fechar();">X</a>
+                </div>
+              <strong class="info-popup">Suas informações</strong><br />	
+
+              <br /><strong>Nome</strong><br />
+              <?php
+                if(isset($_SESSION['logado'])){
+                  echo $dados['Nome'];
+                }
+              ?>
+
+              <br /><br /><strong>E-mail</strong><br />
+              <?php
+                if(isset($_SESSION['logado'])){
+                  echo $dados['Email'];
+                }
+              ?>
+
+              <br /><br /><strong>Curso</strong><br />
+              <?php
+                if(isset($_SESSION['logado'])){
+                  echo $dados['Curso'];
+                }
+              ?>
+              <br /><br />
+              <a href="#">
+                <button class="button button1">EDITAR MINHAS INFORMAÇÕES</button>
+              </a>
+
+            </div>
+
             </div>
         </div>
 
@@ -379,5 +496,13 @@ border-radius: 3px;
   </div>
  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script type="text/javascript">
+					function abrir(){
+						document.getElementById('popup').style.display = 'block';
+					}
+					function fechar(){
+						document.getElementById('popup').style.display =  'none';
+					}
+				</script>
     </body>
   </html>

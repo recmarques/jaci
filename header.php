@@ -322,7 +322,7 @@ transition: 0.5s;
 .footer{
 background-color: #1D1D1D;
 width: 100%;
-height: 200px !important;
+height: 220px !important;
 }
 
 .footer .rede-social{
@@ -378,7 +378,14 @@ font-family: 'Josefin Sans', sans-serif;
 transition: 0.3s;
 }
 
-
+.banner .titulo {
+    color: black;
+    text-align: left;
+    font-weight: 700;
+    max-width: 700px !important;
+    font-size: 50px;
+    text-transform: uppercase;
+}
 }
 
 .banner{
@@ -771,8 +778,7 @@ border-radius: 3px;
     
     <div class="banner" style="background-color: #5BBDA0;">
       <div class="titulo">
-      A IMPORTÂNCIA DA
-      FILOSOFIA
+      PRINCÍPIO DA CONTAGEM X PERMUTAÇÃO
       </div>
 
       <div class="autor">
@@ -784,7 +790,9 @@ border-radius: 3px;
   </div>
 
   <div class="ver-mais">
-    <button class="button-vermais button1-vermais">VER MAIS</button>
+    <a href="projetos.php">
+      <button class="button-vermais button1-vermais">VER MAIS</button>
+    </a>
   </div>
 
 
