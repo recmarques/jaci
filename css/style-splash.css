@@ -219,3 +219,10 @@ body{
 
 
 }
+
+.acessos{
+  font-size: 15px !important;
+  font-weight: 900;
+  color: #d5f8ff;
+  line-height: 40px;
+}
