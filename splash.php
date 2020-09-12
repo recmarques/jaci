@@ -17,6 +17,7 @@
       <meta charset="utf-8">
       <title>Seja bem-vindo(a)! | JACI</title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
+      <!-- <link rel="icon" href="img/logo-preta-preenchida.png" type="image/png" /> -->
       
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="author" content="Renata de Castro M. - EQUIPE SOL">

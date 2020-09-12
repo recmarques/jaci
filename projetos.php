@@ -518,12 +518,12 @@ transition: 0.5s;
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="not-activate" href="header.php">INÍCIO</a></li>
-                <li><a class="not-activate" href="badges.html">PROJETOS</a></li>
-                <li><a class="not-activate" href="collapsible.html">CRIAR PROJETO</a></li>
+                <li><a class="activate" href="projetos.php">PROJETOS</a></li>
+                <li><a class="not-activate" href="criar-projeto.php">CRIAR PROJETO</a></li>
                
                 <?php 
                 if(isset($_SESSION['logado'])){
-                  echo "<li><a class=not-activate href=login.php>MEU PERFIL</a></li>";
+                  echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
                   echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
                 }
                 else{

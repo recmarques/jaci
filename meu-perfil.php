@@ -280,7 +280,11 @@ width: 100% !important;
 					margin: auto;
 					width: 500px;
 					height: 450px;
-					padding: 40px;
+          padding: 40px;
+
+          /*width: 100%;
+          height: 100%;
+					padding: 120px 40px 40px 40px; */
 					border: solid 1px #4c4d4f;
 					background: #24AE91;
           background-image: url("img/Background.png");
