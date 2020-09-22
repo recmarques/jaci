@@ -312,11 +312,12 @@
 
 
 
+
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
-  <head>
-  <meta charset="utf-8">
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <meta charset="utf-8">
       <title>Página Inicial | JACI</title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
       
@@ -344,180 +345,70 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
-      <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="css/style-home.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-   
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      
     <style>
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} 
-
 body{
-    background: #1F9E84;
+  background-color: #24AE91 !important;
 }
 
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 0px;
-    margin-top: 25px;
-    font-weight: 700;
-}
-
-nav{
-  display: flex;
-  height: 80px;
-  width: 100%;
-  background: #23a78a;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  font-family: 'Josefin Sans', sans-serif;
-  flex-wrap: wrap;
-}
-nav .logo{
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
-
-nav .logo img{
-  width: 40%;
-  padding-top: 10px;
-}
-
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 1;
-  list-style: none;
-}
-nav ul li{
-  margin: 0 5px;
-}
-nav ul li a{
-  color: #000;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  padding-right: 35px;
-    padding-left: 35px;
-    font-size: 14px;
-    font-weight: 700;
-    align-content: center;
-    text-align: center;
-}
-nav ul li a.active,
-nav ul li a:hover{
-  color: #fff;
-  text-decoration: none;
-  background-color: transparent;
-  /* background: #fff; */
-}
-nav .menu-btn i{
-  color: #fff;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-input[type="checkbox"]{
-  display: none;
-}
-@media (max-width: 1000px){
-  nav{
-    padding: 0 40px 0 50px;
+  .nav-wrapper{
+      background-color: #23a78a;
+      font-family: 'Josefin Sans', sans-serif;
   }
-}
-@media (max-width: 920px) {
-  nav .menu-btn i{
-    display: block;
+  .nav-wrapper .brand-logo{
+      padding-left: 80px;
   }
-  #click:checked ~ .menu-btn i:before{
-    content: "\f00d";
-  }
-  nav ul{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #24AE91;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul{
-    left: 0;
-  }
-  nav ul li{
-    width: 100%;
-    margin: 7px 0;
-  }
-  nav ul li a{
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a{
-    margin-left: 0px;
-  }
-  nav ul li a.active,
-  nav ul li a:hover{
-    background: none;
-    color: #fff;
-  }
-}
 
-.no-show-desktop{
-  display: table;
-}
-
-.no-show-mobile{
-  display: none;
-}
+  .nav-wrapper .brand-logo img{
+      width: 30%;
+  }
 
 
-::-webkit-scrollbar{
-width: 10px;
-}
 
-::-webkit-scrollbar-track{
-border: 7px solid rgb(19, 19, 19);
-box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
-}
+  @media screen and (max-width: 700px){
+      
+      .nav-wrapper .brand-logo img{
+          width: 40%;
+      }
+  }
 
-::-webkit-scrollbar-thumb{
-background: linear-gradient(
-45deg,
-#98cec3,
-#98cec3
-);
-border-radius: 3px;
-}
+  #nav-mobile{
+      padding-right: 10px;
+      
+      
+  }
 
+  #nav-mobile a{
+      padding-right: 35px;
+      padding-left: 35px;
+      font-size: 14px;
+      font-weight: 700;
+      align-content: center;
+      text-align: center;
+  }
+
+  #nav-mobile a:hover{
+     text-decoration: none;
+      color: white;
+
+  }
+
+  .not-activate{
+      color: black;
+  }
+
+  .activate{
+      color: white;
+  }
+
+  body, html {
+height: 100%;
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
 
 .hero-image {
 background-color: #24AE91;
-height: 475px;
+height: 460px;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -974,7 +865,7 @@ padding-left: 0;
 text-align: center;
 align-content: center;
 align-items: center;
-padding: 20px;
+padding: 10px;
 }
 
 .rede-social img{
@@ -1021,30 +912,26 @@ background: linear-gradient(
 border-radius: 3px;
 }
 
+      </style>
+    
+    </head>
 
-.hero-image strong{
-  font-weight: 600;
-}
+    <body>
 
+  
 
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="header.php">
-        <img src="img/logo-black.png" alt="logo"/></a>
-    </div>
-<input type="checkbox" id="click">
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul>
-<li><a class="active" href="header.php">INÍCIO</a></li>
-<li><a href="projetos.php">PROJETOS</a></li>
-<li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-<!-- <li><a href="#">Feedback</a></li> -->
-<?php 
+        <nav>
+            <div class="nav-wrapper">
+              <a href="header.php" class="brand-logo">
+                  <img src="img/logo-black.png" alt="logo"/>
+              </a>
+              
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="activate" href="header.php">INÍCIO</a></li>
+                <li><a class="not-activate" href="projetos.php">PROJETOS</a></li>
+                <li><a class="not-activate" href="criar-projeto.php">CRIAR PROJETO</a></li>
+                
+                <?php 
                 if(isset($_SESSION['logado'])){
                   echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
                   echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
@@ -1060,11 +947,17 @@ border-radius: 3px;
                   echo "<li><a class=not-activate style=display:none href=logout.php>SAIR</a></li>";
                 }
                 ?>
-</ul>
-</nav>
+                
+                
+              
+              </ul>
+            </div>
+          </nav>
 
+      
 
-<div class="hero-image" id="hero-image">
+          
+    <div class="hero-image">
         <div class="row">
             <div class="col-sm-5 img-banner">
 
@@ -1102,7 +995,7 @@ border-radius: 3px;
 
           <div class="autor">
           <?php
-            echo $Nome1." | ".$Ano1. " | ".$Materia1;;
+            echo $Nome1." | ".$Ano1;
             
           ?>
           </div>
@@ -1122,7 +1015,7 @@ border-radius: 3px;
 
           <div class="autor">
           <?php
-            echo $Nome2." | ".$Ano2. " | ".$Materia2;;
+            echo $Nome2." | ".$Ano2;
             
           ?>
           </div>
@@ -1144,7 +1037,7 @@ border-radius: 3px;
 
         <div class="autor">
         <?php
-            echo $Nome3." | ".$Ano3. " | ".$Materia3;
+            echo $Nome3." | ".$Ano3;
             
           ?>
         </div>
@@ -1163,7 +1056,7 @@ border-radius: 3px;
 
         <div class="autor">
         <?php
-            echo $Nome4." | ".$Ano4. " | ".$Materia4;;
+            echo $Nome4." | ".$Ano4;
             
           ?>
         </div>
@@ -1186,7 +1079,7 @@ border-radius: 3px;
 
       <div class="autor">
       <?php
-            echo $Nome5." | ".$Ano5. " | ".$Materia5;;
+            echo $Nome5." | ".$Ano5;
             
           ?>
       </div>
@@ -1205,7 +1098,7 @@ border-radius: 3px;
 
       <div class="autor">
       <?php
-            echo $Nome6." | ".$Ano6. " | ".$Materia6;;
+            echo $Nome6." | ".$Ano6;
             
           ?>
       </div>
@@ -1258,24 +1151,8 @@ border-radius: 3px;
   </div>
  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
-
-<script>
-  const slideValue = document.querySelector(".sliderValue-span");
-  const inputSlider = document.querySelector(".input-value");
-  inputSlider.oninput = (()=>{
-    let value = inputSlider.value;
-    slideValue.textContent = value;
-    slideValue.style.left = (value/2) + "%";
-    slideValue.classList.add("show");
-  });
-  inputSlider.onblur = (()=>{
-    slideValue.classList.remove("show");
-  });
-</script>
-
-</body>
-</html>
+    </body>
+  </html>
 
 <?php
 

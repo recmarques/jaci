@@ -74,19 +74,27 @@
         $_SESSION['Nome'] = $Nome;
         $_SESSION['Curso'] = $Curso;
 
-
+    //   $ID_Projeto = $_SESSION['ID_Projeto'];
+    //   $Titulo = $_SESSION['Titulo'];
+    //   $Descricao = $_SESSION['Descricao'];
+    //   $Palavras $_SESSION['Palavras'];
+    //   $Ano = $_SESSION['Ano'];
+    //   $Palavras = $_SESSION['Palavras'];
+    //   $Materia = $_SESSION['Materia'];
+    //   $Categoria = $_SESSION['Categoria'];
+    //   $Conhecimento = $_SESSION['Conhecimento'];
+    //   $Texto = $_SESSION['Texto'];
+    //   $ID_Usuario_Projeto = $_SESSION['ID_Usuario_Projeto'];
+    
     
 ?>
 
 
 
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Projetos disponíveis | JACI</title>
-    <meta charset="utf-8">
+  <html>
+    <head>
+      <meta charset="utf-8">
       <title><?php echo $_SESSION['Titulo']." | JACI"; ?></title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
       
@@ -108,185 +116,14 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="author" content="Renata de Castro M. - EQUIPE SOL">
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap" rel="stylesheet">
-    
     <style>
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} 
-
-body{
-    background: #1F9E84;
-}
-nav{
-  display: flex;
-  height: 80px;
-  width: 100%;
-  background: #24AE91;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  font-family: 'Josefin Sans', sans-serif;
-  flex-wrap: wrap;
-}
-
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 0px;
-    margin-top: 25px;
-    font-weight: 700;
-}
-
-nav .logo{
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
-
-nav .logo img{
-  width: 40%;
-  padding-top: 10px;
-}
-
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 1;
-  list-style: none;
-}
-nav ul li{
-  margin: 0 5px;
-}
-nav ul li a{
-  color: #000;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  padding-right: 35px;
-    padding-left: 35px;
-    font-size: 14px;
-    font-weight: 700;
-    align-content: center;
-    text-align: center;
-}
-nav ul li a.active,
-nav ul li a:hover{
-  color: #fff;
-  background: transparent;
-  text-decoration: none;
-}
-nav .menu-btn i{
-  color: #fff;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-input[type="checkbox"]{
-  display: none;
-}
-@media (max-width: 1000px){
-  nav{
-    padding: 0 40px 0 50px;
-  }
-}
-@media (max-width: 920px) {
-  nav .menu-btn i{
-    display: block;
-    /* margin-top: 21px; */
-  }
-  #click:checked ~ .menu-btn i:before{
-    content: "\f00d";
-  }
-  nav ul{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #24AE91;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul{
-    left: 0;
-  }
-  nav ul li{
-    width: 100%;
-    margin: 5px 0;
-  }
-  nav ul li a{
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a{
-    margin-left: 0px;
-  }
-  nav ul li a.active,
-  nav ul li a:hover{
-    background: none;
-    color: #fff;
-  }
-}
-
-
-.no-show-desktop{
-  display: table;
-}
-
-.no-show-mobile{
-  display: none;
-}
-
-
-
-::-webkit-scrollbar{
-width: 10px;
-}
-
-::-webkit-scrollbar-track{
-border: 7px solid rgb(19, 19, 19);
-box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
-}
-
-::-webkit-scrollbar-thumb{
-background: linear-gradient(
-45deg,
-#98cec3,
-#98cec3
-);
-border-radius: 3px;
-}
-
-
-body{
+    body{
         background-color: #24AE91;
     }
 
@@ -473,8 +310,7 @@ body{
         font-weight: 900 !important;
         font-size:25px; 
         text-transform: uppercase !important;
-        /* font-family: 'Lato', sans-serif !important; */
-        font-family: 'Josefin Sans', sans-serif !important;
+        font-family: 'Lato', sans-serif !important;
         letter-spacing: 1px;
     }
 
@@ -640,9 +476,7 @@ body{
             line-height: 32px;
             font-weight: 900 !important;
             font-size: 20px;
-            /* font-family: 'Lato', sans-serif !important; */
-            
-            font-family: 'Josefin Sans', sans-serif !important;
+            font-family: 'Lato', sans-serif !important;
             letter-spacing: 1px;
         }
 
@@ -701,24 +535,20 @@ body{
         align-content: center;
     }
 
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="header.php">
-        <img src="img/logo-black.png" alt="logo"/></a>
-    </div>
-<input type="checkbox" id="click">
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul>
-<li><a href="header.php">INÍCIO</a></li>
-<li><a href="projetos.php">PROJETOS</a></li>
-<li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-<!-- <li><a href="#">Feedback</a></li> -->
-<?php 
+</style>  
+</head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="header.php" class="brand-logo">
+                  <img src="img/logo-black.png" alt="logo black jaci" alt="logo jaci"/>
+              </a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="not-activate" href="header.php">INÍCIO</a></li>
+                <li><a class="not-activate" href="projetos.php">PROJETOS</a></li>
+                <li><a class="not-activate" href="criar-projeto.php">CRIAR PROJETO</a></li>
+                <?php 
                 if(isset($_SESSION['logado'])){
                   echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
                   echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
@@ -734,10 +564,15 @@ body{
                   echo "<li><a class=not-activate style=display:none href=logout.php>SAIR</a></li>";
                 }
                 ?>
-</ul>
-</nav>
+              
+              </ul>
+            </div>
+        </nav>
 
-<div class="hero-image" id="topo">
+      
+
+          
+        <div class="hero-image" id="topo">
             <a href="header.php">
             <img src="img/arrow.png" alt="voltar" class="voltar" alt="seta voltar"/>
             </a>
@@ -789,6 +624,31 @@ body{
                 ?>
         </p>
 
+        <!-- <p>Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Sit amet justo donec enim
+            diam vulputate ut pharetra. Id consectetur purus ut faucibus pulvinar elementum integer.
+            Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor.</p>
+
+        <p>Tellus orci ac auctor augue. Commodo odio aenean sed adipiscing diam donec adipiscing
+            tristique risus. Non curabitur gravida arcu ac tortor dignissim convallis aenean et.
+            Placerat orci nulla pellentesque dignissim enim sit.</p>
+
+            <br /><br />
+
+        <p>Tellus orci ac auctor augue. Commodo odio aenean sed adipiscing diam donec adipiscing
+            tristique risus. Non curabitur gravida arcu ac tortor dignissim convallis aenean et.
+            Placerat orci nulla pellentesque dignissim enim sit. Tristique senectus et netus et
+            malesuada fames ac turpis. Et tortor at risus viverra. Sodales ut eu sem integer
+            vitae justo eget magna fermentum. Viverra ipsum nunc aliquet bibendum enim. Cras
+            adipiscing enim eu turpis egestas. Vel quam elementum pulvinar etiam non quam lacus 
+            suspendisse. Integer enim neque volutpat ac tincidunt vitae semper quis. Pellentesque
+            elit ullamcorper dignissim cras tincidunt.</p>
+
+        <p>Tellus orci ac auctor augue. Commodo odio aenean sed adipiscing diam donec adipiscing
+            tristique risus. Non curabitur gravida arcu ac tortor dignissim convallis aenean et.
+            Placerat orci nulla pellentesque dignissim enim sit. Tristique senectus et netus et
+            malesuada fames ac turpis. Et tortor at risus viverra. Sodales ut eu sem integer vitae
+            justo eget magna fermentum. Viverra ipsum nunc aliquet bibendum enim. Cras adipiscing
+            enim eu turpis egestas. Vel quam elementum pulvinar etiam non quam lacus.</p> -->
 
     </div>
     

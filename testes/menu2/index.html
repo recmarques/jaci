@@ -11,7 +11,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="css/style-home.css">
+      <!-- <link rel="stylesheet" href="css/style-home.css"> -->
       <link rel="stylesheet" href="style.css">
 <!--       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -587,7 +587,106 @@ padding: 0;
 
     </style> -->
     
-    
+    <style>
+      
+      
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+
+      body{
+  background-color: #000;
+}
+
+.show-menu-btn img{
+  width: 10% !important;
+}
+
+.show-menu-btn{
+  float: inherit;
+}
+
+.logo-left img{
+    width: 32%;
+    padding-left: 20px !important;
+  }
+
+  
+.hide-menu-btn img{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media screen and (max-width:800px) {
+  .show-menu-btn,.hide-menu-btn img{
+    display: block;
+  }
+
+ 
+  .logo-left img{
+    width: 32%;
+    padding-left: 20px !important;
+  }
+
+  .header-nav{
+    height: 75px;
+   
+  }
+
+
+  .activate{
+     text-decoration: underline !important;
+     
+  }
+  .menu-pages{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #24AE91;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .show-menu-btn i {
+    line-height: 80px;
+}
+  .logo-left{
+    line-height:85px;
+    float: left;
+    text-transform: uppercase;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+  .menu-pages a{
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu-pages{
+    right: 0;
+  }
+
+}
+
+    </style>
     </head>
 
     <body>
@@ -595,11 +694,12 @@ padding: 0;
       
   <div class="header-nav">
     <h2 class="logo-left">
-      <img src="../../img/logo-black.png"/>
+      <img src="../../img/logo-black.png" alt="logo"/>
     </h2>
     <input type="checkbox" id="chk">
     <label for="chk" class="show-menu-btn">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars">
+      <img src="menu.png" alt="menu"/></i>
     </label>
 
     <ul class="menu-pages">
@@ -609,7 +709,9 @@ padding: 0;
       <a class="not-activate" href="#">ENTRAR</a>
       <a class="not-activate" href="#">SAIR</a>
       <label for="chk" class="hide-menu-btn">
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times">
+          <img src="close.png"/>
+        </i>
       </label>
     </ul>
   </div>

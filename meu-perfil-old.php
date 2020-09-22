@@ -52,29 +52,13 @@
 
 
 
-<!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
-  <head>
-  <meta charset="utf-8">
-  <title>Meu perfil | JACI</title>
-      <link rel="icon" href="img/favicon.png" type="image/png" />
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="author" content="Renata de Castro M. - EQUIPE SOL">
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="css/style-home.css">
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+  <html>
+    <head>
+
       <meta charset="utf-8">
-      
+      <title>Meu perfil | JACI</title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
       
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -83,7 +67,8 @@
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="css/style-perfil.css">
-  
+      <!-- <link rel="stylesheet" href="testes/Responsive Navigation Menu/style.css"> -->
+      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -100,219 +85,52 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
-
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
-      <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="css/style-home.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-   
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      
     <style>
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} 
-
-body{
-    background: #1F9E84;
-}
-
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 0px;
-    margin-top: 25px;
-    font-weight: 700;
-}
-
-nav{
-  display: flex;
-  height: 80px;
-  width: 100%;
-  background: #404040;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  font-family: 'Josefin Sans', sans-serif;
-  flex-wrap: wrap;
-}
-nav .logo{
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
-
-nav .logo img{
-  width: 40%;
-  padding-top: 10px;
-}
-
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 1;
-  list-style: none;
-}
-nav ul li{
-  margin: 0 5px;
-}
-nav ul li a{
-  color: #24AE91;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  padding-right: 35px;
-    padding-left: 35px;
-    font-size: 14px;
-    font-weight: 700;
-    align-content: center;
-    text-align: center;
-}
-nav ul li a.active,
-nav ul li a:hover{
-  color: #fff;
-  text-decoration: none;
-  background-color: transparent;
-  /* background: #fff; */
-}
-nav .menu-btn i{
-  color: #fff;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-input[type="checkbox"]{
-  display: none;
-}
-@media (max-width: 1000px){
-  nav{
-    padding: 0 40px 0 50px;
-  }
-}
-@media (max-width: 920px) {
-  nav .menu-btn i{
-    display: block;
-  }
-  #click:checked ~ .menu-btn i:before{
-    content: "\f00d";
-  }
-  nav ul{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #404040;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul{
-    left: 0;
-  }
-  nav ul li{
-    width: 100%;
-    margin: 7px 0;
-  }
-  nav ul li a{
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a{
-    margin-left: 0px;
-  }
-  nav ul li a.active,
-  nav ul li a:hover{
-    background: none;
-    color: #fff;
-  }
-}
-
-.no-show-desktop{
-  display: table;
-}
-
-.no-show-mobile{
-  display: none;
-}
-
-
-::-webkit-scrollbar{
-width: 10px;
-}
-
-::-webkit-scrollbar-track{
-border: 7px solid rgb(19, 19, 19);
-box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
-}
-
-::-webkit-scrollbar-thumb{
-background: linear-gradient(
-45deg,
-#98cec3,
-#98cec3
-);
-border-radius: 3px;
-}
-
-
-@media screen and (max-width: 700px){
-
-
-.no-show-mobile{
-display: none;
-}
-
-}  
-
-::-webkit-scrollbar{
-width: 10px;
-}
-
-::-webkit-scrollbar-track{
-border: 7px solid rgb(19, 19, 19);
-box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
-}
-
-::-webkit-scrollbar-thumb{
-background: linear-gradient(
-45deg,
-#98cec3,
-#98cec3
-);
-border-radius: 3px;
-}
-
-
 body{
   background-color: #1D1D1D !important;
 }
 
+  .nav-wrapper{
+      background-color: #404040;
+      font-family: 'Josefin Sans', sans-serif;
+  }
+  .nav-wrapper .brand-logo{
+      padding-left: 55px;
+  }
 
+  .nav-wrapper .brand-logo img{
+      width: 30%;
+  }
+
+
+
+  @media screen and (max-width: 700px){
+      
+      .nav-wrapper .brand-logo img{
+          width: 40%;
+      }
+  }
+
+  #nav-mobile{
+      padding-right: 10px;
+      
+      
+  }
+
+  #nav-mobile a{
+      padding-right: 35px;
+      padding-left: 35px;
+      font-size: 14px;
+      font-weight: 700;
+      align-content: center;
+      text-align: center;
+  }
+
+  #nav-mobile a:hover{
+     text-decoration: none;
+      color: white;
+
+  }
 
   .not-activate{
       color: #5EC7A7;
@@ -414,7 +232,7 @@ width: 100% !important;
           text-align: center;
           align-content: center;
           align-items: center;
-          padding: 20px;
+          padding: 10px;
         }
 
         .rede-social img{
@@ -537,36 +355,30 @@ width: 100% !important;
           text-decoration: none;
           font-weight: 900;
         }
-        .not-activate{
-      color: #24AE91;
-  }
-
-  .activate{
-      color: white;
-  }
 
 
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="header.php">
-          <img src="img/logo.png" alt="logo"/>
-        </a>
-    </div>
-<input type="checkbox" id="click">
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul>
-<li><a href="header.php">INÍCIO</a></li>
-<li><a href="projetos.php">PROJETOS</a></li>
-<li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-<!-- <li><a href="#">Feedback</a></li> -->
-<?php 
+      </style>
+    
+    </head>
+
+    <body>
+
+  
+
+        <nav>
+            <div class="nav-wrapper">
+              <a href="header.php" class="brand-logo">
+                  <!-- <img src="img/logo-black.png" /> -->
+                  <img src="img/logo.png" alt="logo"/>
+              </a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="not-activate" href="header.php">INÍCIO</a></li>
+                <li><a class="not-activate" href="projetos.php">PROJETOS</a></li>
+                <li><a class="not-activate" href="criar-projeto.php">CRIAR PROJETO</a></li>
+                
+                <?php 
                 if(isset($_SESSION['logado'])){
-                  echo "<li><a class=active href=meu-perfil.php>MEU PERFIL</a></li>";
+                  echo "<li><a  class=activate href=meu-perfil.php>MEU PERFIL</a></li>";
                   echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
                 }
                 else{
@@ -580,10 +392,15 @@ width: 100% !important;
                   echo "<li><a class=not-activate style=display:none href=logout.php>SAIR</a></li>";
                 }
                 ?>
-</ul>
-</nav>
+                
+                
+              
+              </ul>
+            </div>
+          </nav>
 
-<div class="row">
+      
+          <div class="row">
             <div class="col-sm-3 info">
                 <div class="nome">
                 <?php
@@ -691,20 +508,5 @@ width: 100% !important;
 						document.getElementById('popup').style.display =  'none';
 					}
 				</script>
-
-      <script>
-        const slideValue = document.querySelector(".sliderValue-span");
-        const inputSlider = document.querySelector(".input-value");
-        inputSlider.oninput = (()=>{
-          let value = inputSlider.value;
-          slideValue.textContent = value;
-          slideValue.style.left = (value/2) + "%";
-          slideValue.classList.add("show");
-        });
-        inputSlider.onblur = (()=>{
-          slideValue.classList.remove("show");
-        });
-      </script>
-
-</body>
-</html>
+    </body>
+  </html>

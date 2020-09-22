@@ -92,8 +92,8 @@
 			echo $_SERVER['PHP_SELF'];
 			?>"> 
       
-            <img src="img/jaci.png" class="no-show-mobile"/>
-            <img src="img/logo-black.png" class="no-show-desktop"/>
+            <img src="img/jaci.png" class="no-show-mobile" alt="logo"/>
+            <img src="img/logo-black.png" class="no-show-desktop" alt="logo jaci"/>
             <br /><p class="login">Faça seu login</p>
      
             <div class="txtb">
@@ -119,7 +119,7 @@
             ?>
             </p>
 
-            <p class="fsenha"><a href="">Esqueci minha senha</a></p>
+            <p class="fsenha"><a href="senha.php">Esqueci minha senha</a></p>
             <input type="submit" class="logbtn" value="Entrar" name="btn-entrar">
 
             <div class="bottom-text">

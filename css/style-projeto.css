@@ -21,6 +21,10 @@ body{
         .nav-wrapper .brand-logo img{
             width: 40%;
         }
+
+        .titulo-banner{
+            padding-top: 7% !important;
+            }
     }
 
     #nav-mobile{
@@ -53,150 +57,153 @@ body{
     }
 
     body, html {
-height: 100%;
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-.hero-image {
-background-color: #5EC7A7;
-height: 310px !important;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-margin: 0;
-}
-
-.hero-text {
-text-align: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-.autor{
-text-align: left !important;
-padding-top: 1% !important;
-color: #000 !important;
-padding-right: 11%;
-max-width: 250px;
-line-height: 32px;
-font-weight: 900 !important;
-font-size:25px;
-font-family: 'Lato', sans-serif !important;
-letter-spacing: 1px;
-}
-
-.voltar{
-    display: absolute !important;
-    padding-left: 45px;
-    padding-top: 40px;
-    float: inline-start;
+    height: 100%;
     margin: 0;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    }
 
-.autor .ano{
-    color: #216C56 !important;
-    font-size:22px;
-}
+    .hero-image {
+    background-color: #5EC7A7;
+    height: 310px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    }
 
-.autor .curso{
-    color: #216C56 !important;
-    font-size:22px;
-}
+    .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
 
-.titulo-banner{
-    text-align: left;
-    padding-top: 2% !important;
-    color: #000;
-    padding-left: 11% !important;
-    line-height: 70px;
-    font-size:60px;
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: uppercase;
+    .autor{
+    text-align: left !important;
+    padding-top: 1% !important;
+    color: #000 !important;
+    padding-right: 11%;
+    text-transform: uppercase !important;
+    max-width: 100% !important;
+    line-height: 32px;
+    font-weight: 900 !important;
+    font-size:25px;
+    /* font-family: 'Lato', sans-serif !important; */
+    font-family: 'Josefin Sans', sans-serif !important;
     letter-spacing: 1px;
     }
-    
 
-.banner{
-text-align: right;
-padding-top: 8%;
-color: white;
-line-height: 60px;
-font-size:35px;
-font-family: 'Poppins', sans-serif;
-letter-spacing: 1px;
-}
+    .voltar{
+        display: absolute !important;
+        padding-left: 45px;
+        padding-top: 40px;
+        float: inline-start;
+        margin: 0;
+    }
 
-.button {
-border: none;
-color: #ddd;
-padding: 1px 40px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+    .autor .ano{
+        color: #216C56 !important;
+        font-size:22px;
+    }
 
-.button1 {
-background-color: transparent; 
-font-weight: 800;
-color: #000; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+    .autor .curso{
+        color: #216C56 !important;
+        font-size:22px;
+    }
 
-.button1:hover {
-background-color: #0B342C; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
+    .titulo-banner{
+        text-align: left;
+        padding-top: 2% !important;
+        color: #000;
+        padding-left: 11% !important;
+        line-height: 70px;
+        max-width: 971px !important;
+        font-size:60px;
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        }
+        
+
+    .banner{
+    text-align: right;
+    padding-top: 8%;
+    color: white;
+    line-height: 60px;
+    font-size:35px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    }
+
+    .button {
+    border: none;
+    color: #ddd;
+    padding: 1px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .button1 {
+    background-color: transparent; 
+    font-weight: 800;
+    color: #000; 
+    border: 2px solid #000;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.3s;
+    }
+
+    .button1:hover {
+    background-color: #0B342C; 
+    font-weight: 600;
+    color: #fff; 
+    border: 2px solid #000;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.5s;
+    }
 
 
-.button-vermais {
-border: none;
-padding: 30px 80px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+    .button-vermais {
+    border: none;
+    padding: 30px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    }
 
-.button1-vermais {
-background-color: transparent; 
-font-weight: 800;
-color: #24AE91; 
-border: 2px solid #24AE91;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+    .button1-vermais {
+    background-color: transparent; 
+    font-weight: 800;
+    color: #24AE91; 
+    border: 2px solid #24AE91;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.3s;
+    }
 
-.button1-vermais:hover {
-background-color: #0000; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #fff;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
+    .button1-vermais:hover {
+    background-color: #0000; 
+    font-weight: 600;
+    color: #fff; 
+    border: 2px solid #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.5s;
+    }
 
-.img-banner img{
-width: 100%;
-padding-top: 0;
-padding-left: 75px;
-}
+    .img-banner img{
+    width: 100%;
+    padding-top: 0;
+    padding-left: 75px;
+    }
 
 @media screen and (min-width: 1400px){
 .img-banner img{
@@ -210,6 +217,7 @@ text-align: right;
 padding-top: 8%;
 color: white;
 padding-right: 11%;
+text-transform: uppercase !important;
 line-height: 60px;
 font-size:40px;
 font-family: 'Poppins', sans-serif;
@@ -387,181 +395,181 @@ width: 65%;
 width: 90%;
 }
 
-@media screen and (max-width: 700px){
+    @media screen and (max-width: 700px){
 
-.hero-image{
-height: 400px !important;
-}
+        .hero-image{
+        height: 430px !important;
+        }
 
-.texto{
-    padding: 50px 50px !important;
-}
-
-
-.descrição{
-    padding: 20px 50px !important;
-}
-
-.autor {
-    font-size: 22px;
-    line-height: 37px;
-    text-align: left !important;
-    padding-right: 0;
-    padding-left: 50px !important;
-}
-
-.titulo-banner {
-    text-align: left;
-    padding-top: 2% !important;
-    padding-left: 11% !important;
-    line-height: 55px !important;
-    font-size: 37px !important;
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: uppercase;
-}
-.button{
-padding: 16px 58px;
-}
-
-.banner{
-width: 100%;
-height: 430px;
-padding-left: 43px;
-/* display: table-row-group; */
-padding-top: 60px;
-}
-
-.banner .titulo{
-font-size: 35px;
-line-height: 45px;
-}
-
-.row-2{
-display: block;
-}
-
-.button-projeto {
-border: none;
-color: #ddd;
-padding: 1px 65px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
-
-.button1-projeto {
-background-color: transparent; 
-font-weight: 800;
-color: #000; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
-
-.button1-projeto:hover {
-background-color: #0B342C; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
+        .texto{
+            padding: 50px 50px !important;
+        }
 
 
-.button-vermais {
-border: none;
-padding: 30px 80px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+        .descrição{
+            padding: 20px 50px !important;
+        }
 
-.button1-vermais {
-background-color: transparent; 
-font-weight: 800;
-color: #24AE91; 
-border: 2px solid #24AE91;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+        .autor {
+            font-size: 22px;
+            line-height: 37px;
+            text-align: left !important;
+            padding-right: 0;
+            padding-left: 50px !important;
+        }
 
-.button1-vermais:hover {
-background-color: #0000; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #fff;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
-.ver-mais{
-padding: 0;
-text-align: center;
-align-content: center;
-align-items: center;
-}
+        .titulo-banner {
+            text-align: left;
+            padding-top: 7% !important;
+            padding-left: 11% !important;
+            line-height: 55px !important;
+            font-size: 37px !important;
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+        }
+        .button{
+        padding: 16px 58px;
+        }
 
-.img-banner img{
-width: 100%;
-padding-top: 0;
-/* padding-left: 50px; */
-padding-left: 0;
-}
+        .banner{
+        width: 100%;
+        height: 430px;
+        padding-left: 43px;
+        /* display: table-row-group; */
+        padding-top: 60px;
+        }
 
-.footer .rede-social{
-    background-color: #1D1D1D;
-    align-content: center;
-    align-items: center;
-    -moz-box-align: center;
-    padding-left: 0 !important;
-    padding-top:55px;
-  }
-  
-  .footer .logo-footer{
-    background-color: #1D1D1D;
-    align-content: center;
-    align-items: center;
-    -moz-box-align: center;
-    padding-left: 0 !important;
-    padding-top:55px;
-  }
+        .banner .titulo{
+        font-size: 35px;
+        line-height: 45px;
+        }
 
-.rede-social img{
-width: 10%;
-}
+        .row-2{
+        display: block;
+        }
 
-.footer .logo-footer{
-padding: 10px;
-text-align: center;
-padding-top: 40px;
-}
+        .button-projeto {
+        border: none;
+        color: #ddd;
+        padding: 1px 65px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+        }
 
-.footer .logo-footer img{
-width: 30%;
-}
+        .button1-projeto {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+        }
 
-.no-show-mobile{
-display: none;
-}
+        .button1-projeto:hover {
+        background-color: #0B342C; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+        }
 
-.hero-image .row{
-padding-right: 0;
-padding-left: 0;
-margin: 0;
-}
+
+        .button-vermais {
+        border: none;
+        padding: 30px 80px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .button1-vermais {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #24AE91; 
+        border: 2px solid #24AE91;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+        }
+
+        .button1-vermais:hover {
+        background-color: #0000; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #fff;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+        }
+        .ver-mais{
+        padding: 0;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        }
+
+        .img-banner img{
+        width: 100%;
+        padding-top: 0;
+        /* padding-left: 50px; */
+        padding-left: 0;
+        }
+
+        .footer .rede-social{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 0 !important;
+        padding-top:55px;
+    }
+    
+    .footer .logo-footer{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 0 !important;
+        padding-top:55px;
+    }
+
+        .rede-social img{
+        width: 10%;
+        }
+
+        .footer .logo-footer{
+        padding: 10px;
+        text-align: center;
+        padding-top: 40px;
+        }
+
+        .footer .logo-footer img{
+        width: 30%;
+        }
+
+        .no-show-mobile{
+        display: none;
+        }
+
+        .hero-image .row{
+        padding-right: 0;
+        padding-left: 0;
+        margin: 0;
+        }
 
 }  
 
 
 
-::-webkit-scrollbar{
+    ::-webkit-scrollbar{
     width: 10px;
     }
     
@@ -581,9 +589,10 @@ margin: 0;
     
     .texto{
         padding: 100px 130px;
-        line-height: 32px;
+        line-height: 42px;
         background-color: #272727;
         font-weight: 700 !important;
+        text-align: justify;
         font-size:16px;
         font-family: 'Lato', sans-serif !important;
         color: #fff;

@@ -37,17 +37,20 @@
         $sql1 = "DELETE FROM tb_cadastros WHERE ID = '$id_user'";
         $res1 = mysqli_query($conexao, $sql1);
 
-        session_unset();
-        session_destroy();
+        $sql2 = "DELETE FROM tb_projetos WHERE ID_Usuario = '$id_user'";
+        $res2 = mysqli_query($conexao, $sql2);
+
+
+        $linhas = mysqli_affected_rows($conexao);
+
+        if($linhas == 1){
+            $mensagem = "Conta excluída com sucesso!";
+        }
+        else{
+            $mensagem = "Sua conta não foi excluída!";
+        }
+
         
-
-        $mensagem = "Conta excluída com sucesso";
-        // header('Location: ../login.php');
-
-        mysqli_close($conexao);
-    }
-
-    // Dados
     
     
 ?>
@@ -88,11 +91,18 @@
             </p>
 
             <div class="imagem">
-                <img src="../img/excluir.png">
+                <img src="../img/excluir.png" alt="logo"/>
             </div>
 
             <p class="obrigado">
-                Obrigado por fazer parte dessa jornada conosco!
+                <?php
+                if($mensagem == "Conta excluída com sucesso!"){
+                    echo "Obrigado por fazer parte dessa jornada conosco!";
+                }
+                else{
+                    echo "Tente novamente mais tarde!";
+                }
+                ?>
             </p>
 
                 <br /><br />
@@ -112,3 +122,14 @@
      </body>
 
 </html>
+<?php
+
+    session_unset();
+    session_destroy();
+        
+
+    mysqli_close($conexao);
+}
+
+
+    ?>

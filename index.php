@@ -1,15 +1,28 @@
+<?php
+
+  $arquivo = fopen("contador.txt", "r");
+  $cont = fread($arquivo, 21); //999 999 999 999 999 999 999
+  $cont++;
+
+  $arquivo = fopen("contador.txt", "w");
+  fwrite($arquivo, $cont);
+
+  fclose($arquivo);
+
+?>
+
 <!DOCTYPE html>
   <html>
     <head>
-      <!--Import Google Icon Font-->
       <meta charset="utf-8">
-      <title>Erro 404 | JACI</title>
+      <title>Seja bem-vindo(a)! | JACI</title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
+      <!-- <link rel="icon" href="img/logo-preta-preenchida.png" type="image/png" /> -->
       
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="author" content="Renata de Castro M. - EQUIPE SOL">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <link rel="stylesheet" href="css/style-404.css">
+      <link rel="stylesheet" href="css/style-splash.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -33,19 +46,28 @@
 
         <div class="row">
             <div class="col-sm-6">
-                <img src="img/astronauta.png" class="splash-img" alt="astronauta"/>
+                <img src="img/splash-img.png" class="splash-img no-show-mobile" alt="splash image"/>
             </div>
 
             <div class="col-sm-6 right-col">
                 <div class="right">
-                <img class="logo-right" src="img/logo-black.png" alt="logo" /><br />
-                <img class="right-404" src="img/404.png" alt="404"/><br />
-                Página não encontrada!<br /><br />
+                <img src="img/logo-black.png" class="logo-splash" alt="logo preta"/><br />
+                <img src="img/splash-img.png" class="splash-img no-show-desktop" alt="personagem"/>
+                Sua plataforma de estudos<br />online!<br /><br />
+                
                 <a href="header.php">
-                <button class="button button1">VOLTAR PARA A PLATAFORMA</button><br />
+                <button class="button button1">ACESSAR A PLATAFORMA</button><br />
                 </a>
 
+                <a href="cadastro.php">
+                <button class="button button1">CADASTRAR</button>
+                </a>
 
+                <p class="acessos">
+                  <?php
+                    echo "Quantidade de acessos: $cont ❤";
+                  ?>
+                </p>
                 </div>
             </div>
           </div>

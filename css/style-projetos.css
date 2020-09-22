@@ -17,6 +17,13 @@ body{
   
 
     @media screen and (max-width: 700px){
+
+        .projeto {
+            background-color: #5EC7A7;
+            margin: 10px 0 !important;
+            /* border-radius: 40px; */
+            padding: 50px 50px;
+        }
         
         .nav-wrapper .brand-logo img{
             width: 40%;
@@ -81,11 +88,12 @@ text-align: left !important;
 padding-top: 1% !important;
 color: #000 !important;
 padding-right: 11%;
-max-width: 250px;
+max-width: 100%;
 line-height: 32px;
-font-weight: 900 !important;
+font-weight: 600 !important;
 font-size:25px;
-font-family: 'Lato', sans-serif !important;
+/* font-family: 'Lato', sans-serif !important; */
+font-family: 'Josefin Sans', sans-serif !important;
 letter-spacing: 1px;
 }
 
@@ -402,7 +410,7 @@ height: 400px !important;
     line-height: 37px;
     text-align: left !important;
     padding-right: 0;
-    padding-left: 50px !important;
+    padding-left: 0px !important;
 }
 
 .titulo-banner {
@@ -576,7 +584,7 @@ margin: 0;
     
     .texto{
         padding: 100px 130px;
-        line-height: 32px;
+        line-height: 38px;
         font-weight: 700 !important;
         font-size:16px;
         font-family: 'Lato', sans-serif !important;

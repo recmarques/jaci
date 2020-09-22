@@ -8,7 +8,7 @@
   
     .mensagem{
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 900;
         text-transform: uppercase;
     }
@@ -22,7 +22,7 @@
     }
 
     .cadastro-sucesso{
-        width: 450px;
+        width: 500px;
         background: #5EC7A7;
         height: 550px;
         text-align: center;
@@ -196,6 +196,7 @@
     @media screen and (max-width: 700px){
         body{
             min-height: 100vh;
+            background-image: url("../img/background-image-login.png") !important;
             background-color: #24AE91 !important;
             font-family: 'Josefin Sans', sans-serif;
         }
@@ -241,8 +242,8 @@
         .cadastro-sucesso{
             width: 100%;
             background: #24AE91;
-            height: 600px;
-            padding: 70px 40px !important;
+            height: 585px;
+            padding: 40px 40px !important;
             border-radius: 10px;
             position: absolute;
             /* left: 50%; */

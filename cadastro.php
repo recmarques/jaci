@@ -32,8 +32,8 @@
       
       <form name="f_cadastro" action="controller/cadastro.php" method="post" class="login-form"> 
       
-			<img src="img/jaci.png" class="no-show-mobile"/>
-			<img src="img/logo-black.png" class="no-show-desktop"/>
+			<img src="img/jaci.png" class="no-show-mobile" alt="logo"/>
+			<img src="img/logo-black.png" class="no-show-desktop" alt="logo"/>
             <br /><p class="login">Faça seu cadastro</p>
 
 			<div class="txtb">
@@ -77,6 +77,8 @@
 
 
       <script>
+
+	
 
 // function ValidarSenha(){
 // 	var text;

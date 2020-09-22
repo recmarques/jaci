@@ -3,6 +3,8 @@
   padding: 0;
   
 }
+
+
 .header-nav{
   height: 85px;
   background: #24AE91;
@@ -62,15 +64,17 @@
   color: white;
 }
 
-.show-menu-btn,.hide-menu-btn{
+.show-menu-btn,.hide-menu-btn img{
   transition: 0.4s;
   font-size: 30px;
   cursor: pointer;
   display: none;
 }
-.show-menu-btn{
+
+
+/* .show-menu-btn{
   float: right;
-}
+} */
 .show-menu-btn i{
   line-height: 100px;
 }
@@ -107,20 +111,21 @@
 
 
 @media screen and (max-width:800px) {
-  .show-menu-btn,.hide-menu-btn{
+  .show-menu-btn,.hide-menu-btn img{
     display: block;
   }
 
  
   .logo-left img{
     width: 32%;
+    padding-left: 20px !important;
   }
 
   .header-nav{
     height: 75px;
    
   }
-  
+
 
   .activate{
      text-decoration: underline !important;

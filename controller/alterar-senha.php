@@ -12,52 +12,36 @@
         echo "Falha na conexão: ".mysqli_connect_error();
     endif;
     mysqli_set_charset($conexao, "utf8");
-
-
-    // verificando último ID cadastrado
-	$sql1 = "SELECT * FROM tb_cadastros";
-	$res1 = mysqli_query($conexao, $sql1);
-    $vreg;
-    $maior = 0;
-					
-	while($vreg = mysqli_fetch_row($res1)){
-        $ID = $vreg[0];
-        
-        if($ID > $maior){
-            $maior = $ID;
-        }
-		
-    }
-
     
-    //$vcod = rand(1, 999999999999999);
     
-    $vcod = $maior + 1;
-
-    $vnome = $_POST["nome"];
+    
     $vemail = $_POST["email"];
     $vcurso = $_POST["curso"];
-    $vsenha = $_POST["senha"];
-    $vsenha2 = $_POST["senha2"];
+    $vnovasenha = $_POST["senha"];
 
-
-    if($vsenha == $vsenha2){
-    $sql = "INSERT INTO tb_cadastros
-    VALUES ($vcod, '$vnome', '$vemail', '$vcurso', '$vsenha')";
-    $res = mysqli_query($conexao, $sql);
-
+    $sql1 = "SELECT * FROM tb_cadastros WHERE email = '$vemail' AND curso = '$vcurso'";
+    $res = mysqli_query($conexao, $sql1);
     $linhas = mysqli_affected_rows($conexao);
 
     if($linhas == 1){
-        $mensagem = "Cadastro feito com sucesso!";
+
+        $sql2 = "UPDATE tb_cadastros SET senha = '$vnovasenha' WHERE email = '$vemail' AND curso = '$vcurso'";
+        $res = mysqli_query($conexao, $sql2);
+
+        $linhas = mysqli_affected_rows($conexao);
+
+        if($linhas == 1){
+            $mensagem = "Sua senha foi atualizada com sucesso!";
+        }
+        else{
+            $mensagem = "Falha na alteração da senha!";
+        }
     }
-    else{
-        $mensagem = "Falha na gravação do cadastro!";
+    else {
+        $mensagem = "Não foi encontrado nenhum registro com este e-mail e curso";
     }
+
     mysqli_close($conexao);
-    } else{
-        $mensagem = "Senhas digitadas não são iguais!";
-    }
 
 ?>
 
@@ -73,7 +57,7 @@
         
             <link rel="icon" href="../img/favicon.png" type="image/png" />
         
-            <link rel="stylesheet" href="style-sucesso.css">
+            <link rel="stylesheet" href="style-senha.css">
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
             <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -105,7 +89,7 @@
                 </a>
                 <br />
 
-                <a href="../cadastro.php">
+                <a href="../senha.php">
                     <input type="submit" class="logbtn" value="VOLTAR">
                 </a>
     
