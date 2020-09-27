@@ -72,21 +72,21 @@
         $linhas = mysqli_affected_rows($conexao);
 
         if($linhas == 1){
-            $mensagem = "Cadastro feito <strong>com sucesso!</strong>";
+            $mensagem = "Cadastro feito com sucesso!";
         }
         else{
-            $mensagem = "Falha na <strong>gravação do projeto!</strong>";
+            $mensagem = "Falha na gravação do projeto!";
         }
 
     }
 
-    mysqli_close($conexao);
+    
 
 ?>
 
 
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -653,6 +653,48 @@ transition: 0.5s;
 }
 
 
+@media screen and (max-width: 700px){
+.form{
+    background-color: #1F1F1F;
+    margin: auto;
+    height: 480px;
+    position: absolute;
+    top: 44%;
+    left: 36%;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -1;
+    width: 75%;
+    padding: 10px 30px;
+    border-bottom: solid 20px #1F9E84;
+
+}
+
+.form-cadastro {
+    float: right;
+    padding-right: 50px;
+    padding-top: 10px;
+    width: 100%;
+    color: #DFDFDF;
+}
+.mensagem {
+    padding: 39px 0px 0 0;
+    font-size: 27px;
+    text-align: left;
+}
+
+.form .titulo {
+    float: left;
+    padding-left: 50px;
+    padding-top: 50px;
+    color: #051915;
+    font-size: 67px;
+    width: 430px;
+    text-align: left;
+}
+
+}
     </style>
   </head>
   <body>
@@ -666,9 +708,9 @@ transition: 0.5s;
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-<li><a class="active" href="../header.php">INÍCIO</a></li>
+<li><a href="../header.php">INÍCIO</a></li>
 <li><a href="./../projetos.php">PROJETOS</a></li>
-<li><a href="./../criar-projeto.php">CRIAR PROJETO</a></li>
+<li><a class="active" href="./../criar-projeto.php">CRIAR PROJETO</a></li>
 <!-- <li><a href="#">Feedback</a></li> -->
 <?php 
                 if(isset($_SESSION['logado'])){
@@ -691,7 +733,14 @@ transition: 0.5s;
 <div class="form">
     <div class="titulo"><p> 
     <?php
-                echo $mensagem;
+                if($mensagem == 'Falha na gravação do projeto!'){
+                  // echo $vcod."".$vtitulo."".$vdescricao;
+                echo "Falha na <strong>gravação do projeto!</strong>";
+              
+                }
+                else{
+                  echo "Cadastro <strong>feito com sucesso!</strong>";
+                }
                 ?></p>
       <!-- <div class="descricao">
           Preencha os campos a seguir para adicionar um novo projeto e ajudar um aluno!
@@ -703,7 +752,7 @@ transition: 0.5s;
         if($mensagem == 'Falha na gravação do projeto!'){
           // echo $vcod."".$vtitulo."".$vdescricao;
         echo "Infelizmente não foi possível cadastrar seu projeto! Tente novamente!";
-    }
+      }
     else{
         echo "Obrigado por compartilhar seu conhecimento com todos!";
     }
@@ -737,3 +786,7 @@ transition: 0.5s;
 </div>
 </body>
 </html>
+<?php
+
+mysqli_close($conexao);
+?>

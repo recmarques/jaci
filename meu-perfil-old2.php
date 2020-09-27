@@ -8,9 +8,8 @@
 	$db_name = "jacidb";
 	
 	$conexao = mysqli_connect($servername, $username, $password);
-  mysqli_select_db($conexao, $db_name);
-  
-	$id;
+	mysqli_select_db($conexao, $db_name);
+	
 	if(mysqli_connect_error()):
 		echo "Falha na conexão: ".mysqli_connect_error();
 	endif;
@@ -45,7 +44,7 @@
     }
     }
 
-  
+    mysqli_close($conexao);
     
 ?>
 
@@ -83,7 +82,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="css/style-perfil.css">
+      <link rel="stylesheet" href="css/style-perfil-old2.css">
   
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       
@@ -99,16 +98,28 @@
 
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+      <link rel="icon" href="img/favicon.png" type="image/png" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
    
- 
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      
     <style>
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -275,12 +286,6 @@ border-radius: 3px;
 display: none;
 }
 
-      .popup{
-          position: static !important;
-          width: 100%;
-					
-        }
-
 }  
 
 ::-webkit-scrollbar{
@@ -303,14 +308,10 @@ border-radius: 3px;
 
 
 body{
-  background-color: #353535 !important
+  background-color: #1D1D1D !important;
 }
 
 
-/* 
-body{
-  background-color: #1D1D1D !important;
-} */
 
   .not-activate{
       color: #5EC7A7;
@@ -455,20 +456,19 @@ width: 100% !important;
 
         .popup{
 					position: fixed;
-					top: 79px; bottom: 0; 
+					top: 15px; bottom: 0; 
 		      right: 15px;
 					margin: auto;
-					width: 645px;
-					height: 515px;
+					width: 480px;
+					height: 450px;
           padding: 40px;
-          color: black;
+
 					border: solid 1px #4c4d4f;
 					background: #5EC7A7;
 					display: none;
-          font-size: 19px;
+          font-size: 17px;
           text-align: center;
-          /* font-family: 'Poppins', sans-serif; */
-          font-family: 'Source Sans Pro', sans-serif;
+          font-family: 'Poppins', sans-serif;
         }
         
         /* .popup{
@@ -495,8 +495,7 @@ width: 100% !important;
           padding-top: 10px;
           padding-bottom: 10px;
           font-weight: bold;
-          font-size: 25px;
-          font-weight: bold;
+          font-size: 20px;
           text-transform: uppercase;
           font-family: 'Josefin Sans', sans-serif;
         }
@@ -510,7 +509,6 @@ width: 100% !important;
           text-decoration: none;
           display: inline-block;
           font-size: 10px;
-          text-decoration: none;
           margin: 4px 2px;
           cursor: pointer;
           font-family: 'Josefin Sans', sans-serif;
@@ -546,14 +544,12 @@ width: 100% !important;
           border: 2px solid #000;
           font-family: 'Josefin Sans', sans-serif;
           transition: 0.3s;
-          text-decoration: none;
         }
 
         .button2:hover {
           background-color: #0B342C; 
           font-weight: 600;
           color: #fff; 
-          text-decoration: none;
           border: 2px solid #000;
           font-family: 'Josefin Sans', sans-serif;
           transition: 0.5s;
@@ -584,37 +580,7 @@ width: 100% !important;
       color: white;
   }
 
-  .seus-projetos{
-    font-weight: 900;
-    font-family: 'Josefin Sans', sans-serif;
-}
 
-
-
-@media screen and (max-width: 700px){
-
-.banner{
-    width: 100%;
-    height: 300px;
-    padding-left: 30px;
-    padding-top: 30px !important;
-}
-
-
-.banner .titulo{
-font-size: 33px;
-line-height: 40px;
-}
-
-
-.banner .autor{
-font-size: 15px;
-margin: 0;
-text-transform: uppercase;
-padding: 0;
-line-height: 35px;
-}
-}
     </style>
   </head>
   <body>
@@ -652,99 +618,95 @@ line-height: 35px;
 </ul>
 </nav>
 
-   
+    <div class="row">
+            <div class="col-sm-3 info">
+                <div class="nome">
+                <?php
+                if(isset($_SESSION['logado'])){
+                  echo $dados['Nome'];
+                }
+                ?>
+                </div><br />
+                <div class="update">
+                    <a href="javascript: abrir();">
+                    Minhas informações
+                    </a>
+                </div>
+
+                <div class="update">
+                    <a href="#">
+                    Meus Projetos
+                    </a>
+                </div>
+
+                <div class="excluir">
+                    <a href="controller/excluir.php">
+                    EXCLUIR MINHA CONTA
+                    </a>
+                </div>
+            </div>
             <div class="col-sm-9 meus-projetos">
 
 
 
 
             <div>
-              <h3 class="seus-projetos"><strong>SEUS PROJETOS</strong></h3>
-            <?php
-
-            
-                $sql1 = "SELECT * FROM tb_projetos WHERE ID_Usuario = '$id' ORDER BY ID DESC";
-            
-                $res1 = mysqli_query($conexao, $sql1);
-                
-                if (!(mysqli_num_rows($res1)==0)) {
-                  
-               
-                while($vreg = mysqli_fetch_row($res1)){
-
-                    $ID_Projeto = $vreg[0];
-
-                    $_SESSION['ID_Projeto'] = $ID_Projeto;
-
-                    $Titulo = $vreg[1];
-                    $Descricao = $vreg[2];
-                    $Palavras = $vreg[3];
-                    $Ano = $vreg[4];
-                    $Materia = $vreg[5];
-                    $Categoria = $vreg[6];
-                    $Conhecimento = $vreg[7];
-                    $Texto = $vreg[8];
-                    $ID_Usuario_Projeto = $vreg[9];
-
-                  
-
-    
-                    ?>
           
                       <div class="banner" style="background-color: #5EC7A7;">
-                      
                         <div class="titulo">
-                        <?php
-                          echo $Titulo;
-                        ?>
-                        </div>
-
-                        <div class="autor">
-                        <?php
-                          // echo "Seu projeto | ".$Ano. " | ".$Materia;
-                          echo $Ano. " | ".$Materia;
-                          
-                        ?>
+                        <!-- <?php
+                          echo $Titulo1;
+                        ?> -->A IMPORTÂNCIA DA FILOSOFIA
                         </div>
 
                         
-                      <!-- <a href="projeto.php?ID=<?php echo $ID_Projeto; ?>">
+                      <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
                       <button class="button-projeto button button1-projeto button2">VER MAIS</button>
-                      </a> -->
-
-                      <a style="text-decoration: none;" href="projeto.php?ID=<?php echo $ID_Projeto; ?>">
-                      <button class="button-projeto button button1-projeto button2">VER MAIS</button>
-                      </a>
-
-                      <a href="controller/editar-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/edit.png" alt="editar projeto" /></a>
-
-                      <a href="controller/excluir-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/delete.png" alt="excluir projeto"/></a>
-                      
-                    
-                      </div>
-                    
-                  <?php }}
-                  else{
-                    ?>
-
-                    <div class="banner" style="background-color: #5EC7A7;">
-                        <div class="titulo">
-                        Nenhum projeto cadastrado!
-                        </div>
-
-                        <div class="autor">
-                        CRIE UM PROJETO AGORA! CLIQUE NO BOTÃO ABAIXO.
-                        </div>
-                        
-                      <a href="criar-projeto.php">
-                      <button class="button-projeto button button1-projeto button2">CADASTRAR</button>
                       </a>
                     
                       </div>
 
-                  <?php
-                  } ?>
-                  
+                      <div class="banner" style="background-color: #5EC7A7;">
+                        <div class="titulo">
+                        <!-- <?php
+                          echo $Titulo1;
+                        ?> -->A IMPORTÂNCIA DA FILOSOFIA
+                        </div>
+
+                        
+                      <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
+                      <button class="button-projeto button button1-projeto button2">VER MAIS</button>
+                      </a>
+                    
+                      </div>
+
+                      <div class="banner" style="background-color: #5EC7A7;">
+                        <div class="titulo">
+                        <!-- <?php
+                          echo $Titulo1;
+                        ?> -->A IMPORTÂNCIA DA FILOSOFIA
+                        </div>
+
+                        
+                      <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
+                      <button class="button-projeto button button1-projeto button2">VER MAIS</button>
+                      </a>
+                    
+                      </div>
+
+                      <div class="banner" style="background-color: #5EC7A7;">
+                        <div class="titulo">
+                        <!-- <?php
+                          echo $Titulo1;
+                        ?> -->A IMPORTÂNCIA DA FILOSOFIA
+                        </div>
+
+                        
+                      <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
+                      <button class="button-projeto button button1-projeto button2">VER MAIS</button>
+                      </a>
+                    
+                      </div>
 
           
           </div>
@@ -778,14 +740,8 @@ line-height: 35px;
               ?>
               <br /><br />
               <a href="#">
-                <button class="button button1" style="margin: auto; width: 285px;">EDITAR MINHAS INFORMAÇÕES</button>
+                <button class="button button1">EDITAR MINHAS INFORMAÇÕES</button>
               </a>
-
-              <div class="excluir">
-                    <a href="controller/excluir.php">
-                    EXCLUIR MINHA CONTA
-                    </a>
-                </div>
 
             </div>
 
@@ -855,8 +811,3 @@ line-height: 35px;
 
 </body>
 </html>
-<?php
-
-mysqli_close($conexao);
-
-?>

@@ -43,12 +43,12 @@
 
         $linhas = mysqli_affected_rows($conexao);
 
-        if($linhas == 1){
+        // if($linhas == 1){
             $mensagem = "Conta excluída com sucesso!";
-        }
-        else{
-            $mensagem = "Sua conta não foi excluída!";
-        }
+        // }
+        // else{
+        //     $mensagem = "Sua conta não foi excluída!";
+        // }
 
         
     

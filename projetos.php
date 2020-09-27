@@ -39,7 +39,7 @@
 
 
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -247,7 +247,8 @@ body{
     .projeto {
         background-color: #5EC7A7;
             margin: 10px 0 !important;
-        padding: 50px 50px;
+        /* padding: 50px 50px; */
+        padding: 40px 20px !important;
         width: 100% !important;
     }
 
@@ -854,8 +855,8 @@ input[type=text]:not(.browser-default) {
                 
             </div>
 
-            <!-- <div class="txtb" style="float:left;padding-left: 10px;">
-                <input type="password" placeholder="Senha" id="senha" name="senha" required>
+            <!-- <div class="txtb" style="float:left;">
+                <input type="text" placeholder="Palavra-chave" name="palavra" id="palavra" size="45" maxlength="30" required>
                 
             </div> -->
 
@@ -878,10 +879,10 @@ input[type=text]:not(.browser-default) {
 
     if(isset($_POST['btn-entrar'])){
         $palavra = $_POST['palavra'];
-        $sql1 = "SELECT * FROM tb_projetos WHERE Palavras LIKE '%$palavra%'";
+        $sql1 = "SELECT * FROM tb_projetos WHERE Palavras LIKE '%$palavra%' OR Titulo LIKE '%$palavra%' OR Materia LIKE '%$palavra%'";
     }
     else{
-        $sql1 = "SELECT * FROM tb_projetos";
+        $sql1 = "SELECT * FROM tb_projetos ORDER BY ID DESC;";
     }
     
     $res1 = mysqli_query($conexao, $sql1);

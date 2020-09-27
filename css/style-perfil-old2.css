@@ -294,18 +294,18 @@ color: black;
 text-align: left;
 padding-left: 4%;
 font-size: 40px;
-height: 280px;
+height: 230px;
 padding-top: 4%;
 width: 50%;
 font-family: 'Josefin Sans', sans-serif;
-margin: 15px 0 15px 0;
+margin: 0 0 15px 0;
 }
 
 .banner .titulo{
 color: black;
 text-align: left;
 font-weight: 700;
-max-width: 90%;
+max-width: 100%;
 font-size: 40px;
 line-height: 40px;
 text-transform: uppercase;
@@ -314,7 +314,6 @@ text-transform: uppercase;
 .banner .autor{
 font-size: 15px;
 margin: 0;
-text-transform: uppercase;
 padding: 0;
 }
 
@@ -374,29 +373,29 @@ width: 90%;
 
 @media screen and (max-width: 700px){
 
-    .hero-image{
-        height: 640px;
-    }
+.hero-image{
+height: 640px;
+}
 
-    .bem-vindo{
-        font-size: 23px;
-        line-height: 37px;
-        text-align: center !important;
-        padding-right: 0;
-        padding-left: 0;
-    }
+.bem-vindo{
+font-size: 23px;
+line-height: 37px;
+text-align: center !important;
+padding-right: 0;
+padding-left: 0;
+}
 
-    .button{
-        padding: 16px 58px;
-    }
+.button{
+padding: 16px 58px;
+}
 
-    .banner{
-        width: 100%;
-        height: 300px;
-        padding-left: 30px;
-        /* display: table-row-group; */
-        padding-top: 30px !important;
-    }
+.banner{
+width: 100%;
+height: 300px;
+padding-left: 43px;
+/* display: table-row-group; */
+padding-top: 60px;
+}
 
 .banner .titulo{
 font-size: 35px;
@@ -559,8 +558,8 @@ display: none;
 
     .meus-projetos{
         background-color: #353535;
-        height: 100% !important;
-        width: 100% !important;
+        height: 100%;
+        padding: 15px;
         color: white;
         margin: 0;
     }
@@ -596,66 +595,24 @@ display: none;
     }
 
 
-     .excluir{
+    .info .excluir{
         /* padding: 300px 60px; */
-       padding-top: 50px;
-        font-family: 'Josefin Sans', sans-serif;
+        padding-top: 300px;
         text-transform: uppercase;
         font-weight: 900;
         text-decoration: none;
-        color: #000000;
+        color: #24AE91;
     }
 
-     .excluir a{
+    .info .excluir a{
         text-transform: uppercase;
         font-weight: 900;
         text-decoration: none;
-
-        font-size: 14px;
-        color: #ffff !important;
+        color: #24AE91;
     }
 
 
-     .excluir a:hover{
-        color: #1b9278 !important;
-        transition: 0.7s;
-        text-decoration: none;
+    .info .excluir a:hover{
+        color: #1b9278;
+        transition: 0.5s;
     }
-
-    
-@media screen and (max-width: 700px){
-
-
-    .no-show-mobile{
-        display: none;
-    }
-    
-    .popup{
-        position: static !important;
-        width: 100% !important;
-                        
-    }
-
-    .excluir a{
-        text-transform: uppercase;
-        font-weight: 900;
-        text-decoration: none;
-        
-        font-size: 14px;
-        color: #ffff !important;
-    }
-        
-        
-    .excluir a:hover{
-        color: #1b9278 !important;
-        transition: 0.7s;
-        text-decoration: none;
-    }
-        
-}  
-
-
-.seus-projetos{
-    font-weight: 900;
-    font-family: 'Josefin Sans', sans-serif;
-}

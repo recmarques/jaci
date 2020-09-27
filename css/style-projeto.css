@@ -115,11 +115,11 @@ body{
 
     .titulo-banner{
         text-align: left;
-        padding-top: 2% !important;
+        padding-top: 1% !important;
         color: #000;
         padding-left: 11% !important;
         line-height: 70px;
-        max-width: 971px !important;
+        max-width: 1000px !important;
         font-size:60px;
         font-family: 'Josefin Sans', sans-serif;
         text-transform: uppercase;

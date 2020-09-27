@@ -47,7 +47,7 @@
 			</div>
 
 			<div class="txtb">
-				<input type="text" placeholder="Curso" name="curso" id="curso" minlength="2" maxlength="15">
+				<input type="text" placeholder="Curso" name="curso" id="curso" minlength="2" maxlength="15" required>
 				<span data-placeholdr="Curso"></span>
 			</div>
 

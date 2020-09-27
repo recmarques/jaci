@@ -20,6 +20,7 @@
 	
 	// sessão
 	session_start();
+	
 	$resultado;
 	$sql;
 	$dados;
@@ -29,6 +30,11 @@
 		$erros = array();
 		$email = mysqli_escape_string($conexao, $_POST['email']);
 		$senha = mysqli_escape_string($conexao, $_POST['senha']);
+
+		// session_unset();
+
+		// session_destroy();
+		// session_start();
 		
 		if(empty($email) or empty($senha)){
 			$erros[] = "O campo e-mail/senha precisa ser preenchido";

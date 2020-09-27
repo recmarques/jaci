@@ -85,7 +85,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Projetos disponíveis | JACI</title>
+    <title><?php echo $Titulo; ?> | JACI</title>
     <meta charset="utf-8">
       <title><?php echo $_SESSION['Titulo']." | JACI"; ?></title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
@@ -396,7 +396,7 @@ body{
     }
 
     .button1:hover {
-        background-color: #24AE91; 
+        background-color: #1d1d1d; 
         font-weight: 600;
         color: #fff; 
         border: 2px solid #fff;
@@ -794,8 +794,10 @@ body{
     
 
     <div class="go-up">
+       
+        <?php if(isset($_SESSION['logado'])){ ?>
         <div class="go-up-buttons">
-            <a href="avaliar.php">
+            <a href="avaliar.php" style="text-decoration: none;">
                 <button class="button-projeto button button1-projeto button1">AVALIAR</button>
             </a>
 
@@ -803,6 +805,8 @@ body{
                 <button class="button-projeto button button1-projeto button1">DENUNCIAR</button>
             </a>
         </div>
+        <?php } ?>
+        
         <a href="#topo">
         <img src="img/up.png" alt="voltar para o topo" alt="para cima"/>
         </a>

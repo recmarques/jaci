@@ -313,7 +313,7 @@
 
 
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+
 <html lang="en" dir="ltr">
   <head>
   <meta charset="utf-8">
@@ -1102,7 +1102,7 @@ border-radius: 3px;
 
           <div class="autor">
           <?php
-            echo $Nome1." | ".$Ano1. " | ".$Materia1;;
+            echo $Nome1." | ".$Ano1. " | ".$Materia1;
             
           ?>
           </div>

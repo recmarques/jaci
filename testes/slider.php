@@ -6,7 +6,7 @@
 
 
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

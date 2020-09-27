@@ -56,7 +56,7 @@
     }
     mysqli_close($conexao);
     } else{
-        $mensagem = "Senhas digitadas não são iguais!";
+        $mensagem = "Senhas informadas não são iguais!";
     }
 
 ?>
