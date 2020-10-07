@@ -12,20 +12,20 @@
   <html>
     <head>
      
-      <meta charset="utf-8">
       <title>Cadastro | JACI</title>
-      <link rel="icon" href="img/favicon.png" type="image/png" />
-     
-      <link rel="stylesheet" href="css/style-cadastro.css">
       
+      <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
       
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      
+	  <link rel="icon" href="img/favicon.png" type="image/png" />
+      <link rel="stylesheet" href="css/style-cadastro.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
+     
+	  <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+      
+      
     </head>
 
     <body>
@@ -79,21 +79,20 @@
       <script>
 
 	
+	// function ValidarSenha(){
+	// 	var text;
+	// 	var senha = document.getElementsByName('senha').value;
+	// 	var senha2 = document.getElementsByName('senha2').value;
 
-// function ValidarSenha(){
-// 	var text;
-// 	var senha = document.getElementsByName('senha').value;
-// 	var senha2 = document.getElementsByName('senha2').value;
+	// 	if(senha!= senha2) {
+	// 		   text = "Senhas diferentes!";
+	// 	}
 
-// 	if(senha!= senha2) {
-// 		   text = "Senhas diferentes!";
-// 	}
+	// 	senha.onchange = validatePassword;
+	//    senha2.onkeyup = validatePassword;
 
-// 	senha.onchange = validatePassword;
-//    senha2.onkeyup = validatePassword;
-
-//    document.getElementById("demo").innerHTML = text;
-//         }
+	//    document.getElementById("demo").innerHTML = text;
+	//         }
           
 	var util = {
 	f: {

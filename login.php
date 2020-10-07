@@ -2,9 +2,9 @@
 	
 	// testar criptografia https://www.youtube.com/watch?v=dVTwNJ9kR2g&list=PLwXQLZ3FdTVEITn849NlfI9BGY-hk1wkq&index=41
 
-
 	// conexao
 	// require_once '../conexao.inc';
+	
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
@@ -31,10 +31,6 @@
 		$email = mysqli_escape_string($conexao, $_POST['email']);
 		$senha = mysqli_escape_string($conexao, $_POST['senha']);
 
-		// session_unset();
-
-		// session_destroy();
-		// session_start();
 		
 		if(empty($email) or empty($senha)){
 			$erros[] = "O campo e-mail/senha precisa ser preenchido";
@@ -136,7 +132,6 @@
             <div class="bottom-text-login">
              Acesse sem login
           </div></a>
-            <!-- <input type="submit" class="logbtn" value="Acessar sem login"> -->
       </form> 
       
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->

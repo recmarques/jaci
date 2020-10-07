@@ -1,41 +1,38 @@
 <?php
 
-	// conexao
+    // conexao
     // require_once '../conexao.inc';
     $servername = "localhost";
-	$username = "root";
-	$password = "";
-	$db_name = "jacidb";
-	
-	$conexao = mysqli_connect($servername, $username, $password);
-	mysqli_select_db($conexao, $db_name);
-	
-	if(mysqli_connect_error()):
-		echo "Falha na conexão: ".mysqli_connect_error();
-	endif;
-	// include 'conexao.inc';
-	
-	// Sessão
+    $username = "root";
+    $password = "";
+    $db_name = "jacidb";
+    
+    $conexao = mysqli_connect($servername, $username, $password);
+    mysqli_select_db($conexao, $db_name);
+    
+    if(mysqli_connect_error()):
+      echo "Falha na conexão: ".mysqli_connect_error();
+    endif;
+    // include 'conexao.inc';
+    
+    // Sessão
     session_start();
     
     // Verificação
-    
     mysqli_set_charset($conexao, "utf8");
-    if(isset($_SESSION['logado'])){
+      if(isset($_SESSION['logado'])){
+        
         // header('Location: index.php');
         $id = $_SESSION['ID'];
         $sql = "SELECT * FROM tb_cadastros WHERE ID = '$id'";
         $res = mysqli_query($conexao, $sql);
 
         $dados = mysqli_fetch_array($res);
-
-        
+ 
       }
 
       $sql1 = "SELECT * FROM tb_projetos WHERE ID='1'";
       $res1 = mysqli_query($conexao, $sql1);
-
-
   
           $ID_Projeto1;
           $Titulo1;
@@ -55,7 +52,6 @@
           while($vreg = mysqli_fetch_row($res1)){
 
             $ID_Projeto1 = $vreg[0];
-
             $Titulo1 = $vreg[1];
             $Descricao1 = $vreg[2];
             $Palavras1 = $vreg[3];
@@ -79,11 +75,9 @@
           }
 
 
-          
 
       $sql2 = "SELECT * FROM tb_projetos WHERE ID='2'";
       $res2 = mysqli_query($conexao, $sql2);
-
 
       $ID_Projeto2;
       $Titulo2;
@@ -103,7 +97,6 @@
       while($vreg = mysqli_fetch_row($res2)){
 
         $ID_Projeto2 = $vreg[0];
-
         $Titulo2 = $vreg[1];
         $Descricao2 = $vreg[2];
         $Palavra2 = $vreg[3];
@@ -126,9 +119,9 @@
         }
       }
 
+
       $sql3 = "SELECT * FROM tb_projetos WHERE ID='3'";
       $res3 = mysqli_query($conexao, $sql3);
-
 
       $ID_Projeto3;
       $Titulo3;
@@ -148,7 +141,6 @@
       while($vreg = mysqli_fetch_row($res3)){
 
         $ID_Projeto3 = $vreg[0];
-
         $Titulo3 = $vreg[1];
         $Descricao3 = $vreg[2];
         $Palavra3 = $vreg[3];
@@ -171,9 +163,9 @@
         }
       }
 
+
       $sql4 = "SELECT * FROM tb_projetos WHERE ID='4'";
       $res4 = mysqli_query($conexao, $sql4);
-
 
       $ID_Projeto4;
       $Titulo4;
@@ -193,7 +185,6 @@
       while($vreg = mysqli_fetch_row($res4)){
 
         $ID_Projeto4 = $vreg[0];
-
         $Titulo4 = $vreg[1];
         $Descricao4 = $vreg[2];
         $Palavra4 = $vreg[3];
@@ -216,9 +207,9 @@
         }
       }
 
+
       $sql5 = "SELECT * FROM tb_projetos WHERE ID='5'";
       $res5 = mysqli_query($conexao, $sql5);
-
 
       $ID_Projeto5;
       $Titulo5;
@@ -238,7 +229,6 @@
       while($vreg = mysqli_fetch_row($res5)){
 
         $ID_Projeto5 = $vreg[0];
-
         $Titulo5 = $vreg[1];
         $Descricao5 = $vreg[2];
         $Palavra5 = $vreg[3];
@@ -261,9 +251,9 @@
         }
       }
 
+
       $sql6 = "SELECT * FROM tb_projetos WHERE ID='6'";
       $res6 = mysqli_query($conexao, $sql6);
-    
 
       $ID_Projeto6;
       $Titulo6;
@@ -283,7 +273,6 @@
       while($vreg = mysqli_fetch_row($res6)){
 
         $ID_Projeto6 = $vreg[0];
-
         $Titulo6 = $vreg[1];
         $Descricao6 = $vreg[2];
         $Palavra6 = $vreg[3];
@@ -314,737 +303,736 @@
 
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
-  <head>
-  <meta charset="utf-8">
+  <html lang="en" dir="ltr">
+    <head>
       <title>Página Inicial | JACI</title>
-      <link rel="icon" href="img/favicon.png" type="image/png" />
       
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="Renata de Castro M. - EQUIPE SOL">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta charset="utf-8">
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="css/style-home.css">
-      <!-- <link rel="stylesheet" href="testes/Responsive Navigation Menu/style.css"> -->
-      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      
-
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
       <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="css/style-home.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-   
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       
-    <style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+   
+      
+      <style>
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} 
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      } 
 
-body{
-    background: #1F9E84;
-}
+      body{
+          background: #1F9E84;
+      }
 
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 0px;
-    margin-top: 25px;
-    font-weight: 700;
-}
+      label {
+          display: inline-block;
+          max-width: 100%;
+          margin-bottom: 0px;
+          margin-top: 25px;
+          font-weight: 700;
+      }
 
-nav{
-  display: flex;
-  height: 80px;
-  width: 100%;
-  background: #23a78a;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  font-family: 'Josefin Sans', sans-serif;
-  flex-wrap: wrap;
-}
-nav .logo{
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
+      nav{
+          display: flex;
+          height: 80px;
+          width: 100%;
+          background: #23a78a;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 50px 0 100px;
+          font-family: 'Josefin Sans', sans-serif;
+          flex-wrap: wrap;
+      }
+      nav .logo{
+          color: #fff;
+          font-size: 35px;
+          font-weight: 600;
+      }
 
-nav .logo img{
-  width: 40%;
-  padding-top: 10px;
-}
+      nav .logo img{
+          width: 40%;
+          padding-top: 10px;
+      }
 
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 1;
-  list-style: none;
-}
-nav ul li{
-  margin: 0 5px;
-}
-nav ul li a{
-  color: #000;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  padding-right: 35px;
-    padding-left: 35px;
-    font-size: 14px;
-    font-weight: 700;
-    align-content: center;
-    text-align: center;
-}
-nav ul li a.active,
-nav ul li a:hover{
-  color: #fff;
-  text-decoration: none;
-  background-color: transparent;
-  /* background: #fff; */
-}
-nav .menu-btn i{
-  color: #fff;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-input[type="checkbox"]{
-  display: none;
-}
-@media (max-width: 1000px){
-  nav{
-    padding: 0 40px 0 50px;
-  }
-}
-@media (max-width: 920px) {
-  nav .menu-btn i{
-    display: block;
-  }
-  #click:checked ~ .menu-btn i:before{
-    content: "\f00d";
-  }
-  nav ul{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #24AE91;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul{
-    left: 0;
-  }
-  nav ul li{
-    width: 100%;
-    margin: 7px 0;
-  }
-  nav ul li a{
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a{
-    margin-left: 0px;
-  }
-  nav ul li a.active,
-  nav ul li a:hover{
-    background: none;
-    color: #fff;
-  }
-}
+      nav ul{
+          display: flex;
+          flex-wrap: wrap;
+          z-index: 1;
+          list-style: none;
+      }
 
-.no-show-desktop{
-  display: table;
-}
+      nav ul li{
+          margin: 0 5px;
+      }
+            
+      nav ul li a{
+          color: #000;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 500;
+          padding: 8px 15px;
+          border-radius: 5px;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          padding-right: 35px;
+          padding-left: 35px;
+          font-size: 14px;
+          font-weight: 700;
+          align-content: center;
+          text-align: center;
+      }
+            
+      nav ul li a.active,
+      nav ul li a:hover{
+          color: #fff;
+          text-decoration: none;
+          background-color: transparent;
+          /* background: #fff; */
+      }
 
-.no-show-mobile{
-  display: none;
-}
+      nav .menu-btn i{
+          color: #fff;
+          font-size: 30px;
+          cursor: pointer;
+          display: none;
+      }
+      input[type="checkbox"]{
+          display: none;
+      }
 
+      @media (max-width: 1000px){
+        nav{
+          padding: 0 40px 0 50px;
+        }
+      }
 
-::-webkit-scrollbar{
-width: 10px;
-}
+      @media (max-width: 920px) {
+        nav .menu-btn i{
+            display: block;
+        }
 
-::-webkit-scrollbar-track{
-border: 7px solid rgb(19, 19, 19);
-box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
-}
+        #click:checked ~ .menu-btn i:before{
+          content: "\f00d";
+        }
 
-::-webkit-scrollbar-thumb{
-background: linear-gradient(
-45deg,
-#98cec3,
-#98cec3
-);
-border-radius: 3px;
-}
+        nav ul{
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          background: #24AE91;
+          height: 100vh;
+          width: 100%;
+          text-align: center;
+          display: block;
+          transition: all 0.3s ease;
+        }
 
+        #click:checked ~ ul{
+          left: 0;
+        }
 
-.hero-image {
-background-color: #24AE91;
-height: 475px;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-margin: 0;
-}
+        nav ul li{
+          width: 100%;
+          margin: 7px 0;
+        }
 
-.hero-text {
-text-align: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-}
+        nav ul li a{
+          width: 100%;
+          margin-left: -100%;
+          display: block;
+          font-size: 20px;
+          transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
 
-.bem-vindo{
-text-align: right;
-padding-top: 10%;
-color: white;
-padding-right: 11%;
-line-height: 55px;
-font-size:31px;
-font-family: 'Poppins', sans-serif;
-letter-spacing: 1px;
-}
+        #click:checked ~ ul li a{
+          margin-left: 0px;
+        }
 
-.banner{
-text-align: right;
-padding-top: 8%;
-color: white;
-line-height: 60px;
-font-size:35px;
-font-family: 'Poppins', sans-serif;
-letter-spacing: 1px;
-}
+        nav ul li a.active,
+        nav ul li a:hover{
+          background: none;
+          color: #fff;
+        }
+      }
 
-.button {
-border: none;
-color: #ddd;
-padding: 1px 40px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+    .no-show-desktop{
+      display: table;
+    }
 
-.button1 {
-background-color: transparent; 
-font-weight: 800;
-color: #000; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+    .no-show-mobile{
+      display: none;
+    }
 
-.button1:hover {
-background-color: #0B342C; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
+    ::-webkit-scrollbar{
+      width: 10px;
+    }
 
+    ::-webkit-scrollbar-track{
+      border: 7px solid rgb(19, 19, 19);
+      box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
+    }
 
-.button-vermais {
-border: none;
-padding: 30px 80px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+    ::-webkit-scrollbar-thumb{
+      background: linear-gradient(
+      45deg,
+      #98cec3,
+      #98cec3
+      );
+      border-radius: 3px;
+    }
 
-.button1-vermais {
-background-color: transparent; 
-font-weight: 800;
-color: #24AE91; 
-border: 2px solid #24AE91;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+    .hero-image {
+      background-color: #24AE91;
+      height: 475px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      margin: 0;
+    }
 
-.button1-vermais:hover {
-background-color: #0000; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #fff;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
 
-.img-banner img{
-width: 100%;
-padding-top: 0;
-padding-left: 75px;
-}
+    .bem-vindo{
+      text-align: right;
+      padding-top: 10%;
+      color: white;
+      padding-right: 11%;
+      line-height: 55px;
+      font-size:31px;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 1px;
+    }
 
-@media screen and (min-width: 1400px){
-.img-banner img{
-width: 90%;
-padding-top: 0;
-padding-left: 150px;
-}
+    .banner{
+      text-align: right;
+      padding-top: 8%;
+      color: white;
+      line-height: 60px;
+      font-size:35px;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .button {
+      border: none;
+      color: #ddd;
+      padding: 1px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .button1 {
+      background-color: transparent; 
+      font-weight: 800;
+      color: #000; 
+      border: 2px solid #000;
+      font-family: 'Josefin Sans', sans-serif;
+      transition: 0.3s;
+    }
+
+    .button1:hover {
+      background-color: #0B342C; 
+      font-weight: 600;
+      color: #fff; 
+      border: 2px solid #000;
+      font-family: 'Josefin Sans', sans-serif;
+      transition: 0.5s;
+    }
 
 
+    .button-vermais {
+      border: none;
+      padding: 30px 80px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-family: 'Josefin Sans', sans-serif;
+    }
 
-.bem-vindo{
-text-align: right;
-padding-top: 8%;
-color: white;
-padding-right: 11%;
-line-height: 60px;
-font-size:40px;
-font-family: 'Poppins', sans-serif;
-letter-spacing: 1px;
-}
+    .button1-vermais {
+      background-color: transparent; 
+      font-weight: 800;
+      color: #24AE91; 
+      border: 2px solid #24AE91;
+      font-family: 'Josefin Sans', sans-serif;
+      transition: 0.3s;
+    }
+
+    .button1-vermais:hover {
+      background-color: #0000; 
+      font-weight: 600;
+      color: #fff; 
+      border: 2px solid #fff;
+      font-family: 'Josefin Sans', sans-serif;
+      transition: 0.5s;
+    }
+
+    .img-banner img{
+      width: 100%;
+      padding-top: 0;
+      padding-left: 75px;
+    }
+
+    @media screen and (min-width: 1400px){
+      .img-banner img{
+        width: 90%;
+        padding-top: 0;
+        padding-left: 150px;
+      }
+
+      .bem-vindo{
+        text-align: right;
+        padding-top: 8%;
+        color: white;
+        padding-right: 11%;
+        line-height: 60px;
+        font-size:40px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .button {
+        border: none;
+        color: #ddd;
+        padding: 4px 60px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1 {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto:hover {
+        background-color: #0B342C; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+      }
+
+      .footer{
+        background-color: #1D1D1D;
+        width: 100%;
+        height: 220px !important;
+      }
+
+      .footer .rede-social{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 110px;
+        padding-top: 25px;
+      }
+
+      .footer .logo-footer{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 120px;
+      }
 
 
-.button {
-border: none;
-color: #ddd;
-padding: 4px 60px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+      .footer .logo-footer img{
+        width: 55%;
+      }
 
-.button1 {
-background-color: transparent; 
-font-weight: 800;
-color: #000; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+      .rede-social img{
+        width: 70% !important;
+        padding-top: 10px;
+      }
 
+      .ver-mais{
+        padding-left: 45%;
+      }
 
-.button-projeto {
-border: none;
-color: #ddd;
-padding: 1px 40px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+      .button-vermais {
+        border: none;
+        padding: 30px 100px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
 
-.button1-projeto {
-background-color: transparent; 
-font-weight: 800;
-color: #000; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+      .button1-vermais {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #24AE91; 
+        border: 2px solid #24AE91;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
 
-.button1-projeto:hover {
-background-color: #0B342C; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
+  
 
+      
+        nav ul li a {
+          
+          font-size: 18px;
+          
+        }
+        nav {
+          display: flex;
+          height: 100px;
+        }
 
-.footer{
-background-color: #1D1D1D;
-width: 100%;
-height: 220px !important;
-}
+        nav .logo img {
+          width: 45%;
+          padding-top: 5px;
+        }
 
-.footer .rede-social{
-background-color: #1D1D1D;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-padding-left: 110px;
-padding-top: 25px;
-}
+        .banner .titulo {
+            color: black;
+            text-align: left;
+            font-weight: 700;
+            max-width: 510px;
+            font-size: 58px;
+            text-transform: uppercase;
+        }
+        .banner .autor {
+            font-size: 17px;
+            margin: 0;
+            text-transform: uppercase;
+            padding: 0;
+        }
 
-.footer .logo-footer{
-background-color: #1D1D1D;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-padding-left: 120px;
-}
+        .button-projeto {
+            
+            padding: 4px 65px;
+            
+        }
+    }
 
-
-.footer .logo-footer img{
-width: 55%;
-
-}
-
-.rede-social img{
-width: 70% !important;
-padding-top: 10px;
-}
-
-.ver-mais{
-padding-left: 45%;
-}
-
-.button-vermais {
-border: none;
-padding: 30px 100px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
-
-.button1-vermais {
-background-color: transparent; 
-font-weight: 800;
-color: #24AE91; 
-border: 2px solid #24AE91;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
-
-.banner .titulo {
+    .banner{
     color: black;
-    text-align: left;
-    font-weight: 700;
-    max-width: 700px !important;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-}
+      text-align: left;
+      padding-left: 80px;
+      font-size: 50px;
+      height: 450px;
+      padding-top: 80px;
+      width: 50%;
+      font-family: 'Josefin Sans', sans-serif;
+      margin: 0;
+    }
 
-.banner{
-color: black;
-text-align: left;
-padding-left: 80px;
-font-size: 50px;
-height: 450px;
-padding-top: 80px;
-width: 50%;
-font-family: 'Josefin Sans', sans-serif;
-margin: 0;
-}
+    .banner .titulo{
+      color: black;
+      text-align: left;
+      font-weight: 700;
+      max-width: 510px;
+      font-size: 50px;
+      text-transform: uppercase;
+    }
 
-.banner .titulo{
-color: black;
-text-align: left;
-font-weight: 700;
-max-width: 510px;
-font-size: 50px;
-text-transform: uppercase;
-}
+    .banner .autor{
+      font-size: 15px;
+      margin: 0;
+      text-transform: uppercase;
+      padding: 0;
+    }
 
-.banner .autor{
-font-size: 15px;
-margin: 0;
-text-transform: uppercase;
-padding: 0;
+    .row{
+      width: 100%;
+    }
 
-}
+    .row-2{
+      width: 100%;
+      display: -webkit-inline-box;
+      padding: 0;
+    }
 
-.row{
-width: 100%;
-}
+    .ver-mais{
+      height: 100px;
+      background-color: #1D1D1D;
+      width: 100%;
+      align-content: center;
+      align-items: center;
+      -moz-box-align: center;
+      padding-left: 42%;
+      padding-top: 5px;
+    }
 
-.row-2{
-width: 100%;
-display: -webkit-inline-box;
-padding: 0;
-}
+    .footer{
+      background-color: #1D1D1D;
+      width: 100%;
+      align-content: center;
+      align-items: center;
+      -moz-box-align: center;
+      height: 170px;
+    }
 
-.ver-mais{
-height: 100px;
-background-color: #1D1D1D;
-width: 100%;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-padding-left: 42%;
-padding-top: 5px;
-}
+    .footer .rede-social{
+      background-color: #1D1D1D;
+      align-content: center;
+      align-items: center;
+      -moz-box-align: center;
+      padding-left: 110px;
+      padding-top: 30px;
+    }
 
-.footer{
-background-color: #1D1D1D;
-width: 100%;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-height: 170px;
-}
+    .footer .logo-footer{
+      background-color: #1D1D1D;
+      align-content: center;
+      align-items: center;
+      -moz-box-align: center;
+      padding-left: 120px;
+    }
 
-.footer .rede-social{
-background-color: #1D1D1D;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-padding-left: 110px;
-padding-top: 30px;
-}
+    .footer .logo-footer img{
+      width: 65%;
+    }
 
-.footer .logo-footer{
-background-color: #1D1D1D;
-align-content: center;
-align-items: center;
--moz-box-align: center;
-padding-left: 120px;
+    .rede-social img{
+      width: 90%;
+    }
 
-}
+    @media screen and (max-width: 700px){
 
+      .hero-image{
+        height: 640px;
+      }
 
-.footer .logo-footer img{
-width: 65%;
+      .banner .autor{
+        line-height: 30px;
+        padding: 21px 0;
+      }
 
-}
+      .bem-vindo{
+        font-size: 23px;
+        line-height: 37px;
+        text-align: center !important;
+        padding-right: 0;
+        padding-left: 0;
+      }
 
-.rede-social img{
-width: 90%;
-}
+      .button{
+        padding: 16px 58px;
+      }
 
-@media screen and (max-width: 700px){
+      .banner{
+        width: 100%;
+        height: 430px;
+        padding-left: 43px;
+        /* display: table-row-group; */
+        padding-top: 60px;
+      }
 
-.hero-image{
-height: 640px;
-}
+      .banner .titulo{
+        font-size: 35px;
+        line-height: 45px;
+      }
 
-.banner .autor{
-  line-height: 30px;
-padding: 21px 0;
-}
+      .row-2{
+        display: block;
+      }
 
-.bem-vindo{
-font-size: 23px;
-line-height: 37px;
-text-align: center !important;
-padding-right: 0;
-padding-left: 0;
-}
+      .button-projeto {
+        border: none;
+        color: #ddd;
+        padding: 1px 65px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
 
-.button{
-padding: 16px 58px;
-}
+      .button1-projeto {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
 
-.banner{
-width: 100%;
-height: 430px;
-padding-left: 43px;
-/* display: table-row-group; */
-padding-top: 60px;
-}
+      .button1-projeto:hover {
+        background-color: #0B342C; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+      }
 
-.banner .titulo{
-font-size: 35px;
-line-height: 45px;
-}
+      .button-vermais {
+        border: none;
+        padding: 30px 80px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
 
-.row-2{
-display: block;
-}
+      .button1-vermais {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #24AE91; 
+        border: 2px solid #24AE91;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
 
-.button-projeto {
-border: none;
-color: #ddd;
-padding: 1px 65px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+      .button1-vermais:hover {
+        background-color: #0000; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #fff;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+      }
 
-.button1-projeto {
-background-color: transparent; 
-font-weight: 800;
-color: #000; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+      .ver-mais{
+        padding: 0;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+      }
 
-.button1-projeto:hover {
-background-color: #0B342C; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #000;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
+      .img-banner img{
+        width: 100%;
+        padding-top: 0;
+        /* padding-left: 50px; */
+        padding-left: 0;
+      }
 
+      .footer .rede-social{
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        padding: 20px;
+      }
 
-.button-vermais {
-border: none;
-padding: 30px 80px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 10px;
-margin: 4px 2px;
-cursor: pointer;
-font-family: 'Josefin Sans', sans-serif;
-}
+      .rede-social img{
+        width: 10%;
+      }
 
-.button1-vermais {
-background-color: transparent; 
-font-weight: 800;
-color: #24AE91; 
-border: 2px solid #24AE91;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.3s;
-}
+      .footer .logo-footer{
+        padding: 10px;
+        text-align: center;
+        padding-top: 40px;
+      }
 
-.button1-vermais:hover {
-background-color: #0000; 
-font-weight: 600;
-color: #fff; 
-border: 2px solid #fff;
-font-family: 'Josefin Sans', sans-serif;
-transition: 0.5s;
-}
-.ver-mais{
-padding: 0;
-text-align: center;
-align-content: center;
-align-items: center;
-}
+      .footer .logo-footer img{
+        width: 30%;
+      }
 
-.img-banner img{
-width: 100%;
-padding-top: 0;
-/* padding-left: 50px; */
-padding-left: 0;
-}
+      .no-show-mobile{
+        display: none;
+      }
 
-.footer .rede-social{
-text-align: center;
-align-content: center;
-align-items: center;
-padding: 20px;
-}
+      .hero-image .row{
+        padding-right: 0;
+        padding-left: 0;
+        margin: 0;
+      }
+    }  
 
-.rede-social img{
-width: 10%;
-}
+    ::-webkit-scrollbar{
+      width: 10px;
+    }
 
-.footer .logo-footer{
-padding: 10px;
-text-align: center;
-padding-top: 40px;
-}
+    ::-webkit-scrollbar-track{
+      border: 7px solid rgb(19, 19, 19);
+      box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
+    }
 
-.footer .logo-footer img{
-width: 30%;
-}
+    ::-webkit-scrollbar-thumb{
+      background: linear-gradient(
+      45deg,
+      #98cec3,
+      #98cec3
+      );
+      border-radius: 3px;
+    }
 
-.no-show-mobile{
-display: none;
-}
+    .hero-image strong{
+      font-weight: 600;
+    }
+   
+  </style>
+    </head>
+      <body>
+        <nav>
+          <div class="logo">
+            <a href="header.php">
+            <img src="img/logo-black.png" alt="logo"/></a>
+          </div>
+        <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
 
-.hero-image .row{
-padding-right: 0;
-padding-left: 0;
-margin: 0;
-}
+          <ul>
+            <li><a class="active" href="header.php">INÍCIO</a></li>
+            <li><a href="projetos.php">PROJETOS</a></li>
+            <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
+            <!-- <li><a href="#">Feedback</a></li> -->
 
-}  
-
-::-webkit-scrollbar{
-width: 10px;
-}
-
-::-webkit-scrollbar-track{
-border: 7px solid rgb(19, 19, 19);
-box-shadow: inset 0 0 2.5px 2px rgb(0,0,0,0.5);
-}
-
-::-webkit-scrollbar-thumb{
-background: linear-gradient(
-45deg,
-#98cec3,
-#98cec3
-);
-border-radius: 3px;
-}
-
-
-.hero-image strong{
-  font-weight: 600;
-}
-
-
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="header.php">
-        <img src="img/logo-black.png" alt="logo"/></a>
-    </div>
-<input type="checkbox" id="click">
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul>
-<li><a class="active" href="header.php">INÍCIO</a></li>
-<li><a href="projetos.php">PROJETOS</a></li>
-<li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-<!-- <li><a href="#">Feedback</a></li> -->
-<?php 
+          <?php 
                 if(isset($_SESSION['logado'])){
                   echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
                   echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
@@ -1059,18 +1047,20 @@ border-radius: 3px;
                 else{
                   echo "<li><a class=not-activate style=display:none href=logout.php>SAIR</a></li>";
                 }
-                ?>
-</ul>
-</nav>
+            ?>
+
+          </ul>
+
+        </nav>
 
 
-<div class="hero-image" id="hero-image">
-        <div class="row">
+        <div class="hero-image" id="hero-image">
+          <div class="row">
+
             <div class="col-sm-5 img-banner">
-
               <img src="img/img-banner.png" alt="personagem"/>
-
             </div>
+
             <div class="col-sm-7 bem-vindo">Seja bem-vindo(a),
               <?php 
                 if(isset($_SESSION['logado'])){
@@ -1078,20 +1068,21 @@ border-radius: 3px;
                 }
               ?>
               <br />
-                <strong>Qual material deseja acessar?</strong><br />
-               
-                <a href="projetos.php">
+
+              <strong>Qual material deseja acessar?</strong><br />
+
+              <a href="projetos.php">
                 <button class="button button1">VER PROJETOS</button>
-                </a>
-               
+              </a>
             </div>
+
+          </div>
         </div>
-        
-    </div>
     
 
-    <!-- PRIMEIRA LINHA -->
+      <!-- PRIMEIRA LINHA -->
       <div class="row-2">
+
       
         <div class="banner" style="background-color: #5EC7A7;">
           <div class="titulo">
@@ -1106,10 +1097,10 @@ border-radius: 3px;
             
           ?>
           </div>
+
           <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
-          <button class="button-projeto button button1-projeto button1">VER MAIS</button>
+            <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
-         
         </div>
 
         
@@ -1126,95 +1117,107 @@ border-radius: 3px;
             
           ?>
           </div>
+
           <a href="projeto.php?ID=<?php echo $ID_Projeto2; ?>">
-          <button class="button-projeto button button1-projeto button1">VER MAIS</button>
+            <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
         </div>
-    </div>
 
 
-    <!-- SEGUNDA LINHA -->
-    <div class="row-2">
-      <div class="banner" style="background-color: #A5FFE4;">
-        <div class="titulo">
-        <?php
-            echo $Titulo3;
-          ?>
         </div>
 
-        <div class="autor">
-        <?php
-            echo $Nome3." | ".$Ano3. " | ".$Materia3;
-            
-          ?>
-        </div>
-        <a href="projeto.php?ID=<?php echo $ID_Projeto3; ?>">
-          <button class="button-projeto button button1-projeto button1">VER MAIS</button>
+
+      <!-- SEGUNDA LINHA -->
+      <div class="row-2">
+
+
+        <div class="banner" style="background-color: #A5FFE4;">
+          <div class="titulo">
+          <?php
+              echo $Titulo3;
+            ?>
+          </div>
+
+          <div class="autor">
+          <?php
+              echo $Nome3." | ".$Ano3. " | ".$Materia3;
+              
+            ?>
+          </div>
+
+          <a href="projeto.php?ID=<?php echo $ID_Projeto3; ?>">
+            <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
-      </div>
+        </div>
 
       
-      <div class="banner" style="background-color: #86C3B1;">
+        <div class="banner" style="background-color: #86C3B1;">
+          <div class="titulo">
+          <?php
+              echo $Titulo4;
+            ?>
+          </div>
+
+          <div class="autor">
+          <?php
+              echo $Nome4." | ".$Ano4. " | ".$Materia4;;
+              
+            ?>
+          </div>
+
+          <a href="projeto.php?ID=<?php echo $ID_Projeto4; ?>">
+            <button class="button-projeto button button1-projeto button1">VER MAIS</button>
+          </a>
+        </div>
+
+
+      </div>
+
+
+      <!-- TERCEIRA LINHA -->
+      <div class="row-2 no-show-mobile">
+    
+        <div class="banner" style="background-color: #8EDDC5;">
+          <div class="titulo">
+          <?php
+                echo $Titulo5;
+              ?>
+          </div>
+
+          <div class="autor">
+          <?php
+                echo $Nome5." | ".$Ano5. " | ".$Materia5;;
+                
+              ?>
+          </div>
+          <a href="projeto.php?ID=<?php echo $ID_Projeto5; ?>">
+            <button class="button-projeto button button1-projeto button1">VER MAIS</button>
+          </a>
+      </div>
+
+  
+      <div class="banner" style="background-color: #5BBDA0;">
         <div class="titulo">
         <?php
-            echo $Titulo4;
-          ?>
+              echo $Titulo6;
+            ?>
         </div>
 
         <div class="autor">
         <?php
-            echo $Nome4." | ".$Ano4. " | ".$Materia4;;
-            
-          ?>
+              echo $Nome6." | ".$Ano6. " | ".$Materia6;;
+              
+            ?>
         </div>
-        <a href="projeto.php?ID=<?php echo $ID_Projeto4; ?>">
+        <a href="projeto.php?ID=<?php echo $ID_Projeto6; ?>">
           <button class="button-projeto button button1-projeto button1">VER MAIS</button>
-          </a>
-      </div>
-  </div>
-
-
-  <!-- TERCEIRA LINHA -->
-  <div class="row-2 no-show-mobile">
-    
-    <div class="banner" style="background-color: #8EDDC5;">
-      <div class="titulo">
-      <?php
-            echo $Titulo5;
-          ?>
+        </a>
       </div>
 
-      <div class="autor">
-      <?php
-            echo $Nome5." | ".$Ano5. " | ".$Materia5;;
-            
-          ?>
-      </div>
-      <a href="projeto.php?ID=<?php echo $ID_Projeto5; ?>">
-          <button class="button-projeto button button1-projeto button1">VER MAIS</button>
-          </a>
+
     </div>
 
-    
-    <div class="banner" style="background-color: #5BBDA0;">
-      <div class="titulo">
-      <?php
-            echo $Titulo6;
-          ?>
-      </div>
 
-      <div class="autor">
-      <?php
-            echo $Nome6." | ".$Ano6. " | ".$Materia6;;
-            
-          ?>
-      </div>
-      <a href="projeto.php?ID=<?php echo $ID_Projeto6; ?>">
-          <button class="button-projeto button button1-projeto button1">VER MAIS</button>
-          </a>
-      </div>
-
-  </div>
 
   <div class="ver-mais">
     <a href="projetos.php">
@@ -1260,25 +1263,27 @@ border-radius: 3px;
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   
 
-<script>
-  const slideValue = document.querySelector(".sliderValue-span");
-  const inputSlider = document.querySelector(".input-value");
-  inputSlider.oninput = (()=>{
-    let value = inputSlider.value;
-    slideValue.textContent = value;
-    slideValue.style.left = (value/2) + "%";
-    slideValue.classList.add("show");
-  });
-  inputSlider.onblur = (()=>{
-    slideValue.classList.remove("show");
-  });
-</script>
+      <script>
+        const slideValue = document.querySelector(".sliderValue-span");
+        const inputSlider = document.querySelector(".input-value");
 
-</body>
-</html>
+          inputSlider.oninput = (()=>{
+            let value = inputSlider.value;
+            slideValue.textContent = value;
+            slideValue.style.left = (value/2) + "%";
+            slideValue.classList.add("show");
+        });
+
+          inputSlider.onblur = (()=>{
+            slideValue.classList.remove("show");
+        });
+      </script>
+
+    </body>
+  </html>
 
 <?php
 
-mysqli_close($conexao);
+  mysqli_close($conexao);
 
 ?>
