@@ -41,7 +41,8 @@
 
         // $dados = mysqli_fetch_array($res);
       }
-    }
+
+}
 
 ?>
 
@@ -538,6 +539,28 @@
           transition: 0.5s;
         }
 
+        .button3 {
+          background-color: transparent; 
+          font-weight: 800;
+          color: #000; 
+          height: 60px !important;
+          width: 180px;
+          border: 2px solid #000;
+          font-family: 'Josefin Sans', sans-serif;
+          transition: 0.3s;
+          text-decoration: none;
+        }
+
+        .button3:hover {
+          background-color: #0B342C; 
+          font-weight: 600;
+          color: #fff; 
+          text-decoration: none;
+          border: 2px solid #000;
+          font-family: 'Josefin Sans', sans-serif;
+          transition: 0.5s;
+        }
+
         .info-close{
           color: black;
           padding-right: 0;
@@ -590,6 +613,16 @@
       text-transform: uppercase;
       padding: 0;
       line-height: 35px;
+      }
+
+      .popup-denuncias{
+			width: 95% !important;
+			height: 315px !important;
+			padding: 15px;
+      line-height: 30px;
+			background: #CA3C3C;
+      display:block;
+      font-family: 'Poppins', sans-serif;
       }
     }
 
@@ -661,6 +694,11 @@
           height: 65px !important;
           width: 163px;
       }
+
+      .button3 {
+          height: 65px !important;
+          width: 163px;
+      }
     }
 
     .popup-denuncias{
@@ -681,6 +719,7 @@
       font-family: 'Poppins', sans-serif;
 		
     }
+    
     </style>
     </head>
       <body>
@@ -723,18 +762,93 @@
 
             <div class="col-sm-9 meus-projetos">
 
+          <!-- <?php
 
-            <!-- <div id="popup-denuncias" class="popup-denuncias">
-                <p>Seu projeto 'titulo' foi denúnciado muitas vezes por 'motivo'! Por favor,
-                  revise o conteúdo publicado.
+
+            $sql4 = "SELECT * FROM tb_projetos WHERE ID_Usuario = '$id' ORDER BY ID DESC";
+            $res4 = mysqli_query($conexao, $sql4);
+
+            if (!(mysqli_num_rows($res4)==0)) {
+
+            while($vreg4 = mysqli_fetch_row($res4)){
+
+                $ID_Projeto = $vreg4[0];
+
+                $_SESSION['ID_Projeto'] = $ID_Projeto;
+
+                $Titulo = $vreg4[1];
+                $Descricao = $vreg4[2];
+                $Palavras = $vreg4[3];
+                $Ano = $vreg4[4];
+                $Materia = $vreg4[5];
+                $Categoria = $vreg4[6];
+                $Conhecimento = $vreg4[7];
+                $Texto = $vreg4[8];
+                $ID_Usuario_Projeto = $vreg4[9];
+                 
+
+            $sql2 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
+            $res2 = mysqli_query($conexao, $sql2);
+
+            if (!(mysqli_num_rows($res2)==0)) {
+
+            while($vreg2 = mysqli_fetch_row($res2)){
+
+                $ID_Denuncia = $vreg2[0];
+
+                $_SESSION['ID_Denuncia'] = $ID_Denuncia;
+
+                $Comentarios_Denuncia = $vreg2[1];
+                $Categoria_Denuncia = $vreg2[2];
+                $ID_Projeto_Denuncia = $vreg2[3];
+                $ID_Usuario_Denuncia = $vreg2[4];
+
+
+                $sql3 = "SELECT * FROM tb_projetos WHERE ID = '$ID_Projeto_Denuncia'";
+                $res3 = mysqli_query($conexao, $sql3);
+
+                if (!(mysqli_num_rows($res3)==0)) {
+
+                while($vreg3 = mysqli_fetch_row($res3)){
+
+                      $ID_Projeto = $vreg3[0];
+
+                      $_SESSION['ID_Projeto'] = $ID_Projeto;
+            
+                      $Titulo = $vreg3[1];
+                      $Descricao = $vreg3[2];
+                      $Palavras = $vreg3[3];
+                      $Ano = $vreg3[4];
+                      $Materia = $vreg3[5];
+                      $Categoria = $vreg3[6];
+                      $Conhecimento = $vreg3[7];
+                      $Texto = $vreg3[8];
+                      $ID_Usuario_Projeto = $vreg3[9];
+
+          ?>
+            <div id="popup-denuncias" class="popup-denuncias">
+                <p>Seu projeto <?php echo "<strong> '".$Titulo."' </strong>"; ?> foi denúnciado por conter
+                <?php
+                if ($Categoria_Denuncia == 'Outro'){
+                  echo 'algum motivo não explícito';
+                }
+                else{
+                echo $Categoria_Denuncia;
+                }?>! Por favor, revise o conteúdo publicado.
                 </p>			
 
 
                 <a style="text-decoration: none;" href="javascript: fechar();">
                       <button class="button-projeto button button1-projeto button2">ENTENDIDO</button>
                 </a>
-            </div> -->
 
+                <a style="text-decoration: none;" href="projeto.php?ID=<?php echo $ID_Projeto; ?>">
+                      <button class="button-projeto button button1-projeto button3">VER PROJETO</button>
+                </a>
+            </div>
+            <?php
+            }}}}}} 
+            ?> -->
 
 
                       <!-- <a href="javascript: abrir();">Abrir Pop-up</a><br>
@@ -826,7 +940,107 @@
                   <?php
                   }
                   ?>
-                
+
+               
+                  <h3 class="seus-projetos"><strong>SUAS DENÚNCIAS FEITAS</strong></h3>
+                  
+                  <?php
+
+                    $sql1 = "SELECT * FROM tb_denuncias WHERE ID_Usuario = '$id'";
+                    $res1 = mysqli_query($conexao, $sql1);
+                    
+                    if (!(mysqli_num_rows($res1)==0)) {
+                  
+                    while($vreg = mysqli_fetch_row($res1)){
+
+                        $ID_Denuncias = $vreg[0];
+
+                        $_SESSION['ID_Denuncias'] = $ID_Denuncias;
+
+                        $Comentarios_Denuncias = $vreg[1];
+                        $Categoria_Denuncias = $vreg[2];
+                        $ID_Projeto_Denuncias = $vreg[3];
+                        $ID_Usuario_Denuncias = $vreg[4];
+
+
+                        $sql3 = "SELECT * FROM tb_projetos WHERE ID = '$ID_Projeto_Denuncias'";
+                        $res3 = mysqli_query($conexao, $sql3);
+
+                        if (!(mysqli_num_rows($res3)==0)) {
+
+                        while($vreg3 = mysqli_fetch_row($res3)){
+
+                              $ID_Projeto = $vreg3[0];
+
+                              $_SESSION['ID_Projeto'] = $ID_Projeto;
+                    
+                              $Titulo = $vreg3[1];
+                              $Descricao = $vreg3[2];
+                              $Palavras = $vreg3[3];
+                              $Ano = $vreg3[4];
+                              $Materia = $vreg3[5];
+                              $Categoria = $vreg3[6];
+                              $Conhecimento = $vreg3[7];
+                              $Texto = $vreg3[8];
+                              $ID_Usuario_Projeto = $vreg3[9];
+        
+                        ?>
+                      
+                      <div class="banner" style="background-color: #5EC7A7;">
+                          
+                        <div class="titulo">
+                          <?php
+                            echo $Titulo;
+                          ?>
+                        </div>
+
+                        <div class="autor">
+                          <?php
+                            echo $Categoria." | Motivo: ".$Categoria_Denuncias;
+                          ?>
+                        </div>
+                            
+
+                          <a style="text-decoration: none;" href="projeto.php?ID=<?php echo $ID_Projeto; ?>">
+                            <button class="button-projeto button button1-projeto button2">VER MAIS</button>
+                          </a>
+
+                          <a href="controller/editar-denuncia.php?ID=<?php echo $ID_Denuncias; ?>"><img src="img/edit.png" alt="editar projeto" /></a>
+
+                          <a href="controller/excluir-denuncia.php?ID=<?php echo $ID_Denuncias; ?>"><img src="img/delete.png" alt="excluir projeto"/></a>
+                          
+                        
+                          </div>
+                        
+                      <?php
+                        }}}}
+                        else
+                        {
+                      ?>
+
+                        <div class="banner" style="background-color: #5EC7A7;">
+
+                            <div class="titulo">
+                              Nenhuma denúncia feita!
+                            </div>
+
+                            <div class="autor">
+                              VOCÊ PODE DENUNCIAR QUALQUER PROJETO QUE ACHAR NECESSÁRIO!
+                            </div>
+                            
+                            <a href="projetos.php">
+                              <button class="button-projeto button button1-projeto button3">VER PROJETOS</button>
+                            </a>
+                        
+                        </div>
+
+                      <?php
+                      }
+                      ?>
+
+
+
+
                   </div>
          
               
