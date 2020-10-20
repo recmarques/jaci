@@ -1,93 +1,3 @@
-<?php
-
-   // conexao
-  // require_once '../conexao.inc';
-  $servername = "localhost";
-	$username = "root";
-	$password = "";
-	$db_name = "jacidb";
-	
-	$conexao = mysqli_connect($servername, $username, $password);
-	mysqli_select_db($conexao, $db_name);
-  mysqli_set_charset($conexao, "utf8");
-  
-	if(mysqli_connect_error()):
-		echo "Falha na conexão: ".mysqli_connect_error();
-	endif;
-	// include 'conexao.inc';
-	
-	// Sessão
-  session_start();
-    
-  // Verificação
-  if(!isset($_SESSION['logado'])){
-      header('Location: ../login.php');
-  }
-  else{
-
-        // Dados
-        $id = $_SESSION['ID'];
-        $ID_Usuario = $_SESSION['ID'];
-        $sql = "SELECT * FROM tb_cadastros WHERE ID = '$id'";
-        $res = mysqli_query($conexao, $sql);
-
-        $dados = mysqli_fetch_array($res);
-      
-
-        $vtitulo = $_POST["titulo"];
-        $vdescricao = $_POST["descricao"];
-        $vpalavras = $_POST["palavras-chave"];
-        $vano = $_POST["ano"];
-
-        $vmateria = $_POST["materia"];
-        $vcategoria = $_POST["categoria"];
-        $vconhecimento = $_POST["conhecimento"];
-        $vtexto = $_POST["texto"];
-
-        $ID_Projeto = $_GET['IDProjeto'];
-
-        $sql = "UPDATE tb_projetos SET
-        Titulo = '$vtitulo', Descricao = '$vdescricao', Palavras = '$vpalavras',
-        Ano = $vano, Materia = '$vmateria', Categoria = '$vcategoria', Conhecimento = $vconhecimento, Texto = '$vtexto'
-        WHERE ID = $ID_Projeto AND ID_Usuario = $id";
-
-        // WHERE ID_Usuario = $ID_Usuario AND 
-        $res = mysqli_query($conexao, $sql);
-
-        $linhas = mysqli_affected_rows($conexao);
-
-        if($linhas == 1){
-            $mensagem = "Atualização feita com sucesso!";
-        }
-        else{
-            $mensagem = "Falha na atualização do projeto!";
-        }
-    }
-
-
-?>
-
-
-<!DOCTYPE html>
-
-  <html lang="en" dir="ltr">
-    <head>
-     
-      <title><?php echo $mensagem; ?> | JACI</title>
-
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="icon" href="../img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="css/style-atualizar-projeto.css">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-      
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-     
-    <style>
 
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
     *{
@@ -109,6 +19,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 50px 0 100px;
+      font-family: 'Josefin Sans', sans-serif;
       flex-wrap: wrap;
     }
 
@@ -177,11 +88,11 @@
       nav .menu-btn i{
         display: block;
       }
-      
+
       #click:checked ~ .menu-btn i:before{
         content: "\f00d";
       }
-
+      
       nav ul{
         position: fixed;
         top: 80px;
@@ -210,11 +121,11 @@
         font-size: 20px;
         transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
-      
+
       #click:checked ~ ul li a{
         margin-left: 0px;
       }
-
+      
       nav ul li a.active,
       nav ul li a:hover{
         background: none;
@@ -223,29 +134,30 @@
     }
 
     .form{
-      background-color: #1F1F1F;
-      margin: auto;
-      height: 480px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: 50px;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: -1;
-      width: 75%;
-      padding: 10px 30px;
-      border-bottom: solid 20px #1F9E84;
+        background-color: #1F1F1F;
+        margin: auto;
+        height: 585px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: 100px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: -1;
+        width: 89%;
+        padding: 10px 30px;
+        border-bottom: solid 20px #1F9E84;
     }
 
     .form .titulo{
-      float: left;
-      padding-left: 50px;
-      padding-top: 50px;
-      color: #5EC7A7;
-      font-size: 67px;
-      width: 430px;
-      text-align: left;
+        float: left;
+        padding-left: 50px;
+        padding-top: 60px;
+        color: #5EC7A7;
+        /* font-size: 49px; */
+        font-size: 67px;
+        width: 430px;
+        text-align: left;
     }
 
     .form .titulo p{
@@ -264,7 +176,7 @@
     .form-cadastro{
       float: right;
       padding-right: 50px;
-      padding-top: 10px;
+      padding-top: 45px;
       width: 520px;
       color: #DFDFDF;
     }
@@ -357,7 +269,11 @@
       z-index: -1;
       transition: .5s;
     }
-    
+
+    .disable-select{
+      color: #777;
+    }
+  
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       font-family: 'Josefin Sans', sans-serif;
       color: #777;
@@ -372,7 +288,7 @@
       font-family: 'Josefin Sans', sans-serif;
       color: #777;
     }
-    
+
     .fsenha a{
       color: #DFDFDF;
       /* text-decoration: underline; */
@@ -395,13 +311,12 @@
       outline: none;
       font-weight: 700;
       cursor: pointer;
-      transition: .5s;
-      font-family: 'Poppins', sans-serif;   
+      transition: .5s;   
     }
 
     .logbtn:hover{
       background-color:#177561;
-      transition: 0.5s;    
+      transition: 0.5s;  
     }
 
     .bottom-text a{
@@ -448,7 +363,7 @@
       transition: .5s;
       font-weight: 700;
       font-size: 12px;
-      font-family: 'Poppins', sans-serif;   
+      font-family: 'Poppins', sans-serif;
     }
 
     .bottom-text-login:hover{
@@ -458,11 +373,12 @@
       line-height: 40px;
       color: white !important;
       font-size: 12px;
-      font-family: 'Poppins', sans-serif; 
+      font-family: 'Poppins', sans-serif;
+          
     }
 
     .bottom-text-login a{
-      font-family: 'Josefin Sans', sans-serif;  
+      font-family: 'Josefin Sans', sans-serif;   
     }
 
     ::-webkit-scrollbar{
@@ -600,186 +516,153 @@
       font-weight: 700;
     }
 
-    .mensagem{
-        padding: 77px 50px 0 0;
-        font-size: 27px;
-        text-align: right;
-    }
 
-    .button {
-      border: none;
-      color: #ddd;
-      padding: 1px 40px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 10px;
-      margin: 4px 2px;
-      cursor: pointer;
-      font-family: 'Josefin Sans', sans-serif;
-    }
+    @media screen and (max-width: 700px){
+      .form{
+        background-color: transparent !important;
+      }
+    
+      .form .titulo {
+        float: left;
+        color: #1f1f1f;
+        padding-left: 0;
+        padding-top: 50px;
+        font-size: 47px;
+        width: 280px;
+        text-align: left;
+      }
 
-    .button1 {
-      background-color: #1f9e84; 
-      font-weight: 800;
-      color: #000; 
-      border: 2px solid #000;
-      font-family: 'Josefin Sans', sans-serif;
-      transition: 0.5s;
-      font-size: 13px;
-      margin-top: 70px;
-      padding: 36px 68px;
-    }
+      .form .descricao {
+        float: left;
+        color: #fff;
+        font-size: 20px;
+        width: 280px;
+        text-align: left;
+        padding-bottom: 45px;
+        padding-top: 20px;
+      }
 
-    .button1:hover {
-      background-color: #000; 
-      font-weight: 600;
-      color: #fff; 
-      border: 2px solid #fff;
-      font-family: 'Josefin Sans', sans-serif;
-      transition: 0.5s;
-    }
+      .form-cadastro {
+        float: inherit;
+        padding-right: 50px;
+        padding-top: 10px;
+        width: 116%;
+        color: #DFDFDF;
+      }
 
-
-  @media screen and (max-width: 700px){
-    .form{
-      background-color: #1F1F1F;
-      margin: auto;
-      height: 480px;
-      position: absolute;
-      top: 44%;
-      left: 36%;
-      margin-top: 50px;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: -1;
-      width: 75%;
-      padding: 10px 30px;
-      border-bottom: solid 20px #1F9E84;
-    }
-
-    .form-cadastro {
-      float: right;
-      padding-right: 50px;
-      padding-top: 10px;
-      width: 100%;
-      color: #DFDFDF;
-    }
-
-    .mensagem {
-      padding: 39px 0px 0 0;
-      font-size: 27px;
-      text-align: left;
-    }
-
-    .form .titulo {
-      float: left;
-      padding-left: 50px;
-      padding-top: 50px;
-      color: #051915;
-      font-size: 67px;
-      width: 430px;
-      text-align: left;
-    }
-  }
-
-  </style>
-  </head>
-
-    <body>
-
-      <nav>
-        <div class="logo">
-          <a href="./../header.php">
-            <img src="../img/logo-black.png" alt="logo jaci"/>
-          </a>
-        </div>
-
-      <input type="checkbox" id="click">
-          <label for="click" class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </label>
-
-    <ul>
-      <li><a href="../header.php">INÍCIO</a></li>
-      <li><a href="./../projetos.php">PROJETOS</a></li>
-      <li><a href="./../criar-projeto.php">CRIAR PROJETO</a></li>
-      <!-- <li><a href="#">Feedback</a></li> -->
-      <?php 
-        if(isset($_SESSION['logado'])){
-          echo "<li><a class=not-activate href=../meu-perfil.php>MEU PERFIL</a></li>";
-          echo "<li><a class=not-activate style=display:none href=../login.php>ENTRAR</a></li>";
-        }
-        else{
-          echo "<li><a class=not-activate href=../login.php>ENTRAR</a></li>";
-        }
-
-        if(isset($_SESSION['logado'])){
-          echo "<li><a class=not-activate href=../logout.php>SAIR</a></li>";
-        }
-        else{
-          echo "<li><a class=not-activate style=display:none href=../logout.php>SAIR</a></li>";
-        }
-
-      ?>
-
-    </ul>
-  </nav>
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-family: 'Josefin Sans', sans-serif;
+        color: #000;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-family: 'Josefin Sans', sans-serif;
+        color: #000;
+      }
   
-  <div class="form">
-    <div class="titulo">
-      <p> 
-      <?php
-        if($mensagem == 'Falha na atualização do projeto!'){
-          // echo $vcod."".$vtitulo."".$vdescricao;
-          echo "Falha na <strong>atualização do projeto!</strong>";   
-        }
-        else{
-          echo "Atualização feita <strong>com sucesso!</strong>";
-        }
-      ?>
-      </p>
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        font-family: 'Josefin Sans', sans-serif;
+        color: #000;
+      }
 
-      <!-- <div class="descricao">
-          Preencha os campos a seguir para adicionar um novo projeto e ajudar um aluno!
-      </div> -->
+      .range {
+        height: 80px;
+        width: 100%;
+        background: #1F1F1F;
+        border-radius: 10px;
+        padding: 0 65px 0 70px;
+      }
 
-    </div>
+      .logbtn{
+        display: block;
+        width: 100%;
+        margin: auto;
+        height: 70px;
+        border: none;
+        font-size: 14px;
+        background-color:#1f1f1f;
+        background-size: 200%;
+        color: #fff;
+        outline: none;
+        font-weight: 700;
+        cursor: pointer;
+        transition: .5s;    
+      }
 
-    <div class="form-cadastro mensagem">
-        <?php
-        if($mensagem == 'Falha na atualização do projeto!'){
-            // echo $vcod."".$vtitulo."".$vdescricao;
-          echo "Infelizmente não foi possível cadastrar seu projeto! Tente novamente!";
-          }
-          else{
-              echo "Obrigado por compartilhar seu conhecimento com todos!";
-          }
-        ?>
+      .logbtn:hover{
+        background-color:#000;
+        transition: 0.5s;
+      }
 
-        <?php
-          if($mensagem == 'Falha na atualização do projeto!'){ ?>
-            <a href="./../meu-perfil.php">
-              <button class="button button1">TENTAR NOVAMENTE</button>
-            </a>
-          <?php
-            }
-            else{
-          ?>
-            <a href="./../projeto.php?ID=<?php echo $ID_Projeto; ?>">
-              <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER PROJETO</button>
-            </a>
-          <?php
-              }
-          ?>   
-          <!-- </a> -->
-      </div>
-    </div>
+      .txtb {
+        border-bottom: 2px solid #000000;
+      }
+    }
 
-  </body>
-</html>
-<?php
 
-mysqli_close($conexao);
+    .mensagem{
+    /* padding: 77px 50px 0 0; */
+    padding: 55px 50px 0 0;
+    font-size: 27px;
+    text-align: right;
+}
 
-?>
+
+.button {
+border: none;
+color: #ddd;
+padding: 1px 40px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 10px;
+margin: 4px 2px;
+cursor: pointer;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+.button1 {
+background-color: #1f9e84; 
+font-weight: 800;
+color: #000; 
+border: 2px solid #000;
+font-family: 'Josefin Sans', sans-serif;
+transition: 0.5s;
+font-size: 13px;
+margin-top: 70px;
+padding: 36px 68px;
+}
+
+.button1:hover {
+background-color: #000; 
+font-weight: 600;
+color: #fff; 
+border: 2px solid #fff;
+font-family: 'Josefin Sans', sans-serif;
+transition: 0.5s;
+}
+
+
+
+.titulo-autor-projeto{
+  text-align: left;
+  line-height: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.autor-projeto{
+  color: #777469;
+  text-transform: uppercase;
+}
+
+.email-link{
+  text-decoration: none;
+  color: #DFDFDF;
+}
+
+.email-link:hover{
+  text-decoration: none;
+  color: #5EC7A7;
+  transition: 0.7s;
+}

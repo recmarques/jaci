@@ -36,46 +36,41 @@
     
 
         // verificando último ID cadastrado (projeto)
-        $sql1 = "SELECT * FROM tb_projetos";
+        $sql1 = "SELECT * FROM tb_denuncias";
         $res1 = mysqli_query($conexao, $sql1);
         $vreg;
         $maior = 0;
         $vcod = 0;        
         while($vreg = mysqli_fetch_row($res1)){
-            $ID_projeto = $vreg[0];
+            $ID_avaliacao = $vreg[0];
             
-            if($ID_projeto > $maior){
-                $maior = $ID_projeto;
+            if($ID_avaliacao > $maior){
+                $maior = $ID_avaliacao;
             }
             
         }
 
-        
         //$vcod = rand(1, 999999999999999);
         // ($vcod, '$vtitulo', '$vdescricao', '$vpalavras', $vano, '$vmateria', '$vcategoria', $vconhecimento, '$vtexto', $ID_Usuario)";
         
         $vcod = $maior + 1;
 
-        $vtitulo = $_POST["titulo"];
-        $vdescricao = $_POST["descricao"];
-        $vpalavras = $_POST["palavras-chave"];
-        $vano = $_POST["ano"];
-        $vmateria = $_POST["materia"];
-        $vcategoria = $_POST["categoria"];
-        $vconhecimento = $_POST["conhecimento"];
-        $vtexto = $_POST["texto"];
+        $Comentarios = $_POST["comentarios"];
+        $Categoria = $_POST["categoria"];
 
-        $sql = "INSERT INTO tb_projetos VALUES
-        ($vcod, '$vtitulo', '$vdescricao', '$vpalavras', $vano, '$vmateria', '$vcategoria', $vconhecimento, '$vtexto', $ID_Usuario)";
+        $ID_Projeto = $_GET["ID_Projeto"];
+
+        $sql = "INSERT INTO tb_denuncias VALUES
+        ($vcod, '$Comentarios', '$Categoria', $ID_Projeto, $ID_Usuario)";
         $res = mysqli_query($conexao, $sql);
 
         $linhas = mysqli_affected_rows($conexao);
 
         if($linhas == 1){
-            $mensagem = "Cadastro feito com sucesso!";
+            $mensagem = "Denúncia cadastrada com sucesso!";
         }
         else{
-            $mensagem = "Falha na gravação do projeto!";
+            $mensagem = "Falha na gravação da denúncia!";
         }
 
     }
@@ -89,19 +84,19 @@
 
 <html lang="en" dir="ltr">
   <head>
-    <title><?php echo $mensagem; ?> | JACI</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $mensagem; ?> | JACI</title>
     
     <link rel="icon" href="img/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="css/style-projeto.css">
+    <link rel="stylesheet" href="css/style-denunciar-projeto.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+   
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    
+      
     <style>
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -708,7 +703,7 @@ transition: 0.5s;
 <li><a href="../header.php">INÍCIO</a></li>
 <li><a href="./../projetos.php">PROJETOS</a></li>
 <li><a href="./../criar-projeto.php">CRIAR PROJETO</a></li>
-<!-- <li><a href="#">Feedback</a></li> -->
+
 <?php 
                 if(isset($_SESSION['logado'])){
                   echo "<li><a class=not-activate href=../meu-perfil.php>MEU PERFIL</a></li>";
@@ -730,13 +725,13 @@ transition: 0.5s;
 <div class="form">
     <div class="titulo"><p> 
     <?php
-                if($mensagem == 'Falha na gravação do projeto!'){
+                if($mensagem == 'Falha na gravação da denúncia!'){
                   // echo $vcod."".$vtitulo."".$vdescricao;
-                echo "Falha na <strong>gravação do projeto!</strong>";
+                echo "Falha na <strong>gravação da denúncia!</strong>";
               
                 }
                 else{
-                  echo "Cadastro <strong>feito com sucesso!</strong>";
+                  echo "Denúncia<strong> cadastrada com sucesso!</strong>";
                 }
                 ?></p>
       <!-- <div class="descricao">
@@ -746,18 +741,18 @@ transition: 0.5s;
 
     <div class="form-cadastro mensagem">
         <?php
-        if($mensagem == 'Falha na gravação do projeto!'){
+        if($mensagem == 'Falha na gravação da denúncia!'){
           // echo $vcod."".$vtitulo."".$vdescricao;
-        echo "Infelizmente não foi possível cadastrar seu projeto! Tente novamente!";
+        echo "Infelizmente não foi possível cadastrar sua denúncia! Tente novamente!";
       }
     else{
-        echo "Obrigado por compartilhar seu conhecimento com todos!";
+        echo "Obrigado por avaliar este projeto!";
     }
     ?>
 
             
               <?php
-                  if($mensagem == 'Falha na gravação do projeto!'){ ?>
+                  if($mensagem == 'Falha na gravação da denúncia!'){ ?>
                   <a href="./../criar-projeto.php">
                     <button class="button button1">TENTAR NOVAMENTE</button>
                   </a>
@@ -766,8 +761,8 @@ transition: 0.5s;
               else{
               ?>
              
-              <a href="./../projeto.php?ID=<?php echo $vcod; ?>">
-                <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER MAIS</button>
+              <a href="./../projetos.php">
+                <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER PROJETOS</button>
               </a>
 
               <?php

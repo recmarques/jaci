@@ -69,7 +69,7 @@
         
             <link rel="icon" href="../img/favicon.png" type="image/png" />
         
-            <link rel="stylesheet" href="style-excluir.css">
+            <link rel="stylesheet" href="css/style-excluir-conta.css">
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
             <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -77,6 +77,17 @@
             <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+            <style>
+
+            body{
+                min-height: 100vh;
+                /* background-image: linear-gradient(120deg,#5EC7A7,#00857B); */
+                /* background-image: url("../img/Splash\ Desktop.png"); */
+                background-image: url("../img/background-cadastro-sucesso.png") !important;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+            </style>
     </head>
     <body>
 

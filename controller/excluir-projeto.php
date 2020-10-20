@@ -92,21 +92,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
     <title>Excluir projeto | JACI</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
       <link rel="icon" href="img/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-      <link rel="stylesheet" href="style-excluir-projeto.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/style-excluir-projeto.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-      
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
     <style>
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -822,7 +819,7 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
 
         
     <div class="form">
-        <div class="titulo"><p> 
+        <div class="titulo" style="line-height: 56px;"><p> 
         Você <strong>não tem permissão :(</strong></p>
         
         </div>
@@ -830,7 +827,7 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
         <div class="form-cadastro mensagem">
         Esse projeto pertence a outra pessoa, logo você não pode excluí-lo.<br /><br />
 
-        Caso tenha ocorrido um erro - e esse projeto é seu, mas não consegue acessá-lo -, nos mande um email:
+        Caso tenha ocorrido um erro - e esse projeto é seu, mas não consegue acessá-lo -, nos mande um e-mail:
           <a href="mailto:gruposol413@gmail.com">gruposol413@gmail.com</a>.
 
               <a href="./../meu-perfil.php">

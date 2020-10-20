@@ -48,28 +48,39 @@
 
 <html>
     <head>
-            <meta charset="utf-8">
-            <title>
-                <?php
-                echo $mensagem." | JACI";
-                ?>
-            </title>
         
-            <link rel="icon" href="../img/favicon.png" type="image/png" />
+        <title>
+            <?php
+            echo $mensagem." | JACI";
+            ?>
+        </title>
         
-            <link rel="stylesheet" href="style-senha.css">
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-            <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="icon" href="../img/favicon.png" type="image/png" />
+        <link rel="stylesheet" href="css/style-senha.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            
+        <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script> 
     
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style>
+            body{
+                min-height: 100vh;
+                /* background-image: linear-gradient(120deg,#5EC7A7,#00857B); */
+                /* background-image: url("../img/Splash\ Desktop.png"); */
+                background-image: url("../img/background-cadastro-sucesso.png") !important;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+        </style>
+    
     </head>
+    
     <body>
 
         <br />
-
         <div class="cadastro-sucesso"> 
 
             <p class="mensagem">
@@ -78,22 +89,25 @@
                 ?>
             </p>
 
-                <br /><br />
+            <br /><br />
                 
-                <a href="../login.php">
-                    <button class="button button1">ENTRAR</button><br />
-                </a>
-                <br />
-                <a href="../header.php">
-                    <button class="button button1">ACESSAR SEM LOGIN</button><br />
-                </a>
-                <br />
+            <a href="../login.php">
+                <button class="button button1">ENTRAR</button><br />
+            </a>
 
-                <a href="../senha.php">
-                    <input type="submit" class="logbtn" value="VOLTAR">
-                </a>
+            <br />
+
+            <a href="../header.php">
+                <button class="button button1">ACESSAR SEM LOGIN</button><br />
+            </a>
+
+            <br />
+
+            <a href="../senha.php">
+                <input type="submit" class="logbtn" value="VOLTAR">
+            </a>
     
-        </div> 
-     </body>
+        </div>
 
+     </body>
 </html>
