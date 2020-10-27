@@ -23,7 +23,7 @@ $db = substr($url["heroku_390caed3836a8d5"], 1);
 $conexao = new mysqli($server, $username, $password, $db);
 
 	// $conexao = mysqli_connect($servername, $username, $password);
-	mysqli_select_db($conexao, $db_name);
+	mysqli_select_db($conexao, $db);
   mysqli_set_charset($conexao, "utf8");
 
 	if(mysqli_connect_error()):
