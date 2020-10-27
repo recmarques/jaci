@@ -2,10 +2,15 @@
 
 	// conexao
   // require_once '../conexao.inc';
-  $servername = "localhost";
-	$username = "root";
-	$password = "";
-	$db_name = "jacidb";
+  	// $servername = "localhost";
+	// $username = "root";
+	// $password = "";
+	// $db_name = "jacidb";
+
+	$servername = "https://projeto-jaci.herokuapp.com/";
+	$username = "b0394718678768";
+	$password = "33161d76";
+	$db_name = "heroku_390caed3836a8d5";
 	
 	$conexao = mysqli_connect($servername, $username, $password);
 	mysqli_select_db($conexao, $db_name);
