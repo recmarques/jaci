@@ -7,20 +7,13 @@
 	// $password = "";
 	// $db_name = "jacidb";
 
-// 	$servername = "https://projeto-jaci.herokuapp.com/";
-// 	$username = "b0394718678768";
-// 	$password = "33161d76";
-// 	$db_name = "heroku_390caed3836a8d5";
+	$servername = "us-cdbr-east-02.cleardb.com";
+	$username = "b0394718678768";
+	$password = "33161d76";
+	$db_name = "heroku_390caed3836a8d5";
 	
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$server = $url["https://projeto-jaci.herokuapp.com/"];
-$username = $url["b0394718678768"];
-$password = $url["33161d76"];
-$db = substr($url["heroku_390caed3836a8d5"], 1);
-
-$conexao = new mysqli($server, $username, $password, $db);
+$conexao = new mysqli($server, $username, $password, $db_name);
 
 	// $conexao = mysqli_connect($servername, $username, $password);
 	mysqli_select_db($conexao, $db);
