@@ -312,8 +312,10 @@
       <meta name="author" content="Renata de Castro M. - EQUIPE SOL">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <meta charset="utf-8">
-
-      <link rel="icon" href="img/favicon.png" type="image/png" />
+        
+        <link rel="profile" href="img/favicon.png" type="image/png">
+        <link rel="icon" href="img/favicon.png" type="image/png" />
+        
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="css/style-home.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
