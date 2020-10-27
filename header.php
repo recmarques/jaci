@@ -319,7 +319,21 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
       <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="icon" sizes="192x192" hhref="img/favicon.png" type="image/png">
+      <link rel="icon" sizes="192x192" href="img/favicon.png" type="image/png">
+      <link rel="apple-touch-icon" sizes="57x57" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="img/favicon.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="img/favicon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+      <link rel="icon" type="image/png" sizes="96x96" hhref="img/favicon.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+      <link rel="manifest" href="img/favicon.png">
         
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
