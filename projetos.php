@@ -7,16 +7,27 @@
 	// $password = "";
 	// $db_name = "jacidb";
 
-	$servername = "us-cdbr-east-02.cleardb.com";
-	$username = "b0394718678768";
-	$password = "33161d76";
-	$db_name = "heroku_390caed3836a8d5";
-	
+// 	$servername = "us-cdbr-east-02.cleardb.com";
+// 	$username = "b0394718678768";
+// 	$password = "33161d76";
+// 	$db_name = "heroku_390caed3836a8d5";
+
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["us-cdbr-east-02.cleardb.com"];
+$username = $url["b0394718678768"];
+$password = $url["33161d76"];
+$db_name = substr($url["heroku_390caed3836a8d5"], 1);
 
 $conexao = new mysqli($server, $username, $password, $db_name);
+	
+
+// $conexao = new mysqli($server, $username, $password, $db);
 
 	// $conexao = mysqli_connect($servername, $username, $password);
-	mysqli_select_db($conexao, $db);
+	mysqli_select_db($conexao, $db_name);
+
+
   mysqli_set_charset($conexao, "utf8");
 
 	if(mysqli_connect_error()):
