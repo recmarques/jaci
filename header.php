@@ -2,13 +2,24 @@
 
     // conexao
     // require_once '../conexao.inc';
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $db_name = "jacidb";
+
+
+$url = parse_url(getenv("mysql://b0394718678768:33161d76@us-cdbr-east-02.cleardb.com/heroku_390caed3836a8d5?reconnect=true"));
+
+$server = $url["us-cdbr-east-02.cleardb.com"];
+$username = $url["b0394718678768"];
+$password = $url["33161d76"];
+$db = substr($url["heroku_390caed3836a8d5"], 1);
+
+$conexao = new mysqli($server, $username, $password, $db);
+
+//     $servername = "localhost";
+//     $username = "root";
+//     $password = "";
+//     $db_name = "jacidb";
     
-    $conexao = mysqli_connect($servername, $username, $password);
-    mysqli_select_db($conexao, $db_name);
+//     $conexao = mysqli_connect($servername, $username, $password);
+//     mysqli_select_db($conexao, $db_name);
     
     if(mysqli_connect_error()):
       echo "Falha na conexão: ".mysqli_connect_error();
