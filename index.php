@@ -59,11 +59,11 @@
                     <button class="button button1">CADASTRAR</button>
                   </a>
 
-                  <p class="acessos">
+<!--                   <p class="acessos">
                     <?php
                       echo "Quantidade de acessos: $cont ❤";
                     ?>
-                  </p>
+                  </p> -->
                 </div>
             </div>
 
