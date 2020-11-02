@@ -1077,7 +1077,8 @@
           <div class="row">
 
             <div class="col-sm-5 img-banner">
-              <img src="img/img-banner.png" alt="personagem"/>
+<!--               <img src="img/img-banner.png" alt="personagem"/> -->
+              <img src="img/404-illustration.png" alt="personagem"/>
             </div>
 
             <div class="col-sm-7 bem-vindo">Seja bem-vindo(a),
