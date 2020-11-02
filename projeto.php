@@ -813,11 +813,11 @@
       <?php
         echo $_SESSION['Descricao'];
       ?>
-      <div class="go-down">
+<!--       <div class="go-down">
         <a href="#texto">
           <img src="img/down.png" alt="ir para o texto" alt="para baixo"/>
         </a>
-      </div>
+      </div> -->
     </div>
 
 
