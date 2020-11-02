@@ -63,11 +63,7 @@
                 <button class="button button1">CADASTRAR</button>
                 </a>
 
-<!--                 <p class="acessos">
-                  <?php
-                    echo "Quantidade de acessos: $cont ❤";
-                  ?>
-                </p> -->
+           
                 </div>
             </div>
           </div>
