@@ -942,7 +942,7 @@
                   ?>
 
                
-                  <h3 class="seus-projetos"><strong>SUAS DENÚNCIAS FEITAS</strong></h3>
+<!--                   <h3 class="seus-projetos"><strong>SUAS DENÚNCIAS FEITAS</strong></h3>
                   
                   <?php
 
@@ -1036,12 +1036,12 @@
 
                       <?php
                       }
-                      ?>
+                      ?> 
 
 
 
 
-                  </div>
+                  </div> -->
          
               
             <div id="popup" class="popup">
