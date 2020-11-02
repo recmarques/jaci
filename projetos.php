@@ -2,10 +2,13 @@
 
 	// conexao
   // require_once '../conexao.inc';
-  $servername = "localhost";
-	$username = "root";
-	$password = "";
-  $db_name = "jacidb";
+  $servername = "us-cdbr-east-02.cleardb.com";
+     $username = "b0394718678768";
+     $password = "33161d76";
+     $db_name = "heroku_390caed3836a8d5";
+    
+     $conexao = mysqli_connect($servername, $username, $password);
+     mysqli_select_db($conexao, $db_name);
   
   // $url = parse_url(getenv("mysql://b0394718678768:33161d76@us-cdbr-east-02.cleardb.com/heroku_390caed3836a8d5?reconnect=true"));
 
@@ -16,8 +19,6 @@
   
   // $conexao = new mysqli($server, $username, $password, $db);
 	
-	$conexao = mysqli_connect($servername, $username, $password);
-	mysqli_select_db($conexao, $db_name);
   mysqli_set_charset($conexao, "utf8");
 
 	if(mysqli_connect_error()):
