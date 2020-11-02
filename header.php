@@ -9,7 +9,7 @@ $url = parse_url(getenv("mysql://b0394718678768:33161d76@us-cdbr-east-02.cleardb
 $server = $url["us-cdbr-east-02.cleardb.com"];
 $username = $url["b0394718678768"];
 $password = $url["33161d76"];
-$db = substr($url["heroku_390caed3836a8d5"], 1);
+$db = substr($url["mysql://b0394718678768:33161d76@us-cdbr-east-02.cleardb.com/heroku_390caed3836a8d5?reconnect=true"], 1);
 
 $conexao = new mysqli($server, $username, $password, $db);
 
