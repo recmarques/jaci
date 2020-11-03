@@ -2,15 +2,13 @@
 
     // conexao
     // require_once '../conexao.inc';
-    // mysql://b0394718678768:33161d76@us-cdbr-east-02.cleardb.com/heroku_390caed3836a8d5?reconnect=true
-
-     $servername = "us-cdbr-east-02.cleardb.com";
-     $username = "b0394718678768";
-     $password = "33161d76";
-     $db_name = "heroku_390caed3836a8d5";
+    $servername = "us-cdbr-east-02.cleardb.com";
+    $username = "b0394718678768";
+    $password = "33161d76";
+    $db_name = "heroku_390caed3836a8d5";
     
-     $conexao = mysqli_connect($servername, $username, $password);
-     mysqli_select_db($conexao, $db_name);
+    $conexao = mysqli_connect($servername, $username, $password);
+    mysqli_select_db($conexao, $db_name);
     
     if(mysqli_connect_error()):
       echo "Falha na conexão: ".mysqli_connect_error();
@@ -319,24 +317,7 @@
       <link rel="stylesheet" href="css/style-home.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        
       <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="icon" sizes="192x192" href="img/favicon.png" type="image/png">
-      <link rel="apple-touch-icon" sizes="57x57" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="img/favicon.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
-      <link rel="icon" type="image/png" sizes="192x192" href="img/favicon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-      <link rel="icon" type="image/png" sizes="96x96" hhref="img/favicon.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
-      <link rel="manifest" href="img/favicon.png">
-        
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       
@@ -1077,8 +1058,8 @@
           <div class="row">
 
             <div class="col-sm-5 img-banner">
-              <img src="img/img-banner.png" alt="personagem"/>
-<!--               <img src="img/splash-img.png" alt="personagem"/> -->
+              <img src="img/img-banner-2.png" alt="personagem"/>
+              <!-- <img src="img/img-banner.png" alt="personagem"/> -->
             </div>
 
             <div class="col-sm-7 bem-vindo">Seja bem-vindo(a),

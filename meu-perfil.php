@@ -2,13 +2,13 @@
 
 	// conexao
     // require_once '../conexao.inc';
-     $servername = "us-cdbr-east-02.cleardb.com";
-     $username = "b0394718678768";
-     $password = "33161d76";
-     $db_name = "heroku_390caed3836a8d5";
-    
-     $conexao = mysqli_connect($servername, $username, $password);
-     mysqli_select_db($conexao, $db_name);
+    $servername = "us-cdbr-east-02.cleardb.com";
+    $username = "b0394718678768";
+    $password = "33161d76";
+    $db_name = "heroku_390caed3836a8d5";
+      
+    $conexao = mysqli_connect($servername, $username, $password);
+    mysqli_select_db($conexao, $db_name);
   
     $id;
       if(mysqli_connect_error()):
@@ -257,8 +257,14 @@
     border-radius: 3px;
     }
 
+    .do-not-show-desktop{
+      display: none;
+    }
 
     @media screen and (max-width: 700px){
+      .do-not-show-desktop{
+        display: block;
+      }
 
       .no-show-mobile{
         display: none;
@@ -448,7 +454,7 @@
           font-size: 19px;
           text-align: center;
           /* font-family: 'Poppins', sans-serif; */
-          font-family: 'Source Sans Pro', sans-serif;
+          font-family: 'Josefin Sans', sans-serif;
         }
         
         /* .popup{
@@ -589,6 +595,7 @@
 
         .seus-projetos{
           font-weight: 900;
+          color: #ffffff;
           font-family: 'Josefin Sans', sans-serif;
         }
 
@@ -860,6 +867,8 @@
             <div>
 
               <h3 class="seus-projetos"><strong>SEUS PROJETOS</strong></h3>
+              
+              <a href="#dados"><h5 class="seus-projetos do-not-show-desktop" style="text-decoration: underline; color: #929292;"><strong>VISUALIZAR MEUS DADOS</strong></h5></a>
             
             <?php
 
@@ -942,7 +951,7 @@
                   ?>
 
                
-<!--                   <h3 class="seus-projetos"><strong>SUAS DENÚNCIAS FEITAS</strong></h3>
+                  <!-- <h3 class="seus-projetos"><strong>SUAS DENÚNCIAS FEITAS</strong></h3>
                   
                   <?php
 
@@ -1036,7 +1045,7 @@
 
                       <?php
                       }
-                      ?> 
+                      ?>
 
 
 
@@ -1048,7 +1057,7 @@
                 <!-- <div class="info-close">
                   <a href="javascript: fechar();">X</a>
                 </div> -->
-              <strong class="info-popup">Suas informações</strong><br />	
+              <strong class="info-popup" id="dados">Suas informações</strong><br />	
               
 
               <div class="informacoes-user-popup">
