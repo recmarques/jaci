@@ -499,7 +499,7 @@
 
     .hero-image {
       background-color: #24AE91;
-      height: 430px;
+      height: 460px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
