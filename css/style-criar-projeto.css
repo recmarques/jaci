@@ -522,6 +522,8 @@
     @media screen and (max-width: 700px){
       .form{
         background-color: transparent !important;
+        height: 503px !important;
+        top: 0 !important;
       }
     
       .form .titulo {

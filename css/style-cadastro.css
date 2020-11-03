@@ -204,9 +204,9 @@ body{
   }
 
   .login-form img{
-    width: 100%;
-    padding-left: 55px;
-    padding-right: 55px;
+    width: 50% !important;
+    margin: auto !important;
+    padding: 0 !important;
   }
 
   .txtb{
