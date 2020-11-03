@@ -472,7 +472,7 @@
       }
 
     .no-show-desktop{
-      display: table;
+      display: none;
     }
 
     .no-show-mobile{
@@ -522,7 +522,7 @@
       color: white;
       padding-right: 11%;
       line-height: 55px;
-      font-size:31px;
+      font-size:36px;
       font-family: 'Poppins', sans-serif;
       letter-spacing: 1px;
     }
@@ -850,6 +850,10 @@
         height: 640px;
       }
 
+      .no-show-desktop{
+        display: block;
+      }
+
       .banner .autor{
         line-height: 30px;
         padding: 21px 0;
@@ -1057,12 +1061,12 @@
         <div class="hero-image" id="hero-image">
           <div class="row">
 
-            <div class="col-sm-5 img-banner">
-              <img src="img/img-banner-2.png" alt="personagem"/>
+            <div class="col-sm-4 img-banner">
+              <img src="img/img-banner-2.png" alt="personagem" class="no-show-desktop"/>
               <!-- <img src="img/img-banner.png" alt="personagem"/> -->
             </div>
 
-            <div class="col-sm-7 bem-vindo">Seja bem-vindo(a),
+            <div class="col-sm-8 bem-vindo">Seja bem-vindo(a),
               <?php 
                 if(isset($_SESSION['logado'])){
                   echo $dados['Nome'];
