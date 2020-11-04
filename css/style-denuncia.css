@@ -520,6 +520,13 @@
     @media screen and (max-width: 700px){
       .form{
         background-color: transparent !important;
+        height: 100px !important;
+        top: 0 !important;
+      }
+
+      .autor-projeto{
+        color:#1f1f1f;
+        text-transform: uppercase;
       }
     
       .form .titulo {
