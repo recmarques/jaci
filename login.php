@@ -54,7 +54,7 @@
 					$_SESSION['ID'] = $dados['ID'];
 
 					if($email == 'gruposol413@gmail.com'){
-						header('Location: admin/index-admin.php');
+						header('Location: admin/index.php');
 					}
 					else{
 						header('Location: header.php');
