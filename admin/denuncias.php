@@ -983,6 +983,8 @@
           $ID_Denuncia_Projeto = $vreg[3];
           $ID_Denuncia_Usuario = $vreg[4];
 
+
+
           $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Denuncia_Usuario'";
           $res2 = mysqli_query($conexao, $sql2);
           $vreg1;
@@ -992,6 +994,29 @@
               $Nome = $vreg1[1];
               $Email = $vreg1[2];
               $Curso = $vreg1[3];
+          }
+
+
+          $sql3 = "SELECT * FROM tb_projetos WHERE ID = '$ID_Denuncia_Projeto'";
+          $res3 = mysqli_query($conexao, $sql3);
+          $vreg1;
+    
+          while($vreg1 = mysqli_fetch_row($res3)){
+            
+            $ID_Projeto = $vreg[0];
+  
+            $_SESSION['ID_Projeto'] = $ID_Projeto;
+
+            $Titulo = $vreg[1];
+            $Descricao = $vreg[2];
+            $Palavras = $vreg[3];
+            $Ano = $vreg[4];
+            $Materia = $vreg[5];
+            $Categoria = $vreg[6];
+            $Conhecimento = $vreg[7];
+            $Texto = $vreg[8];
+            $ID_Usuario_Projeto = $vreg[9];
+
           }
 
           $_SESSION['ID_Projeto'] = $ID_Projeto;
@@ -1040,7 +1065,7 @@
 
     <div class="go-up">
       <a href="#topo">
-        <img src="img/up.png" alt="voltar para o topo" alt="voltar para o topo"/>
+        <img src="img/Up.png" alt="voltar para o topo" alt="voltar para o topo"/>
       </a>
     </div>
 
