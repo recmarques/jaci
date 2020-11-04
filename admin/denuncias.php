@@ -963,6 +963,8 @@
         if(isset($_POST['btn-entrar'])){
             $palavra = $_POST['palavra'];
             $sql1 = "SELECT * FROM tb_denuncias WHERE Comentarios LIKE '%$palavra%' OR Categoria LIKE '%$palavra%'";
+            // $sql1 = "SELECT * FROM tb_projetos WHERE Comentarios LIKE '%$palavra%' OR Categoria LIKE '%$palavra%'";
+            
         } 
         // $sql1 = "SELECT * FROM tb_projetos WHERE Palavras LIKE '%$palavra%' OR Titulo LIKE '%$palavra%' OR Materia LIKE '%$palavra%'";
         
@@ -1034,6 +1036,9 @@
           $_SESSION['Nome'] = $Nome;
           $_SESSION['Curso'] = $Curso;
 
+          $_SESSION['Categoria'] = $Categoria;
+          $_SESSION['Comentarios'] = $Comentarios;
+
       
       ?>
 
@@ -1047,11 +1052,11 @@
 
           <div class="autor">
             <?php
-              echo $Nome;
+              echo $Nome." | ".$Categoria;
             ?>
           </div>
 
-          <a href="projeto.php?ID=<?php echo $ID_Projeto; ?>">
+          <a href="denuncia.php?ID=<?php echo $ID_Denuncia; ?>">
             <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER MAIS</button>
           </a>
         </div>
