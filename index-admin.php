@@ -1038,7 +1038,7 @@
 
           <?php 
                 if(isset($_SESSION['logado'])){
-                  echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
+//                   echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
                   echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
                 }
                 else{
