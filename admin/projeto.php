@@ -721,7 +721,7 @@
 
     <nav>
       <div class="logo">
-        <a href="header.php">
+        <a href="index.php">
           <img src="img/logo-black.png" alt="logo"/>
         </a>
       </div>
@@ -731,29 +731,29 @@
           <i class="fas fa-bars"></i>
         </label>
 
-      <ul>
-        <li><a href="header.php">INÍCIO</a></li>
-        <li><a href="projetos.php">PROJETOS</a></li>
-        <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-        <!-- <li><a href="#">Feedback</a></li> -->
-        <?php 
-          if(isset($_SESSION['logado'])){
-              echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
-              echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
-          }
-          else{
-              echo "<li><a class=not-activate href=login.php>ENTRAR</a></li>";
-          }
+        <ul>
+            <li><a href="index.php">INÍCIO</a></li>
+            <li><a href="projetos.php">PROJETOS</a></li>
+            <li><a href="denuncias.php">DENÚNCIAS</a></li>
 
-          if(isset($_SESSION['logado'])){
-              echo "<li><a class=not-activate href=logout.php>SAIR</a></li>";
-          }
-          else{
-            echo "<li><a class=not-activate style=display:none href=logout.php>SAIR</a></li>";
-          }
+          <?php 
+                if(isset($_SESSION['logado'])){
+                  // echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
+                  echo "<li><a class=not-activate style=display:none href=login.php>ENTRAR</a></li>";
+                }
+                else{
+                  echo "<li><a class=not-activate href=login.php>ENTRAR</a></li>";
+                }
 
-        ?>
-      </ul>
+                if(isset($_SESSION['logado'])){
+                  echo "<li><a class=not-activate href=logout.php>SAIR</a></li>";
+                }
+                else{
+                  echo "<li><a class=not-activate style=display:none href=logout.php>SAIR</a></li>";
+                }
+            ?>
+
+          </ul>
 
     </nav>
 

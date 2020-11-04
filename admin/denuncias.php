@@ -889,7 +889,7 @@
 
     <nav>
       <div class="logo">
-        <a href="header.php">
+        <a href="index.php">
           <img src="img/logo-black.png" alt="logo"/>
         </a>
      </div>
@@ -900,7 +900,7 @@
         </label>
 
         <ul>
-            <li><a href="header.php">INÍCIO</a></li>
+            <li><a href="index.php">INÍCIO</a></li>
             <li><a href="projetos.php">PROJETOS</a></li>
             <li><a class="active" href="denuncias.php">DENÚNCIAS</a></li>
 

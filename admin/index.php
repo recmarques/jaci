@@ -1024,7 +1024,7 @@
       <body>
         <nav>
           <div class="logo">
-            <a href="header.php">
+            <a href="index.php">
             <img src="img/logo-black.png" alt="logo"/></a>
           </div>
         <input type="checkbox" id="click">
@@ -1033,7 +1033,7 @@
           </label>
 
           <ul>
-            <li><a class="active" href="header.php">INÍCIO</a></li>
+            <li><a class="active" href="index.php">INÍCIO</a></li>
             <li><a href="projetos.php">PROJETOS</a></li>
             <li><a href="denuncias.php">DENÚNCIAS</a></li>
 
