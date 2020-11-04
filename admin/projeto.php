@@ -27,21 +27,25 @@
 
     }
 
-    $ID_Denuncia = $_GET['ID'];
+    $ID_Projeto = $_GET['ID'];
 
-    $sql1 = "SELECT * FROM tb_denuncias WHERE ID='$ID_Denuncia'";
+    $sql1 = "SELECT * FROM tb_projetos WHERE ID='$ID_Projeto'";
     $res1 = mysqli_query($conexao, $sql1);
 
 
     while($vreg = mysqli_fetch_row($res1)){
 
-      $Comentarios = $vreg[1];
-      $Categoria = $vreg[2];
-      $ID_Denuncia_Projeto = $vreg[3];
-      $ID_Denuncia_Usuario = $vreg[4];
+      $Titulo = $vreg[1];
+      $Descricao = $vreg[2];
+      $Palavras = $vreg[3];
+      $Ano = $vreg[4];
+      $Materia = $vreg[5];
+      $Categoria = $vreg[6];
+      $Conhecimento = $vreg[7];
+      $Texto = $vreg[8];
+      $ID_Usuario_Projeto = $vreg[9];
 
-
-      $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Denuncia_Usuario'";
+      $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto'";
       $res2 = mysqli_query($conexao, $sql2);
       $vreg1;
     
@@ -51,30 +55,7 @@
         $Email = $vreg1[2];
         $Curso = $vreg1[3];
       }
-
-
-      $sql3 = "SELECT * FROM tb_projetos WHERE ID = '$ID_Denuncia_Projeto'";
-      $res3 = mysqli_query($conexao, $sql3);
-      $vreg2;
-    
-      while($vreg2 = mysqli_fetch_row($res3)){
-            
-      $ID_Projeto = $vreg2[0];
-  
-      $_SESSION['ID_Projeto'] = $ID_Projeto;
-
-      $Titulo = $vreg2[1];
-      $Descricao = $vreg2[2];
-      $Palavras = $vreg2[3];
-      $Ano = $vreg2[4];
-      $Materia = $vreg2[5];
-      $Categoria = $vreg2[6];
-      $Conhecimento = $vreg2[7];
-      $Texto = $vreg2[8];
-      $ID_Usuario_Projeto = $vreg2[9];
-
     }
-  }
 
         $_SESSION['ID_Projeto'] = $ID_Projeto;
         $_SESSION['Titulo'] = $Titulo;
@@ -111,7 +92,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="css/style-denuncia.css">
+      <link rel="stylesheet" href="css/style-projeto.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -786,7 +767,7 @@
           <div class="col-sm-9 titulo-banner">
             <strong>
               <?php
-                echo $Titulo;
+                echo $_SESSION['Titulo'];
               ?>
             </strong><br />
 
@@ -796,49 +777,45 @@
 
             <strong>POR
             <?php
-              echo $Nome;
+              echo $_SESSION['Nome'];
             ?>
             </strong><br />
 
             <strong class="ano">
               <?php
-                echo $Ano;
+                echo $_SESSION['Ano'];
               ?>
             </strong><br /><br />
 
             <strong class="curso">
               <?php
-                echo $Curso;
+                echo $_SESSION['Curso'];
               ?>
             </strong>
 
+            <?php 
+            if(isset($_SESSION["ID"])){
+            if($ID_Usuario_Projeto == $_SESSION["ID"]){ ?>
             <br /> <br />
-           
+            <a href="controller/editar-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/edit.png" alt="editar projeto" /></a>
+
             <a href="controller/excluir-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/delete.png" alt="excluir projeto"/></a>
-          
+            <?php
+            }}
+            ?>
           </div>
 
       </div>
       
     </div>
 
-
-    <!-- <a href="projeto.php?ID=<?php echo $ID_Projeto; ?>">
-            <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER MAIS</button>
-          </a> -->
-
     <div class="descrição">
       <?php
-        echo "Você pode visualizar o conteúdo deste projeto clicando";
+        echo $_SESSION['Descricao'];
       ?>
-      
-        <a href="projeto.php?ID=<?php echo $ID_Projeto; ?>"
-        style="text-decoration: underline; color: #ffffff;">aqui.
-        </a>
-
       <div class="go-down">
         <a href="#texto">
-	        <img src="img/Up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
+	        <img src="img/up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
         </a>
       </div>
     </div>
@@ -847,12 +824,7 @@
     <div class="texto" id="texto">
         <p>
           <?php
-           if(empty($Comentarios)){
-             echo "O usuário que denunciou este projeto não adicionou nenhum comentário!";
-           }
-           else{
-            echo $Comentarios;
-           }
+            echo $_SESSION['Texto'];
           ?>
         </p>
     </div>
@@ -860,7 +832,7 @@
 
     <div class="go-up">
        
-        <!-- <?php if(isset($_SESSION['logado'])){ ?>
+        <?php if(isset($_SESSION['logado'])){ ?>
 
         
           <div class="go-up-buttons">
@@ -875,17 +847,17 @@
           </a>
           
 
-          <?php }
-          }
-          ?>
+        <?php }
+        }
+         ?>
 
-          </div> -->
+        </div>
         
 
         
         <div class="go-up-img">
         <a href="#topo">
-          <img src="img/Up.png" alt="voltar para o topo" alt="para cima"/>
+          <img src="img/up.png" alt="voltar para o topo" alt="para cima"/>
         </a>
         </div>
 
