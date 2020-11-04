@@ -319,7 +319,7 @@
       <link rel="stylesheet" href="css/style-home.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <link rel="icon" href="../img/favicon.png" type="image/png" />
+      <link rel="icon" href="img/favicon.png" type="image/png" />
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       
@@ -1025,7 +1025,7 @@
         <nav>
           <div class="logo">
             <a href="header.php">
-            <img src="../img/logo-black.png" alt="logo"/></a>
+            <img src="img/logo-black.png" alt="logo"/></a>
           </div>
         <input type="checkbox" id="click">
           <label for="click" class="menu-btn">
@@ -1063,16 +1063,16 @@
           <div class="row">
 
             <div class="col-sm-4 img-banner">
-              <img src="../img/img-banner-2.png" alt="personagem" class="no-show-desktop"/>
+              <img src="img/img-banner-2.png" alt="personagem" class="no-show-desktop"/>
               <!-- <img src="img/img-banner.png" alt="personagem"/> -->
             </div>
 
-            <div class="col-sm-8 bem-vindo">Seja bem-vindo(a),
-              <?php 
+            <div class="col-sm-8 bem-vindo">Seja bem-vindo(a), administrador!
+              <!-- <?php 
                 if(isset($_SESSION['logado'])){
                   echo $dados['Nome'];
                 }
-              ?>
+              ?> -->
               <br />
 
               <strong>Qual material deseja acessar?</strong><br />
@@ -1236,31 +1236,31 @@
      
         <div class="col-sm-2 rede-social">
           <a href="https://www.facebook.com/" target="_blank">
-            <img src="../img/facebook.png" alt="facebook"/>
+            <img src="img/facebook.png" alt="facebook"/>
             </a>
         </div>
 
         <div class="col-sm-2 rede-social">
           <a href="https://www.instagram.com/" target="_blank">
-            <img src="../img/insta.png" alt="instagram"/>
+            <img src="img/insta.png" alt="instagram"/>
             </a>
         </div>
 
         <div class="col-sm-2 rede-social">
           <a href="https://twitter.com/" target="_blank">
-            <img src="../img/twitter.png" alt="twitter"/>
+            <img src="img/twitter.png" alt="twitter"/>
             </a>
         </div>
 
         <div class="col-sm-2 rede-social">
           <a href="mailto:gruposol413@gmail.com" target="_blank">
-            <img src="../img/mail.png" alt="e-mail"/>
+            <img src="img/mail.png" alt="e-mail"/>
             </a>
         </div>
 
         <div class="col-sm-4 logo-footer" >
           <a href="index.php">
-          <img src="../img/jaci.png" alt="jaci logo"/>
+          <img src="img/jaci.png" alt="jaci logo"/>
           </a>
         </div>
 

@@ -57,9 +57,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
       <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="style-denuncias.css">
+      <link rel="stylesheet" href="css/style-denuncias.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="css/style-projetos.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
