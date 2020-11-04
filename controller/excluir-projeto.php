@@ -681,29 +681,40 @@ transition: 0.5s;
 
 }
 
-.form-cadastro {
-    float: right;
-    padding-right: 50px;
-    padding-top: 10px;
-    width: 100%;
-    color: #DFDFDF;
-}
-.mensagem {
-    padding: 39px 0px 0 0;
-    font-size: 27px;
-    text-align: left;
-}
+  .form-cadastro {
+      float: right;
+      padding-right: 50px;
+      padding-top: 10px;
+      width: 100%;
+      color: #DFDFDF;
+  }
+  .mensagem {
+      padding: 25px 0px 0 0;
+      font-size: 21px;
+      text-align: left;
+  }
 
-.form .titulo {
-    float: left;
-    padding-left: 50px;
-    padding-top: 50px;
-    color: #051915;
-    font-size: 67px;
-    width: 430px;
-    text-align: left;
-}
+  .form .titulo {
+      float: left;
+      padding-left: 50px;
+      padding-top: 50px;
+      color: #051915;
+      font-size: 47px;
+      width: 430px;
+      text-align: left;
+  }
 
+  .button1{
+    background-color: #1f9e84;
+    font-weight: 800;
+    color: #000;
+    border: 2px solid #000;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.5s;
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 23px 64px;
+  }
 }
     </style>
   </head>
