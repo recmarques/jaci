@@ -815,7 +815,7 @@
       ?>
       <div class="go-down">
         <a href="#texto">
-	        <img src="img/up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
+	        <img src="img/Up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
         </a>
       </div>
     </div>
@@ -857,7 +857,7 @@
         
         <div class="go-up-img">
         <a href="#topo">
-          <img src="img/up.png" alt="voltar para o topo" alt="para cima"/>
+          <img src="img/Up.png" alt="voltar para o topo" alt="para cima"/>
         </a>
         </div>
 
