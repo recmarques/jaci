@@ -28,7 +28,9 @@
         $res = mysqli_query($conexao, $sql);
 
         $dados = mysqli_fetch_array($res);
- 
+        if($dados['Email'] != 'gruposol413@gmail.com'){
+          Location('header: ../header.php');
+        }
       }
 
       $sql1 = "SELECT * FROM tb_projetos WHERE ID='1'";
@@ -1033,8 +1035,7 @@
           <ul>
             <li><a class="active" href="header.php">INÍCIO</a></li>
             <li><a href="projetos.php">PROJETOS</a></li>
-            <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-            <!-- <li><a href="#">Feedback</a></li> -->
+            <li><a href="denuncias.php">DENÚNCIAS</a></li>
 
           <?php 
                 if(isset($_SESSION['logado'])){
@@ -1062,7 +1063,7 @@
           <div class="row">
 
             <div class="col-sm-4 img-banner">
-              <img src="img/img-banner-2.png" alt="personagem" class="no-show-desktop"/>
+              <img src="../img/img-banner-2.png" alt="personagem" class="no-show-desktop"/>
               <!-- <img src="img/img-banner.png" alt="personagem"/> -->
             </div>
 
