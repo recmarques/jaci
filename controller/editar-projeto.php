@@ -105,7 +105,7 @@
   <body>
     <nav>
       <div class="logo">
-        <a href="header.php">
+        <a href="../header.php">
         <img src="../img/logo-black.png" alt="logo"/></a>
     </div>
 <input type="checkbox" id="click">
@@ -356,7 +356,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
     let value = inputSlider.value;
     slideValue.textContent = value;
     slideValue.style.left = (value/2) + "%";
-    slideValue.classList.add("show");
+    // slideValue.classList.add("show");
   });
 
   inputSlider.onblur = (()=>{
