@@ -47,7 +47,7 @@
   <html lang="en" dir="ltr">
     <head>
 
-      <title>Projetos disponíveis | JACI</title>
+      <title>Denúncias disponíveis | JACI</title>
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -933,7 +933,7 @@
             
       <div class="row">
         <div class="col-sm-9 titulo-banner">
-          <strong>Estes são os projetos disponíveis.</strong><br />
+          <strong>Estas são as denúncias disponíveis.</strong><br />
         </div>
       </div>
 
@@ -962,31 +962,28 @@
 
         if(isset($_POST['btn-entrar'])){
             $palavra = $_POST['palavra'];
-            $sql1 = "SELECT * FROM tb_projetos WHERE Palavras LIKE '%$palavra%' OR Titulo LIKE '%$palavra%' OR Materia LIKE '%$palavra%'";
-        }
+            $sql1 = "SELECT * FROM tb_denuncias WHERE Comentarios LIKE '%$palavra%' OR Categoria LIKE '%$palavra%'";
+        } 
+        // $sql1 = "SELECT * FROM tb_projetos WHERE Palavras LIKE '%$palavra%' OR Titulo LIKE '%$palavra%' OR Materia LIKE '%$palavra%'";
+        
         else{
-            $sql1 = "SELECT * FROM tb_projetos ORDER BY ID DESC;";
+            $sql1 = "SELECT * FROM tb_denuncias ORDER BY ID DESC;";
         }
     
         $res1 = mysqli_query($conexao, $sql1);
                 
         while($vreg = mysqli_fetch_row($res1)){
 
-          $ID_Projeto = $vreg[0];
+          $ID_Denuncia = $vreg[0];
   
-          $_SESSION['ID_Projeto'] = $ID_Projeto;
+          $_SESSION['ID_Denuncia'] = $ID_Denuncia;
 
-          $Titulo = $vreg[1];
-          $Descricao = $vreg[2];
-          $Palavras = $vreg[3];
-          $Ano = $vreg[4];
-          $Materia = $vreg[5];
-          $Categoria = $vreg[6];
-          $Conhecimento = $vreg[7];
-          $Texto = $vreg[8];
-          $ID_Usuario_Projeto = $vreg[9];
+          $Comentarios = $vreg[1];
+          $Categoria = $vreg[2];
+          $ID_Denuncia_Projeto = $vreg[3];
+          $ID_Denuncia_Usuario = $vreg[4];
 
-          $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto'";
+          $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Denuncia_Usuario'";
           $res2 = mysqli_query($conexao, $sql2);
           $vreg1;
     
@@ -995,22 +992,6 @@
               $Nome = $vreg1[1];
               $Email = $vreg1[2];
               $Curso = $vreg1[3];
-          }
-
-          $sql3 = "SELECT * FROM tb_avaliacoes WHERE ID_Projeto = '$ID_Projeto'";
-          $res3 = mysqli_query($conexao, $sql3);
-          $vreg2;
-          $i = 0;
-          $Nota = 0;
-
-          while($vreg2 = mysqli_fetch_row($res3)){
-              $ID_Avaliacao = $vreg2[0];
-              $Comentários = $vreg2[1];
-              $Nota += $vreg2[2];
-              // $ID_Projeto = $vreg2[3];
-              $ID_Usuario_Avaliacao = $vreg2[4];
-
-              $i++;
           }
 
           $_SESSION['ID_Projeto'] = $ID_Projeto;
@@ -1041,147 +1022,7 @@
 
           <div class="autor">
             <?php
-
-            if(empty($Nota)){
-               echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria;
-            }
-            else{
-
-              if( ($Nota/$i) == 10){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              
-              <?php
-              }
-              
-              if( ($Nota/$i) == 9 || ($Nota/$i) == 9.5 ){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/half-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 8 || ($Nota/$i) == 8.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 7 || ($Nota/$i) == 7.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/half-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 6 || ($Nota/$i) == 6.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 5 || ($Nota/$i) == 5.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/half-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 4 || ($Nota/$i) == 4.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 3 || ($Nota/$i) == 3.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/half-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 2 || ($Nota/$i) == 2.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 1 || ($Nota/$i) == 1.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/half-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-              if( ($Nota/$i) == 0 || ($Nota/$i) == 0.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
-              ?>
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              <img src="img/empty-star.png" class="avaliacao-star">
-              
-              <?php
-              }
-
-    
-          
-          }
+              echo $Nome;
             ?>
           </div>
 
