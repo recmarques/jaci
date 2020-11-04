@@ -570,7 +570,8 @@ border-radius: 3px;
 @media screen and (max-width: 700px){
     .form{
       background-color: transparent !important;
-      margin-top: 353px;
+      height: 20px !important;
+      top: 0 !important;
     }
     
     .form .titulo {
