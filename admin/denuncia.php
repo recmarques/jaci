@@ -786,7 +786,7 @@
           <div class="col-sm-9 titulo-banner">
             <strong>
               <?php
-                echo $_SESSION['Titulo'];
+                echo $Titulo;
               ?>
             </strong><br />
 
@@ -796,32 +796,27 @@
 
             <strong>POR
             <?php
-              echo $_SESSION['Nome'];
+              echo $Nome;
             ?>
             </strong><br />
 
             <strong class="ano">
               <?php
-                echo $_SESSION['Ano'];
+                echo $Ano;
               ?>
             </strong><br /><br />
 
             <strong class="curso">
               <?php
-                echo $_SESSION['Curso'];
+                echo $Curso;
               ?>
             </strong>
 
-            <?php 
-            if(isset($_SESSION["ID"])){
-            if($ID_Usuario_Projeto == $_SESSION["ID"]){ ?>
             <br /> <br />
             <a href="controller/editar-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/edit.png" alt="editar projeto" /></a>
 
             <a href="controller/excluir-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/delete.png" alt="excluir projeto"/></a>
-            <?php
-            }}
-            ?>
+          
           </div>
 
       </div>
@@ -830,7 +825,7 @@
 
     <div class="descrição">
       <?php
-        echo $_SESSION['Categoria'];
+        echo $Categoria;
       ?>
       <div class="go-down">
         <a href="#texto">
@@ -843,11 +838,11 @@
     <div class="texto" id="texto">
         <p>
           <?php
-           if(empty($_SESSION['Comentarios'])){
+           if(empty($Comentarios)){
              echo "O usuário que denunciou este projeto não adicionou nenhum comentário!";
            }
            else{
-            echo $_SESSION['Comentario'];
+            echo $Comentarios;
            }
           ?>
         </p>
