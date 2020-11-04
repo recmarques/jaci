@@ -52,7 +52,13 @@
 					$_SESSION['logado'] = true;
 					
 					$_SESSION['ID'] = $dados['ID'];
-					header('Location: header.php');
+
+					if($email == 'gruposol413@gmail.com'){
+						header('Location: index-admin.php');
+					}
+					else{
+						header('Location: header.php');
+					}
 				}
 				else{
 					$erros[] = "E-mail e senha não conferem!";
