@@ -27,7 +27,7 @@
 
     }
 
-    $ID_Projeto = $_GET['ID'];
+    $ID_Denuncia = $_GET['ID'];
 
     $sql1 = "SELECT * FROM tb_denuncias WHERE ID='$ID_Denuncia'";
     $res1 = mysqli_query($conexao, $sql1);
@@ -813,8 +813,7 @@
             </strong>
 
             <br /> <br />
-            <a href="controller/editar-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/edit.png" alt="editar projeto" /></a>
-
+           
             <a href="controller/excluir-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/delete.png" alt="excluir projeto"/></a>
           
           </div>
