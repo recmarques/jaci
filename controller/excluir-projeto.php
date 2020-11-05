@@ -770,15 +770,6 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
         $sql3 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
         $res3 = mysqli_query($conexao, $sql3);
     
-        // while($vreg2 = mysqli_fetch_row($res3)){
-        //     $ID_Denuncia = $vreg2[0];
-        //     $Comentarios = $vreg2[1];
-        //     $Categoria = $vreg2[2];
-        //     $Curso = $vreg2[3];
-        //     $ID_Denuncia_Projeto = $vreg2[4];
-        //     $ID_Denuncia_Usuario = $vreg2[5];
-        // }
-    
         $sql4 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
         $res4 = mysqli_query($conexao, $sql4);
 

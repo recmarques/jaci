@@ -1112,13 +1112,13 @@
           <div class="autor">
             <?php
 
-            if(empty($Nota)){
-               echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria;
+            if(empty($Nota1)){
+              echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1;
             }
             else{
 
-              if( ($Nota/$i) == 10){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 10){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1129,8 +1129,8 @@
               <?php
               }
               
-              if( ($Nota/$i) == 9 || ($Nota/$i) == 9.5 ){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 9 || ($Nota1/$i1) == 9.5 ){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1141,8 +1141,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 8 || ($Nota/$i) == 8.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 8 || ($Nota1/$i1) == 8.5){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1153,8 +1153,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 7 || ($Nota/$i) == 7.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 7 || ($Nota1/$i1) == 7.5){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1165,8 +1165,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 6 || ($Nota/$i) == 6.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 6 || ($Nota1/$i1) == 6.5){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1177,8 +1177,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 5 || ($Nota/$i) == 5.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 5 || ($Nota1/$i1) == 5.5){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1189,8 +1189,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 4 || ($Nota/$i) == 4.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 4 || ($Nota1/$i1) == 4.5){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1201,8 +1201,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 3 || ($Nota/$i) == 3.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 3 || ($Nota1/$i1) == 3.5){
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/half-star.png" class="avaliacao-star">
@@ -1213,8 +1213,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 2 || ($Nota/$i) == 2.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 2 || ($Nota1/$i1) == 2.5){
+                echo $Nome1." | ".$Ano1. " | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/empty-star.png" class="avaliacao-star">
@@ -1225,8 +1225,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 1 || ($Nota/$i) == 1.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 1 || ($Nota1/$i1) == 1.5){
+                echo $Nome1." | ".$Ano1. " | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/half-star.png" class="avaliacao-star">
               <img src="img/empty-star.png" class="avaliacao-star">
@@ -1237,8 +1237,8 @@
               <?php
               }
 
-              if( ($Nota/$i) == 0 || ($Nota/$i) == 0.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              if( ($Nota1/$i1) == 0 || ($Nota1/$i1) == 0.5){
+                echo $Nome1." | ".$Ano1. " | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/empty-star.png" class="avaliacao-star">
               <img src="img/empty-star.png" class="avaliacao-star">
