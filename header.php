@@ -178,20 +178,20 @@
             $Curso3 = $vreg1[3];
         }
 
-        $sql4 = "SELECT * FROM tb_avaliacoes WHERE ID_Projeto = '$ID_Projeto1'";
-        $res4 = mysqli_query($conexao, $sql3);
-        $vreg4;
+        $sql5 = "SELECT * FROM tb_avaliacoes WHERE ID_Projeto = '$ID_Projeto3'";
+        $res5 = mysqli_query($conexao, $sql5);
+        $vreg5;
         $i3 = 0;
         $Nota3 = 0;
 
-        while($vreg4 = mysqli_fetch_row($res4)){
-            $ID_Avaliacao3 = $vreg4[0];
-            $Comentários3 = $vreg4[1];
-            $Nota3 += $vreg4[2];
+        while($vreg4 = mysqli_fetch_row($res5)){
+            $ID_Avaliacao3 = $vreg5[0];
+            $Comentários3 = $vreg5[1];
+            $Nota3 += $vreg5[2];
             // $ID_Projeto = $vreg2[3];
-            $ID_Usuario_Avaliacao3 = $vreg4[4];
+            $ID_Usuario_Avaliacao3 = $vreg5[4];
 
-            $i3++;
+            $i5++;
         }
       }
 
