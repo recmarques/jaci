@@ -60,19 +60,6 @@
             $Curso = $vreg1[3];
         }
 
-        $sql3 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
-        $res3 = mysqli_query($conexao, $sql3);
-        $vreg2;
-    
-        while($vreg2 = mysqli_fetch_row($res3)){
-            $ID_Denuncia = $vreg2[0];
-            $Comentarios = $vreg2[1];
-            $Categoria = $vreg2[2];
-            $Curso = $vreg2[3];
-            $ID_Denuncia_Projeto = $vreg2[4];
-            $ID_Denuncia_Usuario = $vreg2[5];
-        }
-
         $_SESSION['ID_Projeto'] = $ID_Projeto;
         $_SESSION['Titulo'] = $Titulo;
         $_SESSION['Descricao'] = $Descricao;
@@ -777,14 +764,30 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
 
   $linhas = mysqli_affected_rows($conexao);
 
-  if($linhas > 1){
+  if($linhas == 1){
     $mensagem = "Projeto excluído com sucesso!";
+
+        $sql3 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
+        $res3 = mysqli_query($conexao, $sql3);
     
-    $sql2 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
-    $res2 = mysqli_query($conexao, $sql2);
+        // while($vreg2 = mysqli_fetch_row($res3)){
+        //     $ID_Denuncia = $vreg2[0];
+        //     $Comentarios = $vreg2[1];
+        //     $Categoria = $vreg2[2];
+        //     $Curso = $vreg2[3];
+        //     $ID_Denuncia_Projeto = $vreg2[4];
+        //     $ID_Denuncia_Usuario = $vreg2[5];
+        // }
     
-    $sql3 = "DELETE FROM tb_avaliacoes WHERE ID_Projeto='$ID_Projeto'";
-    $res3 = mysqli_query($conexao, $sql3);
+        $sql4 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
+        $res4 = mysqli_query($conexao, $sql4);
+
+        $sql5 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
+        $res5 = mysqli_query($conexao, $sql5);
+        
+        $sql6 = "DELETE FROM tb_avaliacoes WHERE ID_Projeto='$ID_Projeto'";
+        $res6 = mysqli_query($conexao, $sql6);
+
   }
   else{
       $mensagem = "Não foi possível excluir o projeto!";
