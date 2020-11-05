@@ -858,7 +858,7 @@
     }
 
     .avaliacao-star{
-      width: 2%;
+      width: 4%;
     }
 
     @media screen and (max-width: 700px){
