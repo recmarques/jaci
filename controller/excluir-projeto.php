@@ -775,16 +775,16 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
   $sql1 = "DELETE FROM tb_projetos WHERE ID='$ID_Projeto'";
   $res1 = mysqli_query($conexao, $sql1);
 
-  $sql2 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
-  $res2 = mysqli_query($conexao, $sql2);
-  
-  $sql3 = "DELETE FROM tb_avaliacoes WHERE ID_Projeto='$ID_Projeto'";
-  $res3 = mysqli_query($conexao, $sql3);
-
   $linhas = mysqli_affected_rows($conexao);
 
-  if($linhas == 1){
+  if($linhas > 1){
     $mensagem = "Projeto excluído com sucesso!";
+    
+    $sql2 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
+    $res2 = mysqli_query($conexao, $sql2);
+    
+    $sql3 = "DELETE FROM tb_avaliacoes WHERE ID_Projeto='$ID_Projeto'";
+    $res3 = mysqli_query($conexao, $sql3);
   }
   else{
       $mensagem = "Não foi possível excluir o projeto!";

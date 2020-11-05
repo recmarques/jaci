@@ -72,6 +72,22 @@
                 $Email1 = $vreg1[2];
                 $Curso1 = $vreg1[3];
             }
+
+            $sql3 = "SELECT * FROM tb_avaliacoes WHERE ID_Projeto = '$ID_Projeto1'";
+            $res3 = mysqli_query($conexao, $sql3);
+            $vreg2;
+            $i1 = 0;
+            $Nota1 = 0;
+  
+            while($vreg2 = mysqli_fetch_row($res3)){
+                $ID_Avaliacao1 = $vreg2[0];
+                $Comentários1 = $vreg2[1];
+                $Nota1 += $vreg2[2];
+                // $ID_Projeto = $vreg2[3];
+                $ID_Usuario_Avaliacao1 = $vreg2[4];
+  
+                $i1++;
+            }
           }
 
 
@@ -1094,11 +1110,157 @@
           </div>
 
           <div class="autor">
+            <?php
+
+            if(empty($Nota)){
+               echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria;
+            }
+            else{
+
+              if( ($Nota/$i) == 10){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              
+              <?php
+              }
+              
+              if( ($Nota/$i) == 9 || ($Nota/$i) == 9.5 ){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 8 || ($Nota/$i) == 8.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 7 || ($Nota/$i) == 7.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 6 || ($Nota/$i) == 6.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 5 || ($Nota/$i) == 5.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 4 || ($Nota/$i) == 4.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 3 || ($Nota/$i) == 3.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 2 || ($Nota/$i) == 2.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 1 || ($Nota/$i) == 1.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 0 || ($Nota/$i) == 0.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+    
+          
+          }
+            ?>
+          </div>
+
+          <!-- <div class="autor">
           <?php
             echo $Nome1." | ".$Ano1. " | ".$Materia1;
             
           ?>
-          </div>
+          </div> -->
 
           <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
