@@ -783,7 +783,7 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
 
   $linhas = mysqli_affected_rows($conexao);
 
-  if($linhas >= 1){
+  if($linhas == 1){
     $mensagem = "Projeto excluído com sucesso!";
   }
   else{

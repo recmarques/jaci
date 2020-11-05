@@ -242,7 +242,7 @@ input[type="checkbox"]{
     padding-left: 50px;
     padding-top: 50px;
   color: #5EC7A7;
-  font-size: 47px !important;
+  font-size: 67px !important;
     width: 430px;
     text-align: left;
 }
@@ -686,7 +686,7 @@ transition: 0.5s;
         padding-left: 50px;
         padding-top: 50px;
         color: #051915;
-        font-size: 67px;
+        font-size: 47px;
         width: 430px;
         text-align: left;
     }
