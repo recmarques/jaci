@@ -834,7 +834,7 @@
     }
 
     .footer .logo-footer img{
-      width: 55%;
+      width: 65%;
     }
 
     .rede-social img{
