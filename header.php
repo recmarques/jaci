@@ -857,7 +857,15 @@
       width: 90%;
     }
 
+    .avaliacao-star{
+      width: 2%;
+    }
+
     @media screen and (max-width: 700px){
+
+      .avaliacao-star{
+          width: 5% !important;
+        }
 
       .hero-image{
         height: 640px;
