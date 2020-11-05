@@ -60,6 +60,19 @@
             $Curso = $vreg1[3];
         }
 
+        $sql3 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
+        $res3 = mysqli_query($conexao, $sql3);
+        $vreg2;
+    
+        while($vreg2 = mysqli_fetch_row($res3)){
+            $ID_Denuncia = $vreg2[0];
+            $Comentarios = $vreg2[1];
+            $Categoria = $vreg2[2];
+            $Curso = $vreg2[3];
+            $ID_Denuncia_Projeto = $vreg2[4];
+            $ID_Denuncia_Usuario = $vreg2[5];
+        }
+
         $_SESSION['ID_Projeto'] = $ID_Projeto;
         $_SESSION['Titulo'] = $Titulo;
         $_SESSION['Descricao'] = $Descricao;
@@ -762,9 +775,15 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
   $sql1 = "DELETE FROM tb_projetos WHERE ID='$ID_Projeto'";
   $res1 = mysqli_query($conexao, $sql1);
 
+  $sql2 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
+  $res2 = mysqli_query($conexao, $sql2);
+  
+  $sql3 = "DELETE FROM tb_avaliacoes WHERE ID_Projeto='$ID_Projeto'";
+  $res3 = mysqli_query($conexao, $sql3);
+
   $linhas = mysqli_affected_rows($conexao);
 
-  if($linhas == 1){
+  if($linhas >= 1){
     $mensagem = "Projeto excluído com sucesso!";
   }
   else{
