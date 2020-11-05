@@ -609,7 +609,7 @@
       }
 
       .footer .logo-footer img{
-        width: 30%;
+        width: 30% !important;
       }
 
       .no-show-mobile{
@@ -679,7 +679,7 @@
     }
 
     .footer .logo-footer img{
-      width: 30%;
+      width: 55%;
     }
 
     .go-up-buttons{
@@ -710,9 +710,162 @@
       }
   }
 
-  .go-up-img{
-    text-align: right;
-  }
+    .go-up-img{
+      text-align: right;
+    }
+
+  @media screen and (min-width: 1400px){
+      .img-banner img{
+        width: 90%;
+        padding-top: 0;
+        padding-left: 150px;
+      }
+
+      .bem-vindo{
+        text-align: right;
+        padding-top: 8%;
+        color: white;
+        padding-right: 11%;
+        line-height: 60px;
+        font-size:40px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .button {
+        border: none;
+        color: #ddd;
+        padding: 4px 60px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1 {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto:hover {
+        background-color: #0B342C; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+      }
+
+      .footer{
+        background-color: #1D1D1D;
+        width: 100%;
+        height: 220px !important;
+      }
+
+      .footer .rede-social{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 110px;
+        padding-top: 25px;
+      }
+
+      .footer .logo-footer{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 120px;
+      }
+
+
+      .footer .logo-footer img{
+        width: 65%;
+      }
+
+      .rede-social img{
+        width: 70% !important;
+        padding-top: 10px;
+      }
+
+      .ver-mais{
+        padding-left: 45%;
+      }
+
+      .button-vermais {
+        border: none;
+        padding: 30px 100px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1-vermais {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #24AE91; 
+        border: 2px solid #24AE91;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+        nav ul li a {
+          
+          font-size: 18px;
+          
+        }
+        nav {
+          display: flex;
+          height: 100px;
+        }
+
+        nav .logo img {
+          width: 45%;
+          padding-top: 5px;
+        }
+
+        .banner .titulo {
+            color: black;
+            text-align: left;
+            font-weight: 700;
+            max-width: 510px;
+            font-size: 58px;
+            text-transform: uppercase;
+        }
+        .banner .autor {
+            font-size: 17px;
+            margin: 0;
+            text-transform: uppercase;
+            padding: 0;
+        }
+
+        .button-projeto {
+            
+            padding: 4px 65px;
+            
+        }
+    }
 
   </style>
 </head>

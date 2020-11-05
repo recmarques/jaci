@@ -688,7 +688,7 @@
 
 
       .footer .logo-footer img{
-        width: 55%;
+        width: 65%;
       }
 
       .rede-social img{
@@ -721,9 +721,6 @@
         transition: 0.3s;
       }
 
-  
-
-      
         nav ul li a {
           
           font-size: 18px;
@@ -837,7 +834,7 @@
     }
 
     .footer .logo-footer img{
-      width: 65%;
+      width: 55%;
     }
 
     .rede-social img{

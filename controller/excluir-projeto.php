@@ -696,11 +696,11 @@ transition: 0.5s;
 
   .form .titulo {
       float: left;
-      padding-left: 50px;
+      padding-left: 0;
       padding-top: 50px;
       color: #051915;
       font-size: 47px;
-      width: 430px;
+      width: 100%;
       text-align: left;
   }
 
