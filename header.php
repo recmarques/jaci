@@ -816,6 +816,7 @@
       margin: 0;
       text-transform: uppercase;
       padding: 0;
+      line-height: 32px;
     }
 
     .row{
