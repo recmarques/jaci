@@ -875,7 +875,7 @@
     }
 
     .avaliacao-star{
-      width: 4%;
+      width: 3%;
     }
 
     @media screen and (max-width: 700px){
@@ -1479,7 +1479,9 @@
               
             ?>
           </div> -->
-
+            
+            
+          <br />
           <a href="projeto.php?ID=<?php echo $ID_Projeto3; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
