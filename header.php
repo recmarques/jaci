@@ -793,10 +793,12 @@
     .banner{
     color: black;
       text-align: left;
-      padding-left: 80px;
+/*       padding-left: 80px; */
+      padding-left: 60px;
       font-size: 50px;
       height: 450px;
-      padding-top: 80px;
+/*       padding-top: 80px; */
+      padding-top: 50px;
       width: 50%;
       font-family: 'Josefin Sans', sans-serif;
       margin: 0;
