@@ -1286,7 +1286,8 @@
             
           ?>
           </div> -->
-
+           
+          <br />
           <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1306,7 +1307,9 @@
             
           ?>
           </div>
-
+          
+            
+          <br />
           <a href="projeto.php?ID=<?php echo $ID_Projeto2; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1501,7 +1504,9 @@
               
             ?>
           </div>
-
+           
+            
+          <br />
           <a href="projeto.php?ID=<?php echo $ID_Projeto4; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1527,6 +1532,8 @@
                 
               ?>
           </div>
+            
+          <br />
           <a href="projeto.php?ID=<?php echo $ID_Projeto5; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1546,6 +1553,8 @@
               
             ?>
         </div>
+          
+        <br />
         <a href="projeto.php?ID=<?php echo $ID_Projeto6; ?>">
           <button class="button-projeto button button1-projeto button1">VER MAIS</button>
         </a>
