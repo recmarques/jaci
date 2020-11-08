@@ -734,6 +734,7 @@
         <ul>
             <li><a href="index.php">INÍCIO</a></li>
             <li><a href="projetos.php">PROJETOS</a></li>
+            <li><a href="usuarios.php">USUÁRIOS</a></li>
             <li><a href="denuncias.php">DENÚNCIAS</a></li>
 
           <?php 

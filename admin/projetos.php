@@ -47,7 +47,7 @@
   <html lang="en" dir="ltr">
     <head>
 
-      <title>Denúncias disponíveis | JACI</title>
+      <title>Projetos disponíveis | JACI</title>
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,8 +57,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
       <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="css/style-denuncias.css">
+      <!-- <link rel="stylesheet" href="style.css"> -->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="css/style-projetos.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -571,7 +572,7 @@
       }
 
       .footer .logo-footer img{
-        width: 30%;
+        width: 30% !important;
       }
 
       .no-show-mobile{
@@ -623,7 +624,7 @@
     }
 
     .footer .logo-footer img{
-      width: 30%;
+      width: 55%;
     }
 
     .projeto{
@@ -882,6 +883,160 @@
       width: 2%;
     }
 
+
+    @media screen and (min-width: 1400px){
+      .img-banner img{
+        width: 90%;
+        padding-top: 0;
+        padding-left: 150px;
+      }
+
+      .bem-vindo{
+        text-align: right;
+        padding-top: 8%;
+        color: white;
+        padding-right: 11%;
+        line-height: 60px;
+        font-size:40px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .button {
+        border: none;
+        color: #ddd;
+        padding: 4px 60px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1 {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto:hover {
+        background-color: #0B342C; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+      }
+
+      .footer{
+        background-color: #1D1D1D;
+        width: 100%;
+        height: 220px !important;
+      }
+
+      .footer .rede-social{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 110px;
+        padding-top: 25px;
+      }
+
+      .footer .logo-footer{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 120px;
+      }
+
+
+      .footer .logo-footer img{
+        width: 65%;
+      }
+
+      .rede-social img{
+        width: 70% !important;
+        padding-top: 10px;
+      }
+
+      .ver-mais{
+        padding-left: 45%;
+      }
+
+      .button-vermais {
+        border: none;
+        padding: 30px 100px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1-vermais {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #24AE91; 
+        border: 2px solid #24AE91;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+        nav ul li a {
+          
+          font-size: 18px;
+          
+        }
+        nav {
+          display: flex;
+          height: 100px;
+        }
+
+        nav .logo img {
+          width: 45%;
+          padding-top: 5px;
+        }
+
+        .banner .titulo {
+            color: black;
+            text-align: left;
+            font-weight: 700;
+            max-width: 510px;
+            font-size: 58px;
+            text-transform: uppercase;
+        }
+        .banner .autor {
+            font-size: 17px;
+            margin: 0;
+            text-transform: uppercase;
+            padding: 0;
+        }
+
+        .button-projeto {
+            
+            padding: 4px 65px;
+            
+        }
+    }
+
   </style>
   </head>
 
@@ -889,7 +1044,7 @@
 
     <nav>
       <div class="logo">
-        <a href="index.php">
+        <a href="header.php">
           <img src="img/logo-black.png" alt="logo"/>
         </a>
      </div>
@@ -901,9 +1056,9 @@
 
         <ul>
             <li><a href="index.php">INÍCIO</a></li>
-            <li><a href="projetos.php">PROJETOS</a></li>
+            <li><a class="active" href="projetos.php">PROJETOS</a></li>
             <li><a href="usuarios.php">USUÁRIOS</a></li>
-            <li><a class="active" href="denuncias.php">DENÚNCIAS</a></li>
+            <li><a href="denuncias.php">DENÚNCIAS</a></li>
 
           <?php 
                 if(isset($_SESSION['logado'])){
@@ -923,7 +1078,6 @@
             ?>
 
           </ul>
-
     </nav>
 
     <div class="hero-image" id="topo">
@@ -934,7 +1088,7 @@
             
       <div class="row">
         <div class="col-sm-9 titulo-banner">
-          <strong>Estas são as denúncias disponíveis.</strong><br />
+          <strong>Estes são os projetos disponíveis.</strong><br />
         </div>
       </div>
 
@@ -963,32 +1117,31 @@
 
         if(isset($_POST['btn-entrar'])){
             $palavra = $_POST['palavra'];
-            $sql1 = "SELECT * FROM tb_denuncias WHERE Comentarios LIKE '%$palavra%' OR Categoria LIKE '%$palavra%'";
-            // $sql1 = "SELECT * FROM tb_projetos WHERE Comentarios LIKE '%$palavra%' OR Categoria LIKE '%$palavra%'";
-            
-        } 
-        // $sql1 = "SELECT * FROM tb_projetos WHERE Palavras LIKE '%$palavra%' OR Titulo LIKE '%$palavra%' OR Materia LIKE '%$palavra%'";
-        
+            $sql1 = "SELECT * FROM tb_projetos WHERE Palavras LIKE '%$palavra%' OR Titulo LIKE '%$palavra%' OR Materia LIKE '%$palavra%'";
+        }
         else{
-            $sql1 = "SELECT * FROM tb_denuncias ORDER BY ID DESC;";
+            $sql1 = "SELECT * FROM tb_projetos ORDER BY ID DESC;";
         }
     
         $res1 = mysqli_query($conexao, $sql1);
                 
         while($vreg = mysqli_fetch_row($res1)){
 
-          $ID_Denuncia = $vreg[0];
+          $ID_Projeto = $vreg[0];
   
-          $_SESSION['ID_Denuncia'] = $ID_Denuncia;
+          $_SESSION['ID_Projeto'] = $ID_Projeto;
 
-          $Comentarios = $vreg[1];
-          $Categoria = $vreg[2];
-          $ID_Denuncia_Projeto = $vreg[3];
-          $ID_Denuncia_Usuario = $vreg[4];
+          $Titulo = $vreg[1];
+          $Descricao = $vreg[2];
+          $Palavras = $vreg[3];
+          $Ano = $vreg[4];
+          $Materia = $vreg[5];
+          $Categoria = $vreg[6];
+          $Conhecimento = $vreg[7];
+          $Texto = $vreg[8];
+          $ID_Usuario_Projeto = $vreg[9];
 
-
-
-          $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Denuncia_Usuario'";
+          $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto'";
           $res2 = mysqli_query($conexao, $sql2);
           $vreg1;
     
@@ -999,27 +1152,20 @@
               $Curso = $vreg1[3];
           }
 
-
-          $sql3 = "SELECT * FROM tb_projetos WHERE ID = '$ID_Denuncia_Projeto'";
+          $sql3 = "SELECT * FROM tb_avaliacoes WHERE ID_Projeto = '$ID_Projeto'";
           $res3 = mysqli_query($conexao, $sql3);
           $vreg2;
-    
+          $i = 0;
+          $Nota = 0;
+
           while($vreg2 = mysqli_fetch_row($res3)){
-            
-            $ID_Projeto = $vreg2[0];
-  
-            $_SESSION['ID_Projeto'] = $ID_Projeto;
+              $ID_Avaliacao = $vreg2[0];
+              $Comentários = $vreg2[1];
+              $Nota += $vreg2[2];
+              // $ID_Projeto = $vreg2[3];
+              $ID_Usuario_Avaliacao = $vreg2[4];
 
-            $Titulo = $vreg2[1];
-            $Descricao = $vreg2[2];
-            $Palavras = $vreg2[3];
-            $Ano = $vreg2[4];
-            $Materia = $vreg2[5];
-            $Categoria = $vreg2[6];
-            $Conhecimento = $vreg2[7];
-            $Texto = $vreg2[8];
-            $ID_Usuario_Projeto = $vreg2[9];
-
+              $i++;
           }
 
           $_SESSION['ID_Projeto'] = $ID_Projeto;
@@ -1037,9 +1183,6 @@
           $_SESSION['Nome'] = $Nome;
           $_SESSION['Curso'] = $Curso;
 
-          $_SESSION['Categoria'] = $Categoria;
-          $_SESSION['Comentarios'] = $Comentarios;
-
       
       ?>
 
@@ -1053,11 +1196,151 @@
 
           <div class="autor">
             <?php
-              echo $Nome." | ".$Categoria;
+
+            if(empty($Nota)){
+               echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria;
+            }
+            else{
+
+              if( ($Nota/$i) == 10){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              
+              <?php
+              }
+              
+              if( ($Nota/$i) == 9 || ($Nota/$i) == 9.5 ){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 8 || ($Nota/$i) == 8.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 7 || ($Nota/$i) == 7.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 6 || ($Nota/$i) == 6.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 5 || ($Nota/$i) == 5.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 4 || ($Nota/$i) == 4.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 3 || ($Nota/$i) == 3.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 2 || ($Nota/$i) == 2.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 1 || ($Nota/$i) == 1.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/half-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+              if( ($Nota/$i) == 0 || ($Nota/$i) == 0.5){
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+              ?>
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              <img src="img/empty-star.png" class="avaliacao-star">
+              
+              <?php
+              }
+
+    
+          
+          }
             ?>
           </div>
 
-          <a href="denuncia.php?ID=<?php echo $ID_Denuncia; ?>">
+          <a href="projeto.php?ID=<?php echo $ID_Projeto; ?>">
             <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER MAIS</button>
           </a>
         </div>
@@ -1071,7 +1354,7 @@
 
     <div class="go-up">
       <a href="#topo">
-        <img src="img/Up.png" alt="voltar para o topo" alt="voltar para o topo"/>
+        <img src="img/up.png" alt="voltar para o topo" alt="voltar para o topo"/>
       </a>
     </div>
 

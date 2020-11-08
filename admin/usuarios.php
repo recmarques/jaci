@@ -57,7 +57,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
       <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="css/style-denuncias.css">
+      <link rel="stylesheet" href="css/style-usuarios.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -902,7 +902,8 @@
         <ul>
             <li><a href="index.php">INÍCIO</a></li>
             <li><a href="projetos.php">PROJETOS</a></li>
-            <li><a class="active" href="denuncias.php">DENÚNCIAS</a></li>
+            <li><a class="active" href="usuarios.php">USUÁRIOS</a></li>
+            <li><a href="denuncias.php">DENÚNCIAS</a></li>
 
           <?php 
                 if(isset($_SESSION['logado'])){
@@ -962,7 +963,7 @@
 
         if(isset($_POST['btn-entrar'])){
             $palavra = $_POST['palavra'];
-            $sql1 = "SELECT * FROM tb_cadastros WHERE Nome LIKE '%$palavra%' OR Email LIKE '%$palavra%'";
+            $sql1 = "SELECT * FROM tb_cadastros WHERE Nome LIKE '%$palavra%' OR Email LIKE '%$palavra%' OR Curso LIKE '%$palavra%'";
             // $sql1 = "SELECT * FROM tb_projetos WHERE Comentarios LIKE '%$palavra%' OR Categoria LIKE '%$palavra%'";
             
         } 
