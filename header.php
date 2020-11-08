@@ -793,12 +793,10 @@
     .banner{
     color: black;
       text-align: left;
-/*       padding-left: 80px; */
-      padding-left: 60px;
+      padding-left: 80px;
       font-size: 50px;
       height: 450px;
-/*       padding-top: 80px; */
-      padding-top: 50px;
+      padding-top: 80px;
       width: 50%;
       font-family: 'Josefin Sans', sans-serif;
       margin: 0;
@@ -818,7 +816,6 @@
       margin: 0;
       text-transform: uppercase;
       padding: 0;
-      line-height: 32px;
     }
 
     .row{
@@ -877,7 +874,7 @@
     }
 
     .avaliacao-star{
-      width: 3%;
+      width: 4%;
     }
 
     @media screen and (max-width: 700px){
@@ -1288,8 +1285,7 @@
             
           ?>
           </div> -->
-           
-          <br />
+
           <a href="projeto.php?ID=<?php echo $ID_Projeto1; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1309,9 +1305,7 @@
             
           ?>
           </div>
-          
-            
-          <br />
+
           <a href="projeto.php?ID=<?php echo $ID_Projeto2; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1484,9 +1478,7 @@
               
             ?>
           </div> -->
-            
-            
-          <br />
+
           <a href="projeto.php?ID=<?php echo $ID_Projeto3; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1506,9 +1498,7 @@
               
             ?>
           </div>
-           
-            
-          <br />
+
           <a href="projeto.php?ID=<?php echo $ID_Projeto4; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1534,8 +1524,6 @@
                 
               ?>
           </div>
-            
-          <br />
           <a href="projeto.php?ID=<?php echo $ID_Projeto5; ?>">
             <button class="button-projeto button button1-projeto button1">VER MAIS</button>
           </a>
@@ -1555,8 +1543,6 @@
               
             ?>
         </div>
-          
-        <br />
         <a href="projeto.php?ID=<?php echo $ID_Projeto6; ?>">
           <button class="button-projeto button button1-projeto button1">VER MAIS</button>
         </a>

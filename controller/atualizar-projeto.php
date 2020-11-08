@@ -643,6 +643,19 @@
 
 
   @media screen and (max-width: 700px){
+
+    .button1{
+      background-color: #1f9e84;
+      font-weight: 800;
+      color: #000;
+      border: 2px solid #000;
+      font-family: 'Josefin Sans', sans-serif;
+      transition: 0.5s;
+      font-size: 10px;
+      margin-top: 20px;
+      padding: 23px 64px;
+    }
+
     .form{
       background-color: #1F1F1F;
       margin: auto;
@@ -668,8 +681,11 @@
     }
 
     .mensagem {
-      padding: 39px 0px 0 0;
+      /* padding: 39px 0px 0 0;
       font-size: 27px;
+      text-align: left; */
+      padding: 25px 0px 0 0;
+      font-size: 21px;
       text-align: left;
     }
 
@@ -678,7 +694,7 @@
       padding-left: 50px;
       padding-top: 50px;
       color: #051915;
-      font-size: 67px;
+      font-size: 62px !important;
       width: 430px;
       text-align: left;
     }
@@ -736,7 +752,7 @@
           echo "Falha na <strong>atualização do projeto!</strong>";   
         }
         else{
-          echo "Atualização feita <strong>com sucesso!</strong>";
+          echo "Mudanças salvas <strong>com sucesso!</strong>";
         }
       ?>
       </p>

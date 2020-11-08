@@ -37,18 +37,24 @@
         $sql1 = "DELETE FROM tb_cadastros WHERE ID = '$id_user'";
         $res1 = mysqli_query($conexao, $sql1);
 
-        $sql2 = "DELETE FROM tb_projetos WHERE ID_Usuario = '$id_user'";
-        $res2 = mysqli_query($conexao, $sql2);
-
-
         $linhas = mysqli_affected_rows($conexao);
 
-        // if($linhas == 1){
+        if($linhas == 1){
             $mensagem = "Conta excluída com sucesso!";
-        // }
-        // else{
-        //     $mensagem = "Sua conta não foi excluída!";
-        // }
+
+            $sql2 = "DELETE FROM tb_projetos WHERE ID_Usuario = '$id_user'";
+            $res2 = mysqli_query($conexao, $sql2);
+    
+            $sql3 = "DELETE FROM tb_denuncias WHERE ID_Usuario = '$id_user'";
+            $res3 = mysqli_query($conexao, $sql3);
+    
+            $sql4 = "DELETE FROM tb_avaliacoes WHERE ID_Usuario = '$id_user'";
+            $res4 = mysqli_query($conexao, $sql4);
+    
+        }
+        else{
+            $mensagem = "Sua conta não foi excluída!";
+        }
 
         
     
