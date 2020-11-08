@@ -971,16 +971,16 @@
         else{
             $sql1 = "SELECT * FROM tb_cadastros ORDER BY ID DESC;";
         }
-    
-        $res1 = mysqli_query($conexao, $sql1);
-                
-        while($vreg = mysqli_fetch_row($res1)){
 
-          $ID_User = $vreg[0];
+        $res1 = mysqli_query($conexao, $sql1);
+        $vreg1;
+
+        while($vreg1 = mysqli_fetch_row($res1)){
+
+          $ID_User = $vreg1[0];
   
           $_SESSION['ID_User'] = $ID_User;
 
-          $ID_Usuario = $vreg1[0];
           $Nome = $vreg1[1];
           $Email = $vreg1[2];
           $Curso = $vreg1[3];
