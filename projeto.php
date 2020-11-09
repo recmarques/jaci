@@ -877,6 +877,22 @@
         nav {
           padding: 0 20px 0 20px;
         }
+
+        .texto {
+          padding: 42px 27px !important;
+        }
+
+        .descrição {
+          padding: 29px 27px !important;
+        }
+        
+        .voltar {
+          display: absolute !important;
+          padding-left: 24px;
+          padding-top: 31px;
+          float: inline-start;
+          margin: 0;
+        }
       }
 
   </style>

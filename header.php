@@ -464,6 +464,19 @@
         nav {
           padding: 0 20px 0 20px;
         }
+
+        .banner {
+          width: 100%;
+          height: 430px;
+          padding-left: 23px;
+          /* display: table-row-group; */
+          padding-top: 37px;
+        }
+
+        .banner .titulo {
+          font-size: 33px;
+          line-height: 45px;
+        }
       }
 
       @media (max-width: 920px) {

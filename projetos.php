@@ -893,6 +893,37 @@
         nav {
           padding: 0 20px 0 20px;
         }
+
+        .titulo-banner{
+          text-align: left;
+          padding-top: 15% !important;
+          color: #fff;
+          padding-left: 11% !important;
+          line-height: 70px;
+          font-size: 44px !important;
+          max-width: 940px;
+          font-family: 'Archivo', sans-serif;
+          text-transform: none;
+          letter-spacing: 1px;
+        }
+
+        .projeto .titulo {
+          color: black;
+          text-align: left;
+          font-weight: 700;
+          max-width: 100%;
+          font-size: 32px !important;
+          text-transform: uppercase;
+          font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .projeto .autor {
+          font-size: 13px;
+          margin: 0;
+          font-family: 'Josefin Sans', sans-serif;
+          text-transform: uppercase !important;
+          padding: 0;
+        }
       }
 
 
