@@ -455,14 +455,14 @@
       }
 
       /* !!! */
-      @media (min-width: 350px) {
+      @media (max-width: 350px) {
         nav .logo{
           width: 180px;
           padding-bottom: 10px;
         }
 
         nav {
-          padding: 0 30px 0 30px;
+          padding: 0 20px 0 20px;
         }
       }
 
