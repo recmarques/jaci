@@ -454,6 +454,18 @@
         }
       }
 
+      /* !!! */
+      @media (min-width: 350px) {
+        nav .logo{
+          width: 180px;
+          padding-bottom: 10px;
+        }
+
+        nav {
+          padding: 0 30px 0 30px;
+        }
+      }
+
       @media (max-width: 920px) {
         nav .menu-btn i{
             display: block;
