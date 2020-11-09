@@ -1018,6 +1018,18 @@
     .hero-image strong{
       font-weight: 600;
     }
+
+    /* !!! */
+    @media (max-width: 350px) {
+        nav .logo{
+          width: 180px;
+          padding-bottom: 10px;
+        }
+
+        nav {
+          padding: 0 20px 0 20px;
+        }
+      }
    
   </style>
     </head>
