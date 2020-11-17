@@ -1305,7 +1305,7 @@
 
           <!-- <div class="autor">
           <?php
-            echo $Nome1." | ".$Ano1. " | ".$Materia1;
+            echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1;
             
           ?>
           </div> -->
@@ -1325,7 +1325,7 @@
 
           <div class="autor">
           <?php
-            echo $Nome2." | ".$Ano2. " | ".$Materia2;;
+            echo $Nome2." | ".$Ano2. " | ".$Materia2." | ".$Categoria2;
             
           ?>
           </div>
@@ -1354,7 +1354,7 @@
 
           <div class="autor">
           <?php
-              echo $Nome3." | ".$Ano3. " | ".$Materia3;
+              echo $Nome3." | ".$Ano3. " | ".$Materia3." | ".$Categoria3;
               
             ?>
           </div>
@@ -1374,7 +1374,7 @@
 
           <div class="autor">
           <?php
-              echo $Nome4." | ".$Ano4. " | ".$Materia4;;
+              echo $Nome4." | ".$Ano4. " | ".$Materia4." | ".$Categoria4;
               
             ?>
           </div>
@@ -1400,7 +1400,7 @@
 
           <div class="autor">
           <?php
-                echo $Nome5." | ".$Ano5. " | ".$Materia5;;
+                echo $Nome5." | ".$Ano5. " | ".$Materia5." | ".$Categoria5;
                 
               ?>
           </div>
@@ -1419,7 +1419,7 @@
 
         <div class="autor">
         <?php
-              echo $Nome6." | ".$Ano6. " | ".$Materia6;;
+              echo $Nome6." | ".$Ano6. " | ".$Materia6." | ".$Categoria6;
               
             ?>
         </div>
