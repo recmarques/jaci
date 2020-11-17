@@ -27,50 +27,6 @@
 
     }
 
-    $ID_Projeto = $_GET['ID'];
-
-    $sql1 = "SELECT * FROM tb_projetos WHERE ID='$ID_Projeto'";
-    $res1 = mysqli_query($conexao, $sql1);
-
-
-    while($vreg = mysqli_fetch_row($res1)){
-
-      $Titulo = $vreg[1];
-      $Descricao = $vreg[2];
-      $Palavras = $vreg[3];
-      $Ano = $vreg[4];
-      $Materia = $vreg[5];
-      $Categoria = $vreg[6];
-      $Conhecimento = $vreg[7];
-      $Texto = $vreg[8];
-      $ID_Usuario_Projeto = $vreg[9];
-
-      $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto'";
-      $res2 = mysqli_query($conexao, $sql2);
-      $vreg1;
-    
-      while($vreg1 = mysqli_fetch_row($res2)){
-        $ID_Usuario = $vreg1[0];
-        $Nome = $vreg1[1];
-        $Email = $vreg1[2];
-        $Curso = $vreg1[3];
-      }
-    }
-
-        $_SESSION['ID_Projeto'] = $ID_Projeto;
-        $_SESSION['Titulo'] = $Titulo;
-        $_SESSION['Descricao'] = $Descricao;
-        $_SESSION['Palavras'] = $Palavras;
-        $_SESSION['Ano'] = $Ano;
-        $_SESSION['Palavras'] = $Palavras;
-        $_SESSION['Materia'] = $Materia;
-        $_SESSION['Categoria'] = $Categoria;
-        $_SESSION['Conhecimento'] = $Conhecimento;
-        $_SESSION['Texto'] = $Texto;
-        $_SESSION['ID_Usuario_Projeto'] = $ID_Usuario_Projeto;
-    
-        $_SESSION['Nome'] = $Nome;
-        $_SESSION['Curso'] = $Curso;
     
 ?>
 
@@ -81,9 +37,8 @@
 <html lang="pt-br" dir="ltr">
   <head>
 
-      <!-- <title><?php echo $Titulo; ?> | JACI</title> -->
       <meta charset="utf-8">
-      <title><?php echo $_SESSION['Titulo']." | JACI"; ?></title>
+      <title>Sobre nós | JACI</title>
       <link rel="icon" href="img/favicon.png" type="image/png" />
       
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -92,7 +47,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="css/style-projeto.css">
+      <link rel="stylesheet" href="css/style-sobre.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -115,6 +70,14 @@
       padding: 0;
       box-sizing: border-box;
     } 
+
+    hr.sobre {
+        border-top: 2px solid #000000;
+    }
+
+    hr.about {
+        border-top: 2px solid #ffffff;
+    }
 
     body{
       background: #272727 !important;
@@ -409,38 +372,9 @@
       font-family: 'Josefin Sans', sans-serif;
     }
 
-    .button1-vermais {
-      background-color: transparent; 
-      font-weight: 800;
-      color: #24AE91; 
-      border: 2px solid #24AE91;
-      font-family: 'Josefin Sans', sans-serif;
-      transition: 0.3s;
-    }
-
-    .button1-vermais:hover {
-      background-color: #0000; 
-      font-weight: 600;
-      color: #fff; 
-      border: 2px solid #fff;
-      font-family: 'Josefin Sans', sans-serif;
-      transition: 0.5s;
-    }
-
-    .img-banner img{
-      width: 100%;
-      padding-top: 0;
-      padding-left: 75px;
-    }
-
     @media screen and (min-width: 1400px){
 
-      .img-banner img{
-        width: 90%;
-        padding-top: 0;
-        padding-left: 150px;
-      }
-
+      
       .titulo-banner{
         text-align: left;
         padding-top: 2% !important;
@@ -454,39 +388,14 @@
         letter-spacing: 1px;
       }
 
-      .autor{
-        text-align: left !important;
-        padding-top: 1% !important;
-        color: #000 !important;
-        padding-right: 3% !important;
-        max-width: 400px;
-        line-height: 32px;
-        font-weight: 900 !important;
-        font-size:25px; 
-        text-transform: uppercase !important;
-        /* font-family: 'Lato', sans-serif !important; */
-        font-family: 'Josefin Sans', sans-serif !important;
-        letter-spacing: 1px;
-      }
-
-      .texto{
-        padding: 100px 170px;
-        line-height:42px;
-        font-weight: 700 !important;
-        text-align: justify;
-        font-size:19px;
-        font-family: 'Lato', sans-serif !important;
-        color: #fff;
-      }
-
       .descrição{
         padding: 90px 170px;
         line-height: 42px;
-        background-color: #393939;
+        /* background-color: #393939; */
         font-weight: 700 !important;
         font-size:19px;
         font-family: 'Lato', sans-serif !important;
-        color: #fff;
+        /* color: #fff; */
       }
 
       .footer{
@@ -528,12 +437,6 @@
       text-transform: uppercase;
     }
 
-    .banner .autor{
-      font-size: 15px;
-      margin: 0;
-      padding: 0;
-    }
-
     .row{
       width: 100%;
     }
@@ -563,9 +466,6 @@
         align-content: center;
       }
 
-      .button{
-        padding: 16px 28px !important;
-      }
 
       .banner .titulo{
         font-size: 35px;
@@ -582,13 +482,6 @@
 
       .row-2{
         display: block;
-      }
-
-      .img-banner img{
-        width: 100%;
-        padding-top: 0;
-        /* padding-left: 50px; */
-        padding-left: 0;
       }
 
       .footer .rede-social{
@@ -622,36 +515,6 @@
         margin: 0;
       }
 
-      .autor {
-        text-align: left !important;
-        padding-top: 1% !important;
-        color: #000 !important;
-        padding-right: 11%;
-        text-transform: uppercase !important;
-        max-width: 100% !important;
-        line-height: 25px;
-        font-weight: 900 !important;
-        font-size: 20px;
-        /* font-family: 'Lato', sans-serif !important; */
-            
-        font-family: 'Josefin Sans', sans-serif !important;
-        letter-spacing: 1px;
-      }
-
-      .ano, .curso{
-        font-size: 20px !important;
-      }
-
-      .texto {
-        padding: 100px 130px;
-        line-height: 42px;
-        background-color: #272727;
-        font-weight: 700 !important;
-        text-align: justify;
-        font-size: 16px;
-        font-family: 'Lato', sans-serif !important;
-        color: #fff;
-      }
     }  
 
     .footer{
@@ -693,20 +556,17 @@
 
     @media screen and (min-width: 1400px){
       .titulo-banner {
- 
-    max-width: 1300px !important;
-    font-family: 'Josefin Sans', sans-serif;
+        max-width: 1300px !important;
+        font-family: 'Josefin Sans', sans-serif;
       }
 
       .hero-image {
-    background-color: #5EC7A7;
-    height: 348px !important;
+        background-color: #5EC7A7;
+        height: 348px !important;
       }
 
-
       .descrição {
-    padding: 31px 170px;
-    
+        padding: 31px 170px;
       }
   }
 
@@ -732,46 +592,6 @@
         letter-spacing: 1px;
       }
 
-      .button {
-        border: none;
-        color: #ddd;
-        padding: 4px 60px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 11px;
-        margin: 4px 2px;
-        cursor: pointer;
-        font-family: 'Josefin Sans', sans-serif;
-      }
-
-      .button1 {
-        background-color: transparent; 
-        font-weight: 800;
-        color: #000; 
-        border: 2px solid #000;
-        font-family: 'Josefin Sans', sans-serif;
-        transition: 0.3s;
-      }
-
-      .button1-projeto {
-        background-color: transparent; 
-        font-weight: 800;
-        color: #000; 
-        border: 2px solid #000;
-        font-family: 'Josefin Sans', sans-serif;
-        transition: 0.3s;
-      }
-
-      .button1-projeto:hover {
-        background-color: #0B342C; 
-        font-weight: 600;
-        color: #fff; 
-        border: 2px solid #000;
-        font-family: 'Josefin Sans', sans-serif;
-        transition: 0.5s;
-      }
-
       .footer{
         background-color: #1D1D1D;
         width: 100%;
@@ -795,7 +615,6 @@
         padding-left: 120px;
       }
 
-
       .footer .logo-footer img{
         width: 65%;
       }
@@ -805,36 +624,12 @@
         padding-top: 10px;
       }
 
-      .ver-mais{
-        padding-left: 45%;
-      }
-
-      .button-vermais {
-        border: none;
-        padding: 30px 100px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 11px;
-        margin: 4px 2px;
-        cursor: pointer;
-        font-family: 'Josefin Sans', sans-serif;
-      }
-
-      .button1-vermais {
-        background-color: transparent; 
-        font-weight: 800;
-        color: #24AE91; 
-        border: 2px solid #24AE91;
-        font-family: 'Josefin Sans', sans-serif;
-        transition: 0.3s;
-      }
-
         nav ul li a {
           
           font-size: 18px;
           
         }
+
         nav {
           display: flex;
           height: 100px;
@@ -853,18 +648,6 @@
             font-size: 58px;
             text-transform: uppercase;
         }
-        .banner .autor {
-            font-size: 17px;
-            margin: 0;
-            text-transform: uppercase;
-            padding: 0;
-        }
-
-        .button-projeto {
-            
-            padding: 4px 65px;
-            
-        }
     }
 
     /* !!! */
@@ -878,9 +661,6 @@
           padding: 0 20px 0 20px;
         }
 
-        .texto {
-          padding: 42px 27px !important;
-        }
 
         .descrição {
           padding: 29px 27px !important;
@@ -946,95 +726,102 @@
         <div class="row">
 
           <div class="col-sm-9 titulo-banner">
-            <strong>
-              <?php
-                echo $_SESSION['Titulo'];
-              ?>
+              SOBRE<br /><strong>NÓS
             </strong><br />
-
+          
           </div>
 
-          <div class="col-sm-3 autor">
+          <!-- <div class="col-sm-3 autor">
 
             <strong>POR
-            <?php
-              echo $_SESSION['Nome'];
-            ?>
+              aaaaa
             </strong><br />
 
             <strong class="ano">
-              <?php
-                echo $_SESSION['Ano'];
-              ?>
+              aaaaa
             </strong><br /><br />
 
             <strong class="curso">
-              <?php
-                echo $_SESSION['Curso'];
-              ?>
+              aaaa
             </strong>
-
-            <?php 
-            if(isset($_SESSION["ID"])){
-            if($ID_Usuario_Projeto == $_SESSION["ID"]){ ?>
-            <br /> <br />
-            <a href="controller/editar-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/edit.png" alt="editar projeto" /></a>
-
-            <a href="controller/excluir-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/delete.png" alt="excluir projeto"/></a>
-            <?php
-            }}
-            ?>
-          </div>
+          </div> -->
 
       </div>
       
     </div>
 
-    <div class="descrição">
-      <?php
-        echo $_SESSION['Descricao'];
-      ?>
-      <div class="go-down">
+    <div class="descrição" style="background-color: #5EC7A7; color: #000">
+    <hr class="sobre"><br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Feugiat vivamus at augue eget arcu.
+    Feugiat nisl pretium fusce id velit ut tortor pretium.<br /><br />
+
+    Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Sit amet justo donec
+    enim diam vulputate ut pharetra. Id consectetur purus ut faucibus pulvinar elementum
+    integer. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor.
+    <br /><br />  
+    
+    <!-- <div class="go-down">
         <a href="#texto">
 	        <img src="img/up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
         </a>
+      </div> -->
+    </div>
+
+
+
+    <div class="hero-image-about" id="topo">
+        <br /><br />
+            
+        <div class="row">
+
+          <div class="col-sm-9 titulo-banner-about">
+              ABOUT<br /><strong>US
+            </strong><br />
+          
+          </div>
+
+          <!-- <div class="col-sm-3 autor">
+
+            <strong>POR
+              aaaaa
+            </strong><br />
+
+            <strong class="ano">
+              aaaaa
+            </strong><br /><br />
+
+            <strong class="curso">
+              aaaa
+            </strong>
+          </div> -->
+
       </div>
+      
     </div>
 
+    <div class="descrição" style="background-color: #272727; color: #ffffff">
+    <hr class="about"/><br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Feugiat vivamus at augue eget arcu.
+    Feugiat nisl pretium fusce id velit ut tortor pretium.<br /><br />
 
-    <div class="texto" id="texto">
-        <p>
-          <?php
-            echo $_SESSION['Texto'];
-          ?>
-        </p>
+    Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Sit amet justo donec
+    enim diam vulputate ut pharetra. Id consectetur purus ut faucibus pulvinar elementum
+    integer. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor.
+    <br /><br />
+    
+    <!-- <div class="go-down">
+        <a href="#texto">
+	        <img src="img/up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
+        </a>
+      </div> -->
     </div>
+
     
 
     <div class="go-up">
        
-        <?php if(isset($_SESSION['logado'])){ ?>
-
-        
-          <div class="go-up-buttons">
-          <?php if(!($ID_Usuario_Projeto == $_SESSION["ID"])){ ?>
-
-            <a href="avaliacao.php?ID=<?php echo $ID_Projeto; ?>" style="text-decoration: none;">
-            <button class="button-projeto button button1-projeto button1">AVALIAR</button>
-          </a>
-
-          <a href="denuncia.php?ID=<?php echo $ID_Projeto; ?>">
-              <button class="button-projeto button button1-projeto button1">DENUNCIAR</button>
-          </a>
-          
-
-        <?php }
-        }
-         ?>
-
-        </div>
-        
-
         
         <div class="go-up-img">
         <a href="#topo">
@@ -1071,7 +858,7 @@
         </div>
 
         <div class="col-sm-4 logo-footer" >
-          <a href="sobre.php">
+          <a href="header.php">
           <img src="img/jaci.png" alt="logo"/>
           </a>
         </div>

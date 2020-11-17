@@ -1427,7 +1427,7 @@
         </div>
 
         <div class="col-sm-4 logo-footer" >
-          <a href="header.php">
+          <a href="sobre.php">
           <img src="img/jaci.png" alt="logo"/>
           </a>
         </div>

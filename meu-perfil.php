@@ -317,42 +317,6 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-
-    @media screen and (min-width: 1400px){
-
-      .footer{
-        background-color: #1D1D1D;
-        width: 100%;
-        height: 200px !important;
-      }
-
-      .footer .rede-social{
-        background-color: #1D1D1D;
-        align-content: center;
-        align-items: center;
-        -moz-box-align: center;
-        padding-left: 110px;
-        padding-top: 25px;
-      }
-
-      .footer .logo-footer{
-        background-color: #1D1D1D;
-        align-content: center;
-        align-items: center;
-        -moz-box-align: center;
-        padding-left: 120px;
-      }
-
-      .footer .logo-footer img{
-        width: 55%;
-      }
-
-      .rede-social img{
-        width: 70% !important;
-        padding-top: 10px;
-      }
-    }
-
     .row{
       width: 100% !important;
     }
@@ -375,23 +339,6 @@
       padding-top: 45px;
     }
 
-    .footer .logo-footer{
-      background-color: #1D1D1D;
-      align-content: center;
-      align-items: center;
-      -moz-box-align: center;
-      padding-left: 120px;
-      padding-top: 25px;
-    }
-
-    .footer .logo-footer img{
-      width: 65%;
-    }
-
-    .rede-social img{
-      width: 90%;
-    }
-
     @media screen and (max-width: 700px){
 
         .footer .rede-social{
@@ -403,16 +350,6 @@
 
         .rede-social img{
           width: 10%;
-        }
-
-        .footer .logo-footer{
-          padding: 10px;
-          text-align: center;
-          padding-top: 40px;
-        }
-
-        .footer .logo-footer img{
-        width: 30%;
         }
 
         .no-show-mobile{
