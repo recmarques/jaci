@@ -71,7 +71,7 @@
 
 <!DOCTYPE html>
 
-  <html lang="en" dir="ltr">
+  <html lang="pt-br" dir="ltr">
     <head>
       
       <title>Editar projeto | JACI</title>

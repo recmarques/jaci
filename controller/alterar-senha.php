@@ -46,7 +46,7 @@
 ?>
 
 
-<html>
+<html lang="pt-br" dir="ltr">
     <head>
         
         <title>
