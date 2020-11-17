@@ -14,10 +14,8 @@
 		echo "Falha na conexão: ".mysqli_connect_error();
 	endif;
 	
-	// Sessão
   session_start();
     
-  // Verificação
     if(isset($_SESSION['logado'])){
         $id = $_SESSION['ID'];
         $sql = "SELECT * FROM tb_cadastros WHERE ID = '$id'";
@@ -26,10 +24,8 @@
         $dados = mysqli_fetch_array($res);
 
     }
-
     
 ?>
-
 
 
 <!DOCTYPE html>
@@ -650,7 +646,30 @@
         }
     }
 
-    /* !!! */
+    .email-link{
+        text-decoration: none;
+        color: #32584d;
+    }
+    
+    
+    .email-link:hover{
+        text-decoration: none;
+        color: #000000;
+        transition: 0.7s;
+    }
+
+    .email-link-about{
+        text-decoration: none;
+        color: #49947d;
+    }
+    
+    
+    .email-link-about:hover{
+        text-decoration: none;
+        color: #ffffff;
+        transition: 0.7s;
+    }
+
     @media (max-width: 350px) {
         nav .logo{
           width: 180px;
@@ -696,7 +715,7 @@
         <li><a href="header.php">INÍCIO</a></li>
         <li><a href="projetos.php">PROJETOS</a></li>
         <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-        <!-- <li><a href="#">Feedback</a></li> -->
+       
         <?php 
           if(isset($_SESSION['logado'])){
               echo "<li><a class=not-activate href=meu-perfil.php>MEU PERFIL</a></li>";
@@ -731,41 +750,21 @@
           
           </div>
 
-          <!-- <div class="col-sm-3 autor">
-
-            <strong>POR
-              aaaaa
-            </strong><br />
-
-            <strong class="ano">
-              aaaaa
-            </strong><br /><br />
-
-            <strong class="curso">
-              aaaa
-            </strong>
-          </div> -->
-
       </div>
       
     </div>
 
     <div class="descrição" style="background-color: #5EC7A7; color: #000">
     <hr class="sobre"><br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Feugiat vivamus at augue eget arcu.
-    Feugiat nisl pretium fusce id velit ut tortor pretium.<br /><br />
+    Somos uma equipe de 4 integrantes: Laysla Fernanda, Marco Zotti, Miriã Teixeira,
+    Renata de Castro e Samuel Sabino. Nós, juntos, formamos a <strong>Equipe Sol</strong>,
+    que deu origem ao Projeto Jaci: uma plataforma para facilitar e auxiliar os estudos
+    online de muitos alunos!<br /><br />
 
-    Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Sit amet justo donec
-    enim diam vulputate ut pharetra. Id consectetur purus ut faucibus pulvinar elementum
-    integer. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor.
+    Caso encontre algum erro no nosso site ou queira nos dar algum conselho, nosso e-mail
+    é <strong><a class="email-link" href="mailto:gruposol413@gmail.com" target="_blank">gruposol413@gmail.com</a></strong>.
     <br /><br />  
     
-    <!-- <div class="go-down">
-        <a href="#texto">
-	        <img src="img/up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
-        </a>
-      </div> -->
     </div>
 
 
@@ -781,41 +780,21 @@
           
           </div>
 
-          <!-- <div class="col-sm-3 autor">
-
-            <strong>POR
-              aaaaa
-            </strong><br />
-
-            <strong class="ano">
-              aaaaa
-            </strong><br /><br />
-
-            <strong class="curso">
-              aaaa
-            </strong>
-          </div> -->
-
       </div>
       
     </div>
 
     <div class="descrição" style="background-color: #272727; color: #ffffff">
     <hr class="about"/><br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Feugiat vivamus at augue eget arcu.
-    Feugiat nisl pretium fusce id velit ut tortor pretium.<br /><br />
+    We are a team of 4 members: Laysla Fernanda, Marco Zotti, Miriã Teixeira,
+    Renata de Castro e Samuel Sabino. We, together, form the <strong>Sol Team</strong>,
+    that gave rise to the Jaci Project: a plataform made to facilite and assist studies online
+    of many students!<br /><br />
 
-    Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Sit amet justo donec
-    enim diam vulputate ut pharetra. Id consectetur purus ut faucibus pulvinar elementum
-    integer. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor.
-    <br /><br />
+    If you find an error on our website or want to give us some advice, our email
+    is <strong><a class="email-link-about" href="mailto:gruposol413@gmail.com" target="_blank">gruposol413@gmail.com</a></strong>.
+    <br /><br />  
     
-    <!-- <div class="go-down">
-        <a href="#texto">
-	        <img src="img/up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
-        </a>
-      </div> -->
     </div>
 
     

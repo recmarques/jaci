@@ -1096,7 +1096,6 @@
             <li><a class="active" href="header.php">INÍCIO</a></li>
             <li><a href="projetos.php">PROJETOS</a></li>
             <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
-            <!-- <li><a href="#">Feedback</a></li> -->
 
           <?php 
                 if(isset($_SESSION['logado'])){
