@@ -335,7 +335,7 @@
 
 <!DOCTYPE html>
 
-  <html lang="en" dir="ltr">
+  <html lang="pt-br" dir="ltr">
     <head>
       <title>Página Inicial | JACI</title>
       

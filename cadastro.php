@@ -1,310 +1,124 @@
 <?php
 
-	include 'conexao/conexao.inc';
+    $servername = "us-cdbr-east-02.cleardb.com";
+    $username = "b0394718678768";
+    $password = "33161d76";
+    $db_name = "heroku_390caed3836a8d5";
+        
+    $conexao = mysqli_connect($servername, $username, $password);
+    mysqli_select_db($conexao, $db_name);
 
-	mysqli_close($conexao);
+    if(mysqli_connect_error()):
+        echo "Falha na conexão: ".mysqli_connect_error();
+    endif;
+    mysqli_set_charset($conexao, "utf8");
+
+
+    // verificando último ID cadastrado
+	$sql1 = "SELECT * FROM tb_cadastros";
+	$res1 = mysqli_query($conexao, $sql1);
+    $vreg;
+    $maior = 0;
+					
+	while($vreg = mysqli_fetch_row($res1)){
+        $ID = $vreg[0];
+        
+        if($ID > $maior){
+            $maior = $ID;
+        }
+		
+    }
+
+    
+    //$vcod = rand(1, 999999999999999);
+    
+    $vcod = $maior + 1;
+
+    $vnome = $_POST["nome"];
+    $vemail = $_POST["email"];
+    $vcurso = $_POST["curso"];
+    $vsenha = $_POST["senha"];
+    $vsenha2 = $_POST["senha2"];
+
+
+    if($vsenha == $vsenha2){
+    $sql = "INSERT INTO tb_cadastros
+    VALUES ($vcod, '$vnome', '$vemail', '$vcurso', '$vsenha')";
+    $res = mysqli_query($conexao, $sql);
+
+    $linhas = mysqli_affected_rows($conexao);
+
+    if($linhas == 1){
+        $mensagem = "Cadastro feito com sucesso!";
+    }
+    else{
+        $mensagem = "Falha na gravação do cadastro!";
+    }
+    mysqli_close($conexao);
+    } else{
+        $mensagem = "Senhas informadas não são iguais!";
+    }
 
 ?>
 
 
-
-<!DOCTYPE html>
-  <html>
+<html lang="pt-br" dir="ltr">
     <head>
-     
-      <title>Cadastro | JACI</title>
-      
-      <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      
-	  <link rel="icon" href="img/favicon.png" type="image/png" />
-      <link rel="stylesheet" href="css/style-cadastro.css">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-     
-	  <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-      
-      
+            <meta charset="utf-8">
+
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            
+            <title><?php echo $mensagem." | JACI"; ?></title>
+        
+            <link rel="icon" href="../img/favicon.png" type="image/png" />
+            <link rel="stylesheet" href="css/style-cadastro.css">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+            
+            <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+        <style>
+            body{
+                min-height: 100vh;
+                /* background-image: linear-gradient(120deg,#5EC7A7,#00857B); */
+                /* background-image: url("../img/Splash\ Desktop.png"); */
+                background-image: url("../img/background-cadastro-sucesso.png") !important;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+
+        </style>
     </head>
-
     <body>
-      
-      <form name="f_cadastro" action="controller/cadastro.php" method="post" class="login-form"> 
-      
-			<img src="img/jaci.png" class="no-show-mobile" alt="logo"/>
-			<img src="img/logo-black.png" class="no-show-desktop" alt="logo"/>
-            <br /><p class="login">Faça seu cadastro</p>
 
-			<div class="txtb">
-				<input type="text" placeholder="Nome" name="nome" id="nome" minlength="5" maxlength="40" required>
-				<span data-placeholdr="Nome"></span>
-			</div>
+        <br />
 
-			<div class="txtb">
-				<input type="text" placeholder="E-mail" name="email" id="email"minlength="5"  maxlength="40" required>
-				<span data-placeholdr="Email"></span>
-			</div>
+        <div class="cadastro-sucesso"> 
 
-			<div class="txtb">
-				<input type="text" placeholder="Curso" name="curso" id="curso" minlength="2" maxlength="15" required>
-				<span data-placeholdr="Curso"></span>
-			</div>
+            <p class="mensagem">
+                <?php
+                echo $mensagem;
+                ?>
+            </p>
 
-			<div class="txtb">
-				<input type="password" placeholder="Senha" name="senha" id="senha" minlength="6" maxlength="15" required>
-				<span data-placeholdr="Password"></span>
-			</div>
+            <br /><br />
+                
+            <a href="../login.php">
+                <button class="button button1">ENTRAR</button><br />
+            </a>
 
-			<div class="txtb">
-				<input type="password" placeholder="Confirmar senha" name="senha2" id="senha2" minlength="6" maxlength="15" required>
-				<span data-placeholdr="Password-confirm"></span>
-			</div>
-			
-			<p id="demo"></p>
+            <br />
 
-			<div class="bottom-text">
-				Já tem uma conta? <a href="login.php">Entre!</a>
-			</div>
+            <a href="../header.php">
+                <button class="button button1">ACESSAR SEM LOGIN</button><br />
+            </a>
 
-			<input type="submit" class="logbtn" value="Cadastrar">
-			<br /><hr /><br />
-			<a href="header.php">
-            <div class="bottom-text-login">
-             Acesse sem login
-          </div></a>
-	   </form> 
+            <br />
 
-
-      <script>
-
-	
-	// function ValidarSenha(){
-	// 	var text;
-	// 	var senha = document.getElementsByName('senha').value;
-	// 	var senha2 = document.getElementsByName('senha2').value;
-
-	// 	if(senha!= senha2) {
-	// 		   text = "Senhas diferentes!";
-	// 	}
-
-	// 	senha.onchange = validatePassword;
-	//    senha2.onkeyup = validatePassword;
-
-	//    document.getElementById("demo").innerHTML = text;
-	//         }
-          
-	var util = {
-	f: {
-		addStyle: function (elem, prop, val, vendors) {
-			var i, ii, property, value
-			if (!util.f.isElem(elem)) {
-				elem = document.getElementById(elem)
-			}
-			if (!util.f.isArray(prop)) {
-				prop = [prop]
-				val = [val]
-			}
-			for (i = 0; i < prop.length; i += 1) {
-				var thisProp = String(prop[i]),
-					thisVal = String(val[i])
-				if (typeof vendors !== "undefined") {
-					if (!util.f.isArray(vendors)) {
-							vendors.toLowerCase() == "all" ? vendors = ["webkit", "moz", "ms", "o"] : vendors = [vendors]
-					}
-					for (ii = 0; ii < vendors.length; ii += 1) {
-							elem.style[vendors[i] + thisProp] = thisVal
-					}
-				}
-					thisProp = thisProp.charAt(0).toLowerCase() + thisProp.slice(1)
-					elem.style[thisProp] = thisVal
-			}
-		},
-		cssLoaded: function (event) {
-			var child = util.f.getTrg(event)
-			child.setAttribute("media", "all")
-		},
-		events: {
-			cancel: function (event) {
-				util.f.events.prevent(event)
-				util.f.events.stop(event)
-			},
-			prevent: function (event) {
-				event = event || window.event
-				event.preventDefault()
-			},
-			stop: function (event) {
-				event = event || window.event
-				event.stopPropagation()
-			}
-		},
-		getSize: function (elem, prop) {
-			return parseInt(elem.getBoundingClientRect()[prop], 10)
-		},
-		getTrg: function (event) {
-			event = event || window.event
-			if (event.srcElement) {
-				return event.srcElement
-			} else {
-				return event.target
-			}
-		},
-		isElem: function (elem) {
-			return (util.f.isNode(elem) && elem.nodeType == 1)
-		},
-		isArray: function(v) {
-			return (v.constructor === Array)
-		},
-		isNode: function(elem) {
-			return (typeof Node === "object" ? elem instanceof Node : elem && typeof elem === "object" && typeof elem.nodeType === "number" && typeof elem.nodeName==="string" && elem.nodeType !== 3)
-		},
-		isObj: function (v) {
-			return (typeof v == "object")
-		},
-		replaceAt: function(str, index, char) {
-			return str.substr(0, index) + char + str.substr(index + char.length);
-		}
-	}
-},
-
-form = {
-f: {
-	init: {
-		register: function () {
-			console.clear()// just cuz codepen
-			var child, children = document.getElementsByClassName("field"), i
-			for (i = 0; i < children.length; i += 1) {
-				child = children[i]
-				util.f.addStyle(child, "Opacity", 1)
-			}
-			children = document.getElementsByClassName("psuedo_select")
-			for (i = 0; i < children.length; i += 1) {
-				child = children[i]
-				child.addEventListener("click", form.f.select.toggle)
-			}
-		},
-		unregister: function () {
-			
-		}
-	},
-	select: {
-		blur: function (field) {
-			field.classList.remove("focused")
-			var child, children = field.childNodes, i, ii, nested_child, nested_children
-			for (i = 0; i < children.length; i += 1) {
-				child = children[i]
-				if (util.f.isElem(child)) {
-					if (child.classList.contains("deselect")) {
-						child.parentNode.removeChild(child)
-					} else if (child.tagName == "SPAN") {
-						if (!field.dataset.value) {
-							util.f.addStyle(child, ["FontSize", "Top"], ["16px", "32px"])
-						}
-					} else if (child.classList.contains("psuedo_select")) {
-						nested_children = child.childNodes
-						for (ii = 0; ii < nested_children.length; ii += 1) {
-							nested_child = nested_children[ii]
-							if (util.f.isElem(nested_child)) {
-								if (nested_child.tagName == "SPAN") {
-									if (!field.dataset.value) {
-										util.f.addStyle(nested_child, ["Opacity", "Transform"], [0, "translateY(24px)"])
-									}
-								} else if (nested_child.tagName == "UL") {
-										util.f.addStyle(nested_child, ["Height", "Opacity"], [0, 0])
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		focus: function (field) {
-			field.classList.add("focused")
-			var bool = false, child, children = field.childNodes, i, ii, iii, nested_child, nested_children, nested_nested_child, nested_nested_children, size = 0
-			for (i = 0; i < children.length; i += 1) {
-				child = children[i]
-				util.f.isElem(child) && child.classList.contains("deselect") ? bool = true : null
-			}
-			if (!bool) {
-				child = document.createElement("div")
-				child.className = "deselect"
-				child.addEventListener("click", form.f.select.toggle)
-				field.insertBefore(child, children[0])
-			}
-			for (i = 0; i < children.length; i += 1) {
-				child = children[i]
-				if (util.f.isElem(child) && child.classList.contains("psuedo_select")) {
-					nested_children = child.childNodes
-					for (ii = 0; ii < nested_children.length; ii += 1) {
-						nested_child = nested_children[ii]
-						if (util.f.isElem(nested_child) && nested_child.tagName == "UL") {
-							size = 0
-							nested_nested_children = nested_child.childNodes
-							for (iii = 0; iii < nested_nested_children.length; iii += 1) {
-								nested_nested_child = nested_nested_children[iii]
-								if (util.f.isElem(nested_nested_child) && nested_nested_child.tagName == "LI") {
-									size += util.f.getSize(nested_nested_child, "height")
-									console.log("size: " + size)
-								}
-							}
-							util.f.addStyle(nested_child, ["Height", "Opacity"], [size + "px", 1])
-						}
-					}
-				}
-			}
-		},
-		selection: function (child, parent) {
-			var children = parent.childNodes, i, ii, nested_child, nested_children, time = 0, value
-			if (util.f.isElem(child) && util.f.isElem(parent)) {
-				parent.dataset.value = child.dataset.value
-				value = child.innerHTML
-			}
-			for (i = 0; i < children.length; i += 1) {
-				child = children[i]
-				if (util.f.isElem(child)) {
-					if (child.classList.contains("psuedo_select")) {
-						nested_children = child.childNodes
-						for (ii = 0; ii < nested_children.length; ii += 1) {
-							nested_child = nested_children[ii]
-							if (util.f.isElem(nested_child) && nested_child.classList.contains("selected")) {
-								if (nested_child.innerHTML)  {
-									time = 1E2
-									util.f.addStyle(nested_child, ["Opacity", "Transform"], [0, "translateY(24px)"], "all")
-								}
-								setTimeout(function (c, v) {
-									c.innerHTML = v
-									util.f.addStyle(c, ["Opacity", "Transform", "TransitionDuration"], [1, "translateY(0px)", ".1s"], "all")
-								}, time, nested_child, value)
-							}
-						}
-					} else if (child.tagName == "SPAN") {
-						util.f.addStyle(child, ["FontSize", "Top"], ["12px", "8px"])
-				   }
-			   }
-			}
-		},
-		toggle: function (event) {
-			util.f.events.stop(event)
-			var child = util.f.getTrg(event), children, i, parent
-			switch (true) {
-				case (child.classList.contains("psuedo_select")):
-				case (child.classList.contains("deselect")):
-					parent = child.parentNode
-					break
-				case (child.classList.contains("options")):
-					parent = child.parentNode.parentNode
-					break
-				case (child.classList.contains("option")):
-					parent = child.parentNode.parentNode.parentNode
-					form.f.select.selection(child, parent)
-					break
-			}
-			parent.classList.contains("focused") ? form.f.select.blur(parent) : form.f.select.focus(parent)
-		}
-	}
-}}
-window.onload = form.f.init.register
-      </script>
-      
+            <a href="../cadastro.php">
+                <input type="submit" class="logbtn" value="VOLTAR">
+            </a>
+    
+        </div> 
      </body>
-  </html>
+
+</html>

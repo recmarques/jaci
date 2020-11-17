@@ -54,7 +54,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
+<html lang="pt-br" dir="ltr">
   <head>
   <meta charset="utf-8">
   <title>Meu perfil | JACI</title>
