@@ -24,7 +24,7 @@ body{
 
         .titulo-banner{
             padding-top: 7% !important;
-            }
+        }
     }
 
     #nav-mobile{
@@ -454,6 +454,17 @@ width: 90%;
             font-family: 'Josefin Sans', sans-serif;
             text-transform: uppercase;
         }
+
+        .titulo-banner-about{
+            text-align: left;
+            padding-top: 7% !important;
+            padding-left: 11% !important;
+            line-height: 55px !important;
+            font-size: 52px !important;
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+        }
+
         .button{
         padding: 16px 58px;
         }
