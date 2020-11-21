@@ -683,6 +683,7 @@
 
         .descrição {
           padding: 29px 27px !important;
+          height: 580px;
         }
         
         .voltar {
