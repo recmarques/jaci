@@ -1013,7 +1013,7 @@
 
     <div class="go-up">
        
-       
+       <?php if(isset($_SESSION["ID"])){ ?>
         
           <div class="go-up-buttons">
           <?php if($ID_Usuario_Projeto != $_SESSION["ID"]){ ?>
@@ -1027,8 +1027,8 @@
           </a>
           
 
-        <?php }
-        
+	   <?php }
+		}
          ?>
 
         </div>
