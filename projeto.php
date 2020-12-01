@@ -1,6 +1,6 @@
 <?php
 
-	$servername = "us-cdbr-east-02.cleardb.com";
+    $servername = "us-cdbr-east-02.cleardb.com";
     $username = "b0394718678768";
     $password = "33161d76";
     $db_name = "heroku_390caed3836a8d5";
@@ -78,7 +78,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
+<html lang="pt-br" dir="ltr">
   <head>
 
       <!-- <title><?php echo $Titulo; ?> | JACI</title> -->
@@ -609,7 +609,7 @@
       }
 
       .footer .logo-footer img{
-        width: 30%;
+        width: 30% !important;
       }
 
       .no-show-mobile{
@@ -629,7 +629,7 @@
         padding-right: 11%;
         text-transform: uppercase !important;
         max-width: 100% !important;
-        line-height: 32px;
+        line-height: 25px;
         font-weight: 900 !important;
         font-size: 20px;
         /* font-family: 'Lato', sans-serif !important; */
@@ -710,9 +710,190 @@
       }
   }
 
-  .go-up-img{
-    text-align: right;
-  }
+    .go-up-img{
+      text-align: right;
+    }
+
+  @media screen and (min-width: 1400px){
+      .img-banner img{
+        width: 90%;
+        padding-top: 0;
+        padding-left: 150px;
+      }
+
+      .bem-vindo{
+        text-align: right;
+        padding-top: 8%;
+        color: white;
+        padding-right: 11%;
+        line-height: 60px;
+        font-size:40px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .button {
+        border: none;
+        color: #ddd;
+        padding: 4px 60px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1 {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+      .button1-projeto:hover {
+        background-color: #0B342C; 
+        font-weight: 600;
+        color: #fff; 
+        border: 2px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.5s;
+      }
+
+      .footer{
+        background-color: #1D1D1D;
+        width: 100%;
+        height: 220px !important;
+      }
+
+      .footer .rede-social{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 110px;
+        padding-top: 25px;
+      }
+
+      .footer .logo-footer{
+        background-color: #1D1D1D;
+        align-content: center;
+        align-items: center;
+        -moz-box-align: center;
+        padding-left: 120px;
+      }
+
+
+      .footer .logo-footer img{
+        width: 65%;
+      }
+
+      .rede-social img{
+        width: 70% !important;
+        padding-top: 10px;
+      }
+
+      .ver-mais{
+        padding-left: 45%;
+      }
+
+      .button-vermais {
+        border: none;
+        padding: 30px 100px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1-vermais {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #24AE91; 
+        border: 2px solid #24AE91;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+
+        nav ul li a {
+          
+          font-size: 18px;
+          
+        }
+        nav {
+          display: flex;
+          height: 100px;
+        }
+
+        nav .logo img {
+          width: 45%;
+          padding-top: 5px;
+        }
+
+        .banner .titulo {
+            color: black;
+            text-align: left;
+            font-weight: 700;
+            max-width: 510px;
+            font-size: 58px;
+            text-transform: uppercase;
+        }
+        .banner .autor {
+            font-size: 17px;
+            margin: 0;
+            text-transform: uppercase;
+            padding: 0;
+        }
+
+        .button-projeto {
+            
+            padding: 4px 65px;
+            
+        }
+    }
+
+    /* !!! */
+    @media (max-width: 350px) {
+        nav .logo{
+          width: 180px;
+          padding-bottom: 10px;
+        }
+
+        nav {
+          padding: 0 20px 0 20px;
+        }
+
+        .texto {
+          padding: 42px 27px !important;
+        }
+
+        .descrição {
+          padding: 29px 27px !important;
+        }
+        
+        .voltar {
+          display: absolute !important;
+          padding-left: 24px;
+          padding-top: 31px;
+          float: inline-start;
+          margin: 0;
+        }
+      }
 
   </style>
 </head>
@@ -815,7 +996,7 @@
       ?>
       <div class="go-down">
         <a href="#texto">
-          <img src="img/down.png" alt="ir para o texto" alt="para baixo"/>
+	        <img src="img/up.png" alt="ir para o texto" alt="para baixo" style="transform: rotate(180deg);"/>
         </a>
       </div>
     </div>
@@ -836,7 +1017,7 @@
 
         
           <div class="go-up-buttons">
-          <?php if(!($ID_Usuario_Projeto == $_SESSION["ID"])){ ?>
+          <?php if($ID_Usuario_Projeto != $_SESSION["ID"]){ ?>
 
             <a href="avaliacao.php?ID=<?php echo $ID_Projeto; ?>" style="text-decoration: none;">
             <button class="button-projeto button button1-projeto button1">AVALIAR</button>
@@ -890,7 +1071,7 @@
         </div>
 
         <div class="col-sm-4 logo-footer" >
-          <a href="#">
+          <a href="sobre.php">
           <img src="img/jaci.png" alt="logo"/>
           </a>
         </div>
