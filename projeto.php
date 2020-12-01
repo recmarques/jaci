@@ -1013,11 +1013,11 @@
 
     <div class="go-up">
        
-        <?php if(isset($_SESSION['logado'])){ ?>
-
+       
         
           <div class="go-up-buttons">
-          
+          <?php if($ID_Usuario_Projeto != $_SESSION["ID"]){ ?>
+
             <a href="avaliacao.php?ID=<?php echo $ID_Projeto; ?>" style="text-decoration: none;">
             <button class="button-projeto button button1-projeto button1">AVALIAR</button>
           </a>
@@ -1027,8 +1027,8 @@
           </a>
           
 
-        <?php
-        }
+        <?php }
+        
          ?>
 
         </div>
