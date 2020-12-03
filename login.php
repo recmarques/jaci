@@ -91,7 +91,79 @@
      
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
+   
+    <style>
+	
+		@media screen and (min-width: 1400px){
+			.login-form {
+				width: 437px !important;
+				background: #282828;
+				height: 639px !important;
+				padding: 50px 40px !important;
+				border-radius: 10px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.logbtn {
+				display: block;
+				width: 100%;
+				height: 48px;
+				border: none;
+				font-size: 14px;
+				background: linear-gradient(120deg,#5EC7A7,#3b9e81,#00857B);
+				background-size: 200%;
+				color: #fff;
+				outline: none;
+				font-weight: 700;
+				cursor: pointer;
+				transition: .5s;
+				font-family: 'Poppins', sans-serif;
+			}
+
+			.bottom-text-login {
+				/* margin-top: 60px; */
+				background-color: #4fb697;
+				text-align: center;
+				line-height: 50px;
+				color: white !important;
+				transition: .5s;
+				font-weight: 700;
+				font-size: 14px;
+				height: 50px;
+				font-family: 'Poppins', sans-serif;
+			}
+
+			.bottom-text-login:hover {
+			
+				line-height: 50px;
+				font-size: 14px;
+				font-family: 'Poppins', sans-serif;
+			}
+
+			.fsenha a {
+				color: #5EC7A7;
+				font-family: 'Poppins', sans-serif;
+				font-size: 13px;
+				line-height: 40px;
+				font-weight: 700;
+			}
+
+			.bottom-text {
+				/* margin-top: 60px; */
+				text-align: left;
+				line-height: 40px;
+				color: white;
+				font-size: 15px;
+				font-family: 'Josefin Sans', sans-serif;
+			}
+
+			.txtb input {
+				font-size: 16px;
+			}
+		}
+	</style>
     </head>
 
     <body>

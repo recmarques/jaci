@@ -229,6 +229,10 @@ body{
     }
 
 @media screen and (min-width: 1400px){
+nav ul li {
+margin: 0 16px;
+}
+
 .img-banner img{
 width: 90%;
 padding-top: 0;
@@ -642,7 +646,7 @@ width: 90%;
         background-color: #393939;
         font-weight: 700 !important;
         font-size:16px;
-        height: 390px;
+        height: 355px;
         font-family: 'Lato', sans-serif !important;
         color: #fff;
     }

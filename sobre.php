@@ -562,6 +562,7 @@
       }
 
       .descrição {
+        height: 345px;
         padding: 31px 170px;
       }
   }

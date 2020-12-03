@@ -410,7 +410,10 @@
     }
 
     @media screen and (min-width: 1400px){
-
+      nav ul li {
+        margin: 0 16px;
+      }
+      
       .img-banner img{
         width: 90%;
         padding-top: 0;
@@ -435,7 +438,7 @@
         color: #000 !important;
         padding-right: 11%;
         max-width: 100%;
-        line-height: 32px;
+        line-height: 40px;
         font-weight: 600 !important;
         font-size:25px;
         /* font-family: 'Lato', sans-serif !important; */
@@ -794,6 +797,13 @@
 
 
   @media screen and (min-width: 1400px){
+    .projeto {
+    background-color: #5EC7A7;
+    margin: 68px 209px;
+    /* border-radius: 40px; */
+    padding: 50px 50px;
+}
+
     nav ul li a {
       font-size: 18px;
     }
@@ -833,7 +843,7 @@
       font-weight: 700;
       max-width: 800px;
       font-size: 71px;
-      line-height: 74px;
+      line-height: 90px;
       text-transform: uppercase;
       font-family: 'Josefin Sans', sans-serif;
     }
@@ -843,7 +853,7 @@
     }
 
     .button-projeto {
-        padding: 14px 76px;
+        padding: 24px 84px;
     }
 
     .logbtn {
@@ -984,11 +994,10 @@
         font-family: 'Josefin Sans', sans-serif;
         transition: 0.5s;
       }
-
       .footer{
         background-color: #1D1D1D;
         width: 100%;
-        height: 220px !important;
+        height: 250px !important;
       }
 
       .footer .rede-social{
@@ -1015,7 +1024,7 @@
 
       .rede-social img{
         width: 70% !important;
-        padding-top: 10px;
+        padding-top: 50px;
       }
 
       .ver-mais{
@@ -1074,9 +1083,7 @@
         }
 
         .button-projeto {
-            
-            padding: 4px 65px;
-            
+            padding: 16px 73px;
         }
     }
 

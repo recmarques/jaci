@@ -663,6 +663,10 @@
     }
 
     @media screen and (min-width: 1400px){
+      nav ul li {
+        margin: 0 16px;
+      }
+
       .img-banner img{
         width: 90%;
         padding-top: 0;
