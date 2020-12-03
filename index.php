@@ -34,7 +34,47 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       
-     
+     <style>
+      @media screen and (min-width: 1400px){
+
+      .col-sm-6 .right, .col-sm-6 .right img{
+        align-content: left;
+        align-items: left;
+        max-width: 600px;
+        padding-top: 50px;
+        padding-right: 0px;
+        font-weight: 900;
+        text-align: right;
+        color: white;
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+        width: 63% !important;
+      }
+
+      .button {
+        border: none;
+        height: 115px;
+        width: 355px;
+        font-size: 13px;
+        margin: 7px 2px;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .button1 {
+        background-color: transparent; 
+        font-weight: 800;
+        color: #000; 
+        border: 3px solid #000;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 0.3s;
+      }
+          
+      .right-col{
+        padding-right: 215px !important;
+      }
+    }
+     </style>
     </head>
 
     <body>
@@ -59,11 +99,11 @@
                     <button class="button button1">CADASTRAR</button>
                   </a>
 
-                  <!-- <p class="acessos">
+                   <!-- <p class="acessos">
                     <?php
                       echo "Quantidade de acessos: $cont ❤";
                     ?>
-                  </p> -->
+                  </p>  -->
                 </div>
             </div>
 

@@ -558,7 +558,7 @@
 
       .hero-image {
         background-color: #5EC7A7;
-        height: 348px !important;
+        height: 215px !important;
       }
 
       .descrição {
@@ -807,40 +807,6 @@
         <a href="#topo">
           <img src="img/up.png" alt="voltar para o topo" alt="para cima"/>
         </a>
-        </div>
-
-    </div>
-
-    <div class="footer">
-     
-        <div class="col-sm-2 rede-social">
-          <a href="https://www.facebook.com/" target="_blank">
-            <img src="img/facebook.png" alt="facebook"/>
-            </a>
-        </div>
-
-        <div class="col-sm-2 rede-social">
-          <a href="https://www.instagram.com/" target="_blank">
-            <img src="img/insta.png" alt="instagram"/>
-            </a>
-        </div>
-
-        <div class="col-sm-2 rede-social">
-          <a href="https://twitter.com/" target="_blank">
-            <img src="img/twitter.png" alt="twitter"/>
-            </a>
-        </div>
-
-        <div class="col-sm-2 rede-social">
-          <a href="mailto:gruposol413@gmail.com" target="_blank">
-            <img src="img/mail.png" alt="e-mail"/>
-            </a>
-        </div>
-
-        <div class="col-sm-4 logo-footer" >
-          <a href="header.php">
-          <img src="img/jaci.png" alt="logo"/>
-          </a>
         </div>
 
     </div>
