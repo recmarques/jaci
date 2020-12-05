@@ -926,7 +926,7 @@
       }
 
       .bem-vindo{
-        font-size: 23px;
+        font-size: 20px;
         line-height: 37px;
         text-align: center !important;
         padding-right: 0;
