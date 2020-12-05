@@ -1017,7 +1017,6 @@
         padding-left: 120px;
       }
 
-
       .footer .logo-footer img{
         width: 65%;
       }

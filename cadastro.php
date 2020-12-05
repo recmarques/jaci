@@ -127,10 +127,10 @@
 				<span data-placeholdr="Password"></span>
 			</div>
 
-			<!-- <div class="txtb">
+			<div class="txtb">
 				<input type="password" placeholder="Confirmar senha" name="senha2" id="senha2" minlength="6" maxlength="15" required>
 				<span data-placeholdr="Password-confirm"></span>
-			</div> -->
+			</div>
 			
 			<p id="demo"></p>
 
