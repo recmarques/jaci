@@ -31,7 +31,7 @@
 			.login-form {
 				width: 437px !important;
 				background: #282828;
-				height: 650px !important;
+				height: 680px !important;
 				padding: 50px 40px !important;
 				border-radius: 10px;
 				position: absolute;
