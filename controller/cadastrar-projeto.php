@@ -66,7 +66,7 @@
         $vtexto = $_POST["texto"];
 
         $sql = "INSERT INTO tb_projetos VALUES
-        ($vcod, '$vtitulo', '$vdescricao', '$vpalavras', $vano, '$vmateria', '$vcategoria', $vconhecimento, '$vtexto', $ID_Usuario)";
+        (1, '$vtitulo', '$vdescricao', '$vpalavras', $vano, '$vmateria', '$vcategoria', $vconhecimento, '$vtexto', $ID_Usuario)";
         $res = mysqli_query($conexao, $sql);
 
         $linhas = mysqli_affected_rows($conexao);
