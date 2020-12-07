@@ -224,6 +224,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
 
                 
                   <option value="Artigo">Artigo</option>
+                  <option value="Exercício">Exercício</option>
                   <option value="Manual">Manual</option>
                   <option value="Resumo">Resumo</option>
                   <option value="Trabalho">Trabalho</option>
