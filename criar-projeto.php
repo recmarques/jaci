@@ -126,9 +126,9 @@
 
           <div class="txtb">
             <select name="materia" id="materia" required>
-              <option value="" class="disable-select" disabled selected>Disciplina</option>
+              <option value="" class="disable-select" disabled selected>Matéria</option>
 
-                <optgroup label="Disciplinas comuns">
+                <optgroup label="Matérias comuns">
                   <option value="Biologia">Biologia</option>
                   <option value="Filosofia">Filosofia</option>
                   <option value="Física">Física</option>
@@ -143,7 +143,7 @@
                   <option value="Outro">Outro</option>
                 </optgroup>
 
-                <optgroup label="Disciplinas de Informática">
+                <optgroup label="Informática">
                   <option value="Aplicações Web">Aplicações Web</option>
                   <option value="Banco de dados">Banco de dados</option>
                   <option value="Gestão Industrial">Gestão Industrial</option>
@@ -153,7 +153,7 @@
                   <option value="Teoria e Desenvolvimento de Sistemas">Teoria e Desenvolvimento de Sistemas</option>
                 </optgroup>
 
-                <optgroup label="Disciplinas de Mecânica">
+                <optgroup label="Mecânica">
                   <option value="Elementos de Máquinas">Elementos de Máquinas</option>
                   <option value="Máquinas e Aparelhos Mecânicos">Máquinas e Aparelhos Mecânicos</option>
                   <option value="Resistência dos Materiais">Resistência dos Materiais</option>
