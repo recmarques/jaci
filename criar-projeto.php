@@ -143,7 +143,7 @@
                   <option value="Outro">Outro</option>
                 </optgroup>
 
-                <optgroup label="Informática">
+                <optgroup label="Disciplinas de Informática">
                   <option value="Aplicações Web">Aplicações Web</option>
                   <option value="Banco de dados">Banco de dados</option>
                   <option value="Gestão Industrial">Gestão Industrial</option>
@@ -153,7 +153,7 @@
                   <option value="Teoria e Desenvolvimento de Sistemas">Teoria e Desenvolvimento de Sistemas</option>
                 </optgroup>
 
-                <optgroup label="Mecânica">
+                <optgroup label="Disciplinas de Mecânica">
                   <option value="Elementos de Máquinas">Elementos de Máquinas</option>
                   <option value="Máquinas e Aparelhos Mecânicos">Máquinas e Aparelhos Mecânicos</option>
                   <option value="Resistência dos Materiais">Resistência dos Materiais</option>
