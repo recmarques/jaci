@@ -536,6 +536,11 @@
         height: 503px !important;
         top: 0 !important;
       }
+
+      nav .logo img{
+        width: 30%;
+        padding-top: 0px;
+    }
     
       .form .titulo {
         float: left;

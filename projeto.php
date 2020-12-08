@@ -546,6 +546,11 @@
         height: 640px;
       }
 
+      nav .logo img{
+          width: 30%;
+          padding-top: 0px;
+        }
+
       .banner{
         width: 100%;
         height: 430px;

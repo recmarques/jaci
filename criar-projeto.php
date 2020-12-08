@@ -126,9 +126,9 @@
 
           <div class="txtb">
             <select name="materia" id="materia" required>
-              <option value="" class="disable-select" disabled selected>Matéria</option>
+              <option value="" class="disable-select" disabled selected>Disciplina</option>
 
-                <optgroup label="Matérias comuns">
+                <optgroup label="Disciplinas comuns">
                   <option value="Biologia">Biologia</option>
                   <option value="Filosofia">Filosofia</option>
                   <option value="Física">Física</option>

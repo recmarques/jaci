@@ -173,8 +173,8 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
               <select name="materia" id="materia" required>
                 <!-- <option value="<?php echo $Materia; ?>" class="disable-select" disabled selected><?php echo $Materia; ?></option> -->
                 
-                <!-- <option value="" class="disable-select" disabled selected>Matéria</option> -->
-                <optgroup label="Matérias comuns">
+                <!-- <option value="" class="disable-select" disabled selected>Disciplinas</option> -->
+                <optgroup label="Disciplinas comuns">
 
                 <!-- <option value=""><?php echo $Materia; ?></option> -->
                 <option name="materia" id="materia" value="<?php echo $Materia; ?>" selected><?php echo $Materia; ?></option>
@@ -192,7 +192,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
                 <option name="materia" id="materia" value="Outro">Outro</option>
               </optgroup>
 
-              <optgroup label="Informática">
+              <optgroup label="Disciplinas de Informática">
                 <option name="materia" id="materia" value="Aplicações Web">Aplicações Web</option>
                 <option name="materia" id="materia" value="Banco de dados">Banco de dados</option>
                 <option name="materia" id="materia" value="Gestão Industrial">Gestão Industrial</option>
@@ -202,7 +202,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
                 <option name="materia" id="materia" value="Teoria e Desenvolvimento de Sistemas">Teoria e Desenvolvimento de Sistemas</option>
               </optgroup>
 
-              <optgroup label="Mecânica">
+              <optgroup label="Disciplinas de Mecânica">
                 <option name="materia" id="materia" value="Elementos de Máquinas">Elementos de Máquinas</option>
                 <option name="materia" id="materia" value="Máquinas e Aparelhos Mecânicos">Máquinas e Aparelhos Mecânicos</option>
                 <option name="materia" id="materia" value="Resistência dos Materiais">Resistência dos Materiais</option>

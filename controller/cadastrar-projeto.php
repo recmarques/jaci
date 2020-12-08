@@ -665,8 +665,12 @@ transition: 0.5s;
     width: 75%;
     padding: 10px 30px;
     border-bottom: solid 20px #1F9E84;
-
 }
+
+nav .logo img{
+      width: 30%;
+      padding-top: 0px;
+  }
 
     .form-cadastro {
         float: right;

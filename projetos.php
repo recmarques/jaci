@@ -511,6 +511,11 @@
           height: 430px !important;
       }
 
+      nav .logo img{
+          width: 30%;
+          padding-top: 0px;
+        }
+
       .logbtn {
         width: 45% !important;
         height: 54px;
@@ -811,11 +816,6 @@
     nav {
         display: flex;
         height: 100px;
-    }
-
-    nav .logo img {
-        width: 45%;
-        padding-top: 5px;
     }
 
     .lista{

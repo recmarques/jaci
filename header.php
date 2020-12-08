@@ -912,6 +912,11 @@
           width: 5% !important;
         }
 
+        nav .logo img{
+          width: 30%;
+          padding-top: 0px;
+        }
+
       .hero-image{
         height: 640px;
       }

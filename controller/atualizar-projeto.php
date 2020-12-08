@@ -656,6 +656,11 @@
       padding: 23px 64px;
     }
 
+    nav .logo img{
+          width: 30%;
+          padding-top: 0px;
+        }
+
     .form{
       background-color: #1F1F1F;
       margin: auto;

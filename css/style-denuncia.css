@@ -536,6 +536,11 @@
         top: 0 !important;
       }
 
+      nav .logo img{
+        width: 30%;
+        padding-top: 0px;
+    }
+
       .autor-projeto{
         color:#1f1f1f;
         text-transform: uppercase;
