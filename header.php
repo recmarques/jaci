@@ -31,7 +31,7 @@
  
       }
 
-      $sql1 = "SELECT * FROM tb_projetos WHERE ID='1'";
+      $sql1 = "SELECT * FROM tb_projetos WHERE ID='10'";
       $res1 = mysqli_query($conexao, $sql1);
   
           $ID_Projeto1;
@@ -1235,7 +1235,7 @@
               }
 
               if( ($Nota1/$i1) == 6 || ($Nota1/$i1) == 6.5){
-                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1." | ".$NotaProfessor1."<br />";
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
