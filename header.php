@@ -31,7 +31,7 @@
  
       }
 
-      $sql = "SELECT * FROM tb_projetos WHERE ID='6'";
+      $sql = "SELECT * FROM tb_projetos WHERE ID='8'";
       $res = mysqli_query($conexao, $sql);
 
       $ID_Projeto1;
