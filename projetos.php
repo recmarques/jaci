@@ -508,7 +508,7 @@
     @media screen and (max-width: 700px){
 
       .hero-image{
-          height: 430px !important;
+          height: 490px !important;
       }
 
       nav .logo img{
