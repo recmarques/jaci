@@ -47,7 +47,7 @@
   <html lang="pt-br" dir="ltr">
     <head>
 
-      <title>Projetos disponíveis | JACI</title>
+      <title>Atividades disponíveis | JACI</title>
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1105,8 +1105,8 @@
 
       <ul>
         <li><a href="header.php">INÍCIO</a></li>
-        <li><a class="active" href="projetos.php">PROJETOS</a></li>
-        <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
+        <li><a class="active" href="projetos.php">ATIVIDADES</a></li>
+        <li><a href="criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
 
         <?php 
           if(isset($_SESSION['logado'])){
@@ -1136,7 +1136,7 @@
             
       <div class="row">
         <div class="col-sm-9 titulo-banner">
-          <strong>Estes são os projetos disponíveis.</strong><br />
+          <strong>Estes são as atividades disponíveis.</strong><br />
         </div>
       </div>
 

@@ -117,8 +117,8 @@
 
     <ul>
       <li><a href="header.php">INÍCIO</a></li>
-      <li><a href="projetos.php">PROJETOS</a></li>
-      <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
+      <li><a href="projetos.php">ATIVIDADES</a></li>
+      <li><a href="criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
 
       <?php 
         if(isset($_SESSION['logado'])){
@@ -151,7 +151,7 @@ if(!($ID_Usuario_Projeto == $_SESSION["ID"])){
 
       <div class="descricao">
           Preencha os campos a seguir para adicionar uma avaliação para este projeto e nos ajudar a 
-          definir projetos de alta qualidade para todos!
+          definir atividades de alta qualidade para todos!
       </div>
     </div>
 
@@ -211,7 +211,7 @@ else{?>
           <a class="email-link" href="mailto:gruposol413@gmail.com" target="_blank">gruposol413@gmail.com</a>.
 
               <a href="projetos.php">
-                <button class="button button1">VER PROJETOS</button>
+                <button class="button button1">VER ATIVIDADES</button>
               </a>
         </div>
 

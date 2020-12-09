@@ -90,8 +90,8 @@
 
             <p class="obrigado">
                 <p class="submensagem">
-                Após sua conta ser excluída não haverá como desfazer tal ato e seus projetos cadastrados
-                serão excluídos
+                Após sua conta ser excluída não haverá como desfazer tal ato e suas atividades cadastradas
+                serão excluídas
                 </p>
             </p>
 

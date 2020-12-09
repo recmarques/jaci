@@ -1115,8 +1115,8 @@
 
           <ul>
             <li><a class="active" href="header.php">INÍCIO</a></li>
-            <li><a href="projetos.php">PROJETOS</a></li>
-            <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
+            <li><a href="projetos.php">ATIVIDADES</a></li>
+            <li><a href="criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
 
           <?php 
                 if(isset($_SESSION['logado'])){
@@ -1159,7 +1159,7 @@
               <strong>Qual material deseja acessar?</strong><br />
 
               <a href="projetos.php">
-                <button class="button button1">VER PROJETOS</button>
+                <button class="button button1">VER ATIVIDADES</button>
               </a>
             </div>
 

@@ -706,8 +706,8 @@ nav .logo img{
       </label>
       <ul>
 <li><a href="../header.php">INÍCIO</a></li>
-<li><a href="./../projetos.php">PROJETOS</a></li>
-<li><a href="./../criar-projeto.php">CRIAR PROJETO</a></li>
+<li><a href="./../projetos.php">ATIVIDADES</a></li>
+<li><a href="./../criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
 
 <?php 
                 if(isset($_SESSION['logado'])){
@@ -767,7 +767,7 @@ nav .logo img{
               ?>
              
               <a href="./../projetos.php">
-                <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER PROJETOS</button>
+                <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER ATIVIDADES</button>
               </a>
 
               <?php

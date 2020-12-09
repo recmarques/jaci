@@ -699,8 +699,8 @@
 
           <ul>
             <li><a href="header.php">INÍCIO</a></li>
-            <li><a href="projetos.php">PROJETOS</a></li>
-            <li><a href="criar-projeto.php">CRIAR PROJETO</a></li>
+            <li><a href="projetos.php">ATIVIDADES</a></li>
+            <li><a href="criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
             <?php 
                 if(isset($_SESSION['logado'])){
                   echo "<li><a class=active href=meu-perfil.php>MEU PERFIL</a></li>";
@@ -822,7 +822,7 @@
 
             <div>
 
-              <h3 class="seus-projetos"><strong>SEUS PROJETOS</strong></h3>
+              <h3 class="seus-projetos"><strong>SUAS ATIVIDADES CADASTRADAS</strong></h3>
               
               <a href="#dados"><h5 class="seus-projetos do-not-show-desktop" style="text-decoration: underline; color: #929292;"><strong>VISUALIZAR MEUS DADOS</strong></h5></a>
             
@@ -894,7 +894,7 @@
                         </div>
 
                         <div class="autor">
-                          CRIE UM PROJETO AGORA! CLIQUE NO BOTÃO ABAIXO.
+                          CADASTRE UMA ATIVIDADE AGORA! CLIQUE NO BOTÃO ABAIXO.
                         </div>
                         
                         <a href="criar-projeto.php">
@@ -996,7 +996,7 @@
                             </div>
                             
                             <a href="projetos.php">
-                              <button class="button-projeto button button1-projeto button3">VER PROJETOS</button>
+                              <button class="button-projeto button button1-projeto button3">VER ATIVIDADES</button>
                             </a>
                         
                         </div>

@@ -43,7 +43,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <title>Criar projeto | JACI</title>
+      <title>Cadastrar Atividade | JACI</title>
 
       <link rel="icon" href="img/favicon.png" type="image/png" />
       <link rel="stylesheet" href="css/style-criar-projeto.css">
@@ -71,8 +71,8 @@
 
     <ul>
       <li><a href="header.php">INÍCIO</a></li>
-      <li><a href="projetos.php">PROJETOS</a></li>
-      <li><a class="active" href="criar-projeto.php">CRIAR PROJETO</a></li>
+      <li><a href="projetos.php">ATIVIDADES</a></li>
+      <li><a class="active" href="criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
       <!-- <li><a href="#">Feedback</a></li> -->
       <?php 
         if(isset($_SESSION['logado'])){
@@ -98,7 +98,7 @@
   <div class="form">
     <div class="titulo">
       <p> 
-        CADASTRAR <strong>NOVO PROJETO</strong>
+        CADASTRAR <strong> ATIVIDADE</strong>
       </p>
 
       <div class="descricao">

@@ -116,8 +116,8 @@
       </label>
       <ul>
 <li><a href="../header.php">INÍCIO</a></li>
-<li><a href="./../projetos.php">PROJETOS</a></li>
-<li><a href="./../criar-projeto.php">CRIAR PROJETO</a></li>
+<li><a href="./../projetos.php">ATIVIDADES</a></li>
+<li><a href="./../criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
 <!-- <li><a href="#">Feedback</a></li> -->
 <?php 
                 if(isset($_SESSION['logado'])){
@@ -145,7 +145,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
 ?>
   <div class="form">
     <div class="titulo"><p> 
-    EDITAR <strong>PROJETO</strong></p>
+    EDITAR <strong>ATIVIDADE</strong></p>
       <div class="descricao">
           Preencha os campos a seguir para editar seu projeto que já foi cadastrado!
       </div>

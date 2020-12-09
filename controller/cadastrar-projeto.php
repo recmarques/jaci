@@ -722,8 +722,8 @@ nav .logo img{
       </label>
       <ul>
 <li><a href="../header.php">INÍCIO</a></li>
-<li><a href="./../projetos.php">PROJETOS</a></li>
-<li><a href="./../criar-projeto.php">CRIAR PROJETO</a></li>
+<li><a href="./../projetos.php">ATIVIDADES</a></li>
+<li><a href="./../criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
 <!-- <li><a href="#">Feedback</a></li> -->
 <?php 
                 if(isset($_SESSION['logado'])){
