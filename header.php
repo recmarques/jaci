@@ -40,6 +40,7 @@
           $Palavras1;
           $Ano1;
           $Materia1;
+          $NotaProfessor1;
           $Categoria1;
           $Conhecimento1;
           $Texto1;
@@ -57,6 +58,7 @@
             $Palavras1 = $vreg[3];
             $Ano1 = $vreg[4];
             $Materia1 = $vreg[5];
+            $NotaProfessor1 = $vreg[5];
             $Categoria1 = $vreg[6];
             $Conhecimento1 = $vreg[7];
             $Texto1 = $vreg[8];
@@ -101,6 +103,7 @@
       $Palavras2;
       $Ano2;
       $Materia2;
+      $NotaProfessor2;
       $Categoria2;
       $Conhecimento2;
       $Texto2;
@@ -118,10 +121,11 @@
         $Palavra2 = $vreg[3];
         $Ano2 = $vreg[4];
         $Materia2 = $vreg[5];
-        $Categoria2 = $vreg[6];
-        $Conhecimento2 = $vreg[7];
-        $Texto2 = $vreg[8];
-        $ID_Usuario_Projeto2 = $vreg[9];
+        $NotaProfessor2 = $vreg[6];
+        $Categoria2 = $vreg[7];
+        $Conhecimento2 = $vreg[8];
+        $Texto2 = $vreg[9];
+        $ID_Usuario_Projeto2 = $vreg[10];
 
         $sql3 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto2'";
         $res3 = mysqli_query($conexao, $sql3);
@@ -145,6 +149,7 @@
       $Palavras3;
       $Ano3;
       $Materia3;
+      $NotaProfessor3;
       $Categoria3;
       $Conhecimento3;
       $Texto3;
@@ -162,10 +167,11 @@
         $Palavra3 = $vreg[3];
         $Ano3 = $vreg[4];
         $Materia3 = $vreg[5];
-        $Categoria3 = $vreg[6];
-        $Conhecimento3 = $vreg[7];
-        $Texto3 = $vreg[8];
-        $ID_Usuario_Projeto3 = $vreg[9];
+        $NotaProfessor3 = $vreg[6];
+        $Categoria3 = $vreg[7];
+        $Conhecimento3 = $vreg[8];
+        $Texto3 = $vreg[9];
+        $ID_Usuario_Projeto3 = $vreg[10];
 
         $sql4 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto3'";
         $res4 = mysqli_query($conexao, $sql4);
@@ -205,6 +211,7 @@
       $Palavras4;
       $Ano4;
       $Materia4;
+      $NotaProfessor4;
       $Categoria4;
       $Conhecimento4;
       $Texto4;
@@ -222,10 +229,11 @@
         $Palavra4 = $vreg[3];
         $Ano4 = $vreg[4];
         $Materia4 = $vreg[5];
-        $Categoria4 = $vreg[6];
-        $Conhecimento4 = $vreg[7];
-        $Texto4 = $vreg[8];
-        $ID_Usuario_Projeto4 = $vreg[9];
+        $NotaProfessor4 = $vreg[6];
+        $Categoria4 = $vreg[7];
+        $Conhecimento4 = $vreg[8];
+        $Texto4 = $vreg[9];
+        $ID_Usuario_Projeto4 = $vreg[10];
 
         $sql5 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto4'";
         $res5 = mysqli_query($conexao, $sql5);
@@ -249,6 +257,7 @@
       $Palavras5;
       $Ano5;
       $Materia5;
+      $NotaProfessor5;
       $Categoria5;
       $Conhecimento5;
       $Texto5;
@@ -266,10 +275,11 @@
         $Palavra5 = $vreg[3];
         $Ano5 = $vreg[4];
         $Materia5 = $vreg[5];
-        $Categoria5 = $vreg[6];
-        $Conhecimento5 = $vreg[7];
-        $Texto5 = $vreg[8];
-        $ID_Usuario_Projeto5 = $vreg[9];
+        $NotaProfessor5 = $vreg[6];
+        $Categoria5 = $vreg[7];
+        $Conhecimento5 = $vreg[8];
+        $Texto5 = $vreg[9];
+        $ID_Usuario_Projeto5 = $vreg[10];
 
         $sql6 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto5'";
         $res6 = mysqli_query($conexao, $sql6);
@@ -293,6 +303,7 @@
       $Palavras6;
       $Ano6;
       $Materia6;
+      $NotaProfessor6;
       $Categoria6;
       $Conhecimento6;
       $Texto6;
@@ -310,10 +321,11 @@
         $Palavra6 = $vreg[3];
         $Ano6 = $vreg[4];
         $Materia6 = $vreg[5];
-        $Categoria6 = $vreg[6];
-        $Conhecimento6 = $vreg[7];
-        $Texto6 = $vreg[8];
-        $ID_Usuario_Projeto6 = $vreg[9];
+        $NotaProfessor6 = $vreg[6];
+        $Categoria6 = $vreg[7];
+        $Conhecimento6 = $vreg[8];
+        $Texto6 = $vreg[9];
+        $ID_Usuario_Projeto6 = $vreg[10];
 
         $sql7 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto6'";
         $res7 = mysqli_query($conexao, $sql7);
@@ -1223,7 +1235,7 @@
               }
 
               if( ($Nota1/$i1) == 6 || ($Nota1/$i1) == 6.5){
-                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1."<br />";
+                echo $Nome1." | ".$Ano1." | ".$Materia1." | ".$Categoria1." | ".$NotaProfessor1."<br />";
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">

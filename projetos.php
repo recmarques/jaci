@@ -1184,7 +1184,7 @@
           $Palavras = $vreg[3];
           $Ano = $vreg[4];
           $Materia = $vreg[5];
-          $Nota = $vreg[6];
+          $NotaProfessor = $vreg[6];
           $Categoria = $vreg[7];
           $Conhecimento = $vreg[8];
           $Texto = $vreg[9];
