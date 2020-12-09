@@ -85,7 +85,6 @@
                 $ID_Avaliacao1 = $vreg2[0];
                 $Comentários1 = $vreg2[1];
                 $Nota1 += $vreg2[2];
-                // $ID_Projeto = $vreg2[3];
                 $ID_Usuario_Avaliacao1 = $vreg2[4];
   
                 $i1++;
