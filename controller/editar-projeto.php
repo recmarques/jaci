@@ -73,6 +73,7 @@
       $_SESSION['Ano'] = $Ano;
       $_SESSION['Palavras'] = $Palavras;
       $_SESSION['Materia'] = $Materia;
+      $_SESSION['NotaProfessor'] = $NotaProfessor;
       $_SESSION['Categoria'] = $Categoria;
       $_SESSION['Conhecimento'] = $Conhecimento;
       $_SESSION['Texto'] = $Texto;
@@ -226,7 +227,6 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
             <select name="categoria" id="categoria" required>
             <option name="categoria" id="categoria" value="<?php echo $Categoria; ?>" selected><?php echo $Categoria; ?></option>
                 
-
                 
                   <option value="Artigo">Artigo</option>
                   <option value="Exercício">Exercício</option>

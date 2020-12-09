@@ -41,6 +41,7 @@
         $vano = $_POST["ano"];
 
         $vmateria = $_POST["materia"];
+        $vnotaprofessor = $_POST["nota"];
         $vcategoria = $_POST["categoria"];
         $vconhecimento = $_POST["conhecimento"];
         $vtexto = $_POST["texto"];
@@ -49,7 +50,7 @@
 
         $sql = "UPDATE tb_projetos SET
         Titulo = '$vtitulo', Descricao = '$vdescricao', Palavras = '$vpalavras',
-        Ano = $vano, Materia = '$vmateria', Categoria = '$vcategoria', Conhecimento = $vconhecimento, Texto = '$vtexto'
+        Ano = $vano, Materia = '$vmateria', Nota = $vnotaprofessor, Categoria = '$vcategoria', Conhecimento = $vconhecimento, Texto = '$vtexto'
         WHERE ID = $ID_Projeto AND ID_Usuario = $id";
 
         // WHERE ID_Usuario = $ID_Usuario AND 
