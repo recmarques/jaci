@@ -61,12 +61,13 @@
         $vpalavras = $_POST["palavras-chave"];
         $vano = $_POST["ano"];
         $vmateria = $_POST["materia"];
+        $vnota = $_POST["nota"];
         $vcategoria = $_POST["categoria"];
         $vconhecimento = $_POST["conhecimento"];
         $vtexto = $_POST["texto"];
 
         $sql = "INSERT INTO tb_projetos VALUES
-        ($vcod, '$vtitulo', '$vdescricao', '$vpalavras', $vano, '$vmateria', '$vcategoria', $vconhecimento, '$vtexto', $ID_Usuario)";
+        ($vcod, '$vtitulo', '$vdescricao', '$vpalavras', $vano, '$vmateria', $vnota, '$vcategoria', $vconhecimento, '$vtexto', $ID_Usuario)";
         $res = mysqli_query($conexao, $sql);
 
         $linhas = mysqli_affected_rows($conexao);

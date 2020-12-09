@@ -266,6 +266,11 @@
         display: block;
       }
 
+      nav .logo img{
+          width: 30%;
+          padding-top: 0px;
+        }
+
       .no-show-mobile{
         display: none;
       }
@@ -737,10 +742,11 @@
                 $Palavras = $vreg4[3];
                 $Ano = $vreg4[4];
                 $Materia = $vreg4[5];
-                $Categoria = $vreg4[6];
-                $Conhecimento = $vreg4[7];
-                $Texto = $vreg4[8];
-                $ID_Usuario_Projeto = $vreg4[9];
+                $Nota = $vreg4[6];
+                $Categoria = $vreg4[7];
+                $Conhecimento = $vreg4[8];
+                $Texto = $vreg4[9];
+                $ID_Usuario_Projeto = $vreg4[10];
                  
 
             $sql2 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
@@ -776,10 +782,11 @@
                       $Palavras = $vreg3[3];
                       $Ano = $vreg3[4];
                       $Materia = $vreg3[5];
-                      $Categoria = $vreg3[6];
-                      $Conhecimento = $vreg3[7];
-                      $Texto = $vreg3[8];
-                      $ID_Usuario_Projeto = $vreg3[9];
+                      $Nota = $vreg3[6];
+                      $Categoria = $vreg3[7];
+                      $Conhecimento = $vreg3[8];
+                      $Texto = $vreg3[9];
+                      $ID_Usuario_Projeto = $vreg3[10];
 
           ?>
             <div id="popup-denuncias" class="popup-denuncias">
@@ -837,10 +844,11 @@
                     $Palavras = $vreg[3];
                     $Ano = $vreg[4];
                     $Materia = $vreg[5];
-                    $Categoria = $vreg[6];
-                    $Conhecimento = $vreg[7];
-                    $Texto = $vreg[8];
-                    $ID_Usuario_Projeto = $vreg[9];
+                    $Nota = $vreg[6];
+                    $Categoria = $vreg[7];
+                    $Conhecimento = $vreg[8];
+                    $Texto = $vreg[9];
+                    $ID_Usuario_Projeto = $vreg[19];
     
                     ?>
                    
@@ -937,10 +945,11 @@
                               $Palavras = $vreg3[3];
                               $Ano = $vreg3[4];
                               $Materia = $vreg3[5];
-                              $Categoria = $vreg3[6];
-                              $Conhecimento = $vreg3[7];
-                              $Texto = $vreg3[8];
-                              $ID_Usuario_Projeto = $vreg3[9];
+                              $Nota = $vreg3[6];
+                              $Categoria = $vreg3[7];
+                              $Conhecimento = $vreg3[8];
+                              $Texto = $vreg3[9];
+                              $ID_Usuario_Projeto = $vreg3[10];
         
                         ?>
                       
@@ -1037,7 +1046,7 @@
               </a>
 
               <div class="excluir">
-                    <a href="controller/excluir.php">
+                    <a href="controller/excluir-confirmacao.php">
                     EXCLUIR MINHA CONTA
                     </a>
                 </div>
@@ -1062,7 +1071,21 @@
 
 			</script>
 
+      <script>
 
+        const slideValue = document.querySelector(".sliderValue-span");
+        const inputSlider = document.querySelector(".input-value");
+        inputSlider.oninput = (()=>{
+          let value = inputSlider.value;
+          slideValue.textContent = value;
+          slideValue.style.left = (value/2) + "%";
+          slideValue.classList.add("show");
+        });
+        inputSlider.onblur = (()=>{
+          slideValue.classList.remove("show");
+        });
+
+      </script>
 
       <script type="text/javascript">
 					function abrir(){

@@ -49,10 +49,11 @@
       $Palavras = $vreg[3];
       $Ano = $vreg[4];
       $Materia = $vreg[5];
-      $Categoria = $vreg[6];
-      $Conhecimento = $vreg[7];
-      $Texto = $vreg[8];
-      $ID_Usuario_Projeto = $vreg[9];
+      $Nota = $vreg[6];
+      $Categoria = $vreg[7];
+      $Conhecimento = $vreg[8];
+      $Texto = $vreg[9];
+      $ID_Usuario_Projeto = $vreg[10];
 
       $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto'";
       $res2 = mysqli_query($conexao, $sql2);
@@ -215,8 +216,12 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
               <input type="number" placeholder="Ano em que o projeto foi feito" value="<?php echo $Ano; ?>" id="ano" name="ano" size="4" maxlength="4" required>
               <span data-placeholdr="Password"></span>
             </div>
-            
 
+            <div class="txtb">
+              <input type="number" placeholder="Nota atribuída pelo professor" id="nota" name="nota" size="2" maxlength="2">
+              <span></span>
+            </div>
+            
             <div class="txtb">
             <select name="categoria" id="categoria" required>
             <option name="categoria" id="categoria" value="<?php echo $Categoria; ?>" selected><?php echo $Categoria; ?></option>

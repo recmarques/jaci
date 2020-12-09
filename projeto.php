@@ -40,10 +40,11 @@
       $Palavras = $vreg[3];
       $Ano = $vreg[4];
       $Materia = $vreg[5];
-      $Categoria = $vreg[6];
-      $Conhecimento = $vreg[7];
-      $Texto = $vreg[8];
-      $ID_Usuario_Projeto = $vreg[9];
+      $Nota = $vreg[6];
+      $Categoria = $vreg[7];
+      $Conhecimento = $vreg[8];
+      $Texto = $vreg[9];
+      $ID_Usuario_Projeto = $vreg[10];
 
       $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto'";
       $res2 = mysqli_query($conexao, $sql2);
@@ -545,6 +546,11 @@
       .hero-image{
         height: 640px;
       }
+
+      nav .logo img{
+          width: 30%;
+          padding-top: 0px;
+        }
 
       .banner{
         width: 100%;
