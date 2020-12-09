@@ -1224,6 +1224,7 @@
           $_SESSION['Ano'] = $Ano;
           $_SESSION['Palavras'] = $Palavras;
           $_SESSION['Materia'] = $Materia;
+          $_SESSION['NotaProfessor'] = $NotaProfessor;
           $_SESSION['Categoria'] = $Categoria;
           $_SESSION['Conhecimento'] = $Conhecimento;
           $_SESSION['Texto'] = $Texto;
@@ -1247,12 +1248,12 @@
             <?php
 
             if(empty($Nota)){
-               echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria;
+               echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
             }
             else{
 
               if( ($Nota/$i) == 10){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1264,7 +1265,7 @@
               }
               
               if( ($Nota/$i) == 9 || ($Nota/$i) == 9.5 ){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1276,7 +1277,7 @@
               }
 
               if( ($Nota/$i) == 8 || ($Nota/$i) == 8.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1288,7 +1289,7 @@
               }
 
               if( ($Nota/$i) == 7 || ($Nota/$i) == 7.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1300,7 +1301,7 @@
               }
 
               if( ($Nota/$i) == 6 || ($Nota/$i) == 6.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1312,7 +1313,7 @@
               }
 
               if( ($Nota/$i) == 5 || ($Nota/$i) == 5.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1324,7 +1325,7 @@
               }
 
               if( ($Nota/$i) == 4 || ($Nota/$i) == 4.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/star.png" class="avaliacao-star">
@@ -1336,7 +1337,7 @@
               }
 
               if( ($Nota/$i) == 3 || ($Nota/$i) == 3.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/half-star.png" class="avaliacao-star">
@@ -1348,7 +1349,7 @@
               }
 
               if( ($Nota/$i) == 2 || ($Nota/$i) == 2.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/star.png" class="avaliacao-star">
               <img src="img/empty-star.png" class="avaliacao-star">
@@ -1360,7 +1361,7 @@
               }
 
               if( ($Nota/$i) == 1 || ($Nota/$i) == 1.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/half-star.png" class="avaliacao-star">
               <img src="img/empty-star.png" class="avaliacao-star">
@@ -1372,7 +1373,7 @@
               }
 
               if( ($Nota/$i) == 0 || ($Nota/$i) == 0.5){
-                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />";
+                echo $Nome." | ".$Ano." | ".$Materia." | ".$Categoria."<br />Nota Atribuída pelo professor: ".$NotaProfessor;
               ?>
               <img src="img/empty-star.png" class="avaliacao-star">
               <img src="img/empty-star.png" class="avaliacao-star">
