@@ -31,50 +31,49 @@
  
       }
 
-      $sql = "SELECT * FROM tb_projetos WHERE ID='10'";
-      $res = mysqli_query($conexao, $sql2);
+      $sql1 = "SELECT * FROM tb_projetos WHERE ID='10'";
+      $res1 = mysqli_query($conexao, $sql1);
+  
+          $ID_Projeto1;
+          $Titulo1;
+          $Descricao1;
+          $Palavras1;
+          $Ano1;
+          $Materia1;
+          $NotaProfessor1;
+          $Categoria1;
+          $Conhecimento1;
+          $Texto1;
+          $ID_Usuario_Projeto1;
+          $ID_Usuario2;
+          $Nome1;
+          $Email1;
+          $Curso1;
 
-      $ID_Projeto1;
-      $Titulo1;
-      $Descricao1;
-      $Palavras1;
-      $Ano1;
-      $Materia1;
-      $NotaProfessor1;
-      $Categoria1;
-      $Conhecimento1;
-      $Texto1;
-      $ID_Usuario_Projeto1;
-      $ID_Usuario1;
-      $Nome1;
-      $Email1;
-      $Curso1;
+          while($vreg = mysqli_fetch_row($res1)){
 
-      while($vreg = mysqli_fetch_row($res)){
+            $ID_Projeto1 = $vreg[0];
+            $Titulo1 = $vreg[1];
+            $Descricao1 = $vreg[2];
+            $Palavras1 = $vreg[3];
+            $Ano1 = $vreg[4];
+            $Materia1 = $vreg[5];
+            $NotaProfessor1 = $vreg[5];
+            $Categoria1 = $vreg[6];
+            $Conhecimento1 = $vreg[7];
+            $Texto1 = $vreg[8];
+            $ID_Usuario_Projeto1 = $vreg[9];
 
-        $ID_Projeto1 = $vreg[0];
-        $Titulo1 = $vreg[1];
-        $Descricao1 = $vreg[2];
-        $Palavra1 = $vreg[3];
-        $Ano1 = $vreg[4];
-        $Materia1 = $vreg[5];
-        $NotaProfessor1 = $vreg[6];
-        $Categoria1 = $vreg[7];
-        $Conhecimento1 = $vreg[8];
-        $Texto1 = $vreg[9];
-        $ID_Usuario_Projeto1 = $vreg[10];
+            $sql2 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto1'";
+            $res2 = mysqli_query($conexao, $sql2);
+            $vreg1;
 
-        $sql1 = "SELECT * FROM tb_cadastros WHERE ID = '$ID_Usuario_Projeto1'";
-        $res1 = mysqli_query($conexao, $sql1);
-        $vreg1;
-
-        while($vreg1 = mysqli_fetch_row($res1)){
-            $ID_Usuario1 = $vreg1[0];
-            $Nome1 = $vreg1[1];
-            $Email1 = $vreg1[2];
-            $Curso1 = $vreg1[3];
-        }
-      
+            while($vreg1 = mysqli_fetch_row($res2)){
+                $ID_Usuario1 = $vreg1[0];
+                $Nome1 = $vreg1[1];
+                $Email1 = $vreg1[2];
+                $Curso1 = $vreg1[3];
+            }
 
             $sql3 = "SELECT * FROM tb_avaliacoes WHERE ID_Projeto = '$ID_Projeto1'";
             $res3 = mysqli_query($conexao, $sql3);
