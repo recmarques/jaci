@@ -874,9 +874,9 @@
                         <button class="button-projeto button button1-projeto button2">VER MAIS</button>
                       </a>
 
-                      <a href="controller/editar-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/edit.png" alt="editar projeto" /></a>
+                      <a href="controller/editar-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/edit.png" alt="editar atividade" /></a>
 
-                      <a href="controller/excluir-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/delete.png" alt="excluir projeto"/></a>
+                      <a href="controller/excluir-projeto.php?ID=<?php echo $ID_Projeto; ?>"><img src="img/delete.png" alt="excluir atividade"/></a>
                       
                     
                       </div>
@@ -890,7 +890,7 @@
                     <div class="banner" style="background-color: #5EC7A7;">
 
                         <div class="titulo">
-                          Nenhum projeto cadastrado!
+                          Nenhum atividade cadastrada!
                         </div>
 
                         <div class="autor">

@@ -74,7 +74,7 @@
   <html lang="pt-br" dir="ltr">
     <head>
       
-      <title>Editar projeto | JACI</title>
+      <title>Editar atividade | JACI</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       

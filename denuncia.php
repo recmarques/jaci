@@ -91,7 +91,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <title>Denunciar projeto | JACI</title>
+      <title>Denunciar atividade | JACI</title>
 
       <link rel="icon" href="img/favicon.png" type="image/png" />
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -147,11 +147,11 @@ if(!($ID_Usuario_Projeto == $_SESSION["ID"])){
   <div class="form">
     <div class="titulo">
       <p> 
-      DENUNCIAR <strong>ESTE PROJETO</strong>
+      DENUNCIAR <strong>ESTA ATIVIDADE</strong>
       </p>
 
       <div class="descricao">
-          Preencha os campos a seguir para adicionar uma denúncia deste projeto para que
+          Preencha os campos a seguir para adicionar uma denúncia para esta atividade para que
           nossa equipe avalie!
       </div>
     </div>
@@ -201,9 +201,9 @@ else{?>
         </div>
 
         <div class="form-cadastro mensagem">
-        Esse projeto pertence a você, logo você não pode denunciá-lo<br /><br />
+        Esse atividade pertence a você, logo você não pode denunciá-lo<br /><br />
 
-        Caso tenha ocorrido um erro - e esse projeto não é seu, mas não consegue acessá-lo -, nos mande um e-mail:
+        Caso tenha ocorrido um erro - e essa atividade não é seu, mas não consegue acessá-la -, nos mande um e-mail:
           <a class="email-link" href="mailto:gruposol413@gmail.com" target="_blank">gruposol413@gmail.com</a>.
 
               <a href="projetos.php">

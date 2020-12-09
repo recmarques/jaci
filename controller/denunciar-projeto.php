@@ -751,7 +751,7 @@ nav .logo img{
         echo "Infelizmente não foi possível cadastrar sua denúncia! Tente novamente!";
       }
     else{
-        echo "Obrigado por avaliar este projeto!";
+        echo "Obrigado por avaliar esta atividade!";
     }
     ?>
 

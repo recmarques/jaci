@@ -91,7 +91,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <title>Avaliar projeto | JACI</title>
+      <title>Avaliar atividade | JACI</title>
 
       <link rel="icon" href="img/favicon.png" type="image/png" />
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -146,11 +146,11 @@ if(!($ID_Usuario_Projeto == $_SESSION["ID"])){
   <div class="form">
     <div class="titulo">
       <p> 
-      AVALIAR <strong>ESTE PROJETO</strong>
+      AVALIAR <strong>ESTA ATIVIDADE</strong>
       </p>
 
       <div class="descricao">
-          Preencha os campos a seguir para adicionar uma avaliação para este projeto e nos ajudar a 
+          Preencha os campos a seguir para adicionar uma avaliação para esta atividade e nos ajudar a 
           definir atividades de alta qualidade para todos!
       </div>
     </div>
@@ -205,9 +205,9 @@ else{?>
         </div>
 
         <div class="form-cadastro mensagem">
-        Esse projeto pertence a você, logo você não pode avaliá-lo.<br /><br />
+        Essa atividade pertence a você, logo você não pode avaliá-lo.<br /><br />
 
-        Caso tenha ocorrido um erro - e esse projeto não é seu, mas não consegue acessá-lo -, nos mande um e-mail:
+        Caso tenha ocorrido um erro - e essa atividade não é sua, mas não consegue acessá-la -, nos mande um e-mail:
           <a class="email-link" href="mailto:gruposol413@gmail.com" target="_blank">gruposol413@gmail.com</a>.
 
               <a href="projetos.php">

@@ -755,7 +755,7 @@
       <?php
         if($mensagem == 'Falha na atualização do projeto!'){
           // echo $vcod."".$vtitulo."".$vdescricao;
-          echo "Falha na <strong>atualização do projeto!</strong>";   
+          echo "Falha na <strong>atualização da atividade!</strong>";   
         }
         else{
           echo "Mudanças salvas <strong>com sucesso!</strong>";
@@ -773,7 +773,7 @@
         <?php
         if($mensagem == 'Falha na atualização do projeto!'){
             // echo $vcod."".$vtitulo."".$vdescricao;
-          echo "Infelizmente não foi possível cadastrar seu projeto! Tente novamente!";
+          echo "Infelizmente não foi possível cadastrar sua atividade! Tente novamente!";
           }
           else{
               echo "Obrigado por compartilhar seu conhecimento com todos!";
@@ -790,7 +790,7 @@
             else{
           ?>
             <a href="./../projeto.php?ID=<?php echo $ID_Projeto; ?>">
-              <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER PROJETO</button>
+              <button class="button-projeto button button1-projeto button1" id="$ID_Projeto">VER ATIVIDADE</button>
             </a>
           <?php
               }

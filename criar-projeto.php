@@ -98,11 +98,11 @@
   <div class="form">
     <div class="titulo">
       <p> 
-        CADASTRAR <strong> ATIVIDADE</strong>
+        CADASTRAR <strong> ATIVI-<br />DADE</strong>
       </p>
 
       <div class="descricao">
-          Preencha os campos a seguir para adicionar um novo projeto e ajudar um aluno!
+          Preencha os campos a seguir para adicionar uma nova atividade e ajudar um aluno!
       </div>
     </div>
 
@@ -110,7 +110,7 @@
       <form method="post" class="login-form" action="controller/cadastrar-projeto.php"> 
       
           <div class="txtb">
-            <input type="text" placeholder="Título do projeto" name="titulo" id="titulo" size="100" maxlength="100" required>
+            <input type="text" placeholder="Título da atividade" name="titulo" id="titulo" size="100" maxlength="100" required>
             <span data-placeholdr="Email"></span>
           </div>
 
@@ -164,7 +164,7 @@
             </div>
 
             <div class="txtb">
-              <input type="number" placeholder="Ano em que o projeto foi feito" id="ano" name="ano" size="4" maxlength="4" required>
+              <input type="number" placeholder="Ano em que a atividade foi feito" id="ano" name="ano" size="4" maxlength="4" required>
               <span data-placeholdr="Password"></span>
             </div>
 
@@ -220,7 +220,7 @@
             </div>
             
             <br /><br />
-              <input type="submit" class="logbtn" value="CADASTRAR PROJETO" name="btn-entrar">
+              <input type="submit" class="logbtn" value="CADASTRAR ATIVIDADE" name="btn-entrar">
             <br />
             
       </form> 

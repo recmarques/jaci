@@ -95,7 +95,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Excluir projeto | JACI</title>
+    <title>Excluir atividade | JACI</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -735,7 +735,7 @@ nav .logo img{
       </label>
       <ul>
 <li><a href="../header.php">INÍCIO</a></li>
-<li><a href="./../projetos.php">PROJETOS</a></li>
+<li><a href="./../projetos.php">ATIVIDADES</a></li>
 <li><a href="./../criar-projeto.php">CADASTRAR ATIVIDADE</a></li>
 <!-- <li><a href="#">Feedback</a></li> -->
 <?php 
@@ -775,18 +775,18 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
         $sql3 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
         $res3 = mysqli_query($conexao, $sql3);
     
-        $sql4 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
-        $res4 = mysqli_query($conexao, $sql4);
+        // $sql4 = "DELETE FROM tb_denuncias WHERE ID_Projeto='$ID_Projeto'";
+        // $res4 = mysqli_query($conexao, $sql4);
 
-        $sql5 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
-        $res5 = mysqli_query($conexao, $sql5);
+        // $sql5 = "SELECT * FROM tb_denuncias WHERE ID_Projeto = '$ID_Projeto'";
+        // $res5 = mysqli_query($conexao, $sql5);
         
         $sql6 = "DELETE FROM tb_avaliacoes WHERE ID_Projeto='$ID_Projeto'";
         $res6 = mysqli_query($conexao, $sql6);
 
   }
   else{
-      $mensagem = "Não foi possível excluir o projeto!";
+      $mensagem = "Não foi possível excluir a atividade!";
   }
 ?>
 
@@ -795,11 +795,11 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
     <?php
                 if($mensagem == 'Não foi possível excluir o projeto!'){
                   // echo $vcod."".$vtitulo."".$vdescricao;
-                echo "<strong>Não foi possível excluir</strong> o projeto!";
+                echo "<strong>Não foi possível excluir</strong> a atividade!";
               
                 }
                 else{
-                  echo "Projeto excluído <strong>com sucesso!</strong>";
+                  echo "Atividade excluída <strong>com sucesso!</strong>";
                 }
                 ?></p>
       <!-- <div class="descricao">
@@ -811,10 +811,10 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
         <?php
         if($mensagem == 'Não foi possível excluir o projeto!'){
           // echo $vcod."".$vtitulo."".$vdescricao;
-        echo "Infelizmente não foi possível excluir seu projeto! Tente novamente!";
+        echo "Infelizmente não foi possível excluir sua atividade! Tente novamente!";
       }
     else{
-        echo "Seu projeto foi excluído com sucesso!";
+        echo "A atividade foi excluído com sucesso!";
     }
     ?>
 
@@ -855,9 +855,9 @@ if($_SESSION['ID'] == $_SESSION['ID_Usuario_Projeto']){
         </div>
 
         <div class="form-cadastro mensagem">
-        Esse projeto pertence a outra pessoa, logo você não pode excluí-lo.<br /><br />
+        Essa atividade pertence a outra pessoa, logo você não pode excluí-lo.<br /><br />
 
-        Caso tenha ocorrido um erro - e esse projeto é seu, mas não consegue acessá-lo -, nos mande um e-mail:
+        Caso tenha ocorrido um erro - e essa atividade é sua, mas não consegue acessá-la -, nos mande um e-mail:
           <a href="mailto:gruposol413@gmail.com">gruposol413@gmail.com</a>.
 
               <a href="./../meu-perfil.php">

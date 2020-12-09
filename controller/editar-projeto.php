@@ -91,7 +91,7 @@
   <html lang="pt-br" dir="ltr">
     <head>
       
-      <title>Editar projeto | JACI</title>
+      <title>Editar atividade | JACI</title>
       
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -147,7 +147,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
     <div class="titulo"><p> 
     EDITAR <strong>ATIVIDADE</strong></p>
       <div class="descricao">
-          Preencha os campos a seguir para editar seu projeto que já foi cadastrado!
+          Preencha os campos a seguir para editar sua atividade que já foi cadastrada anteriormente!
       </div>
     </div>
 
@@ -155,7 +155,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
       <form method="post" class="login-form" action="atualizar-projeto.php?IDProjeto=<?php echo $ID_Projeto;?>"> 
       
             <div class="txtb">
-                <input type="text" placeholder="Título do projeto" name="titulo" id="titulo" size="100" maxlength="100" value="<?php echo $Titulo; ?>" required>
+                <input type="text" placeholder="Título da atividade" name="titulo" id="titulo" size="100" maxlength="100" value="<?php echo $Titulo; ?>" required>
                 <span data-placeholdr="Email"></span>
             </div>
 
@@ -214,7 +214,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
             </div>
 
             <div class="txtb">
-              <input type="number" placeholder="Ano em que o projeto foi feito" value="<?php echo $Ano; ?>" id="ano" name="ano" size="4" maxlength="4" required>
+              <input type="number" placeholder="Ano em que a atividade foi feito" value="<?php echo $Ano; ?>" id="ano" name="ano" size="4" maxlength="4" required>
               <span data-placeholdr="Password"></span>
             </div>
 
@@ -322,7 +322,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
 
             <br /><br />
 
-            <input type="submit" class="logbtn" value="ATUALIZAR PROJETO" name="btn-entrar">
+            <input type="submit" class="logbtn" value="ATUALIZAR ATIVIDADE" name="btn-entrar">
 
            <br />
             
@@ -343,8 +343,8 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
     VOCÊ <strong>NÃO TEM PERMISSÃO PARA ACESSAR ESSA PÁGINA :(</strong></p>
     </div>
       <div class="descricao">
-          Esse projeto pertence a outra pessoa, logo você não pode editá-lo.<br /><br />Caso tenha
-          ocorrido um erro - e esse projeto é seu, mas não consegue acessá-lo -, nos mande um e-mail: <a href="mailto:gruposol413@gmail.com" target="_blank">gruposol413@gmail.com</a>.
+          Essa atividade pertence a outra pessoa, logo você não pode editá-lo.<br /><br />Caso tenha
+          ocorrido um erro - e essa atividade é sua, mas não consegue acessá-la -, nos mande um e-mail: <a href="mailto:gruposol413@gmail.com" target="_blank">gruposol413@gmail.com</a>.
       </div>
     </div>
 

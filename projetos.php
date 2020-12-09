@@ -1136,7 +1136,7 @@
             
       <div class="row">
         <div class="col-sm-9 titulo-banner">
-          <strong>Estes são as atividades disponíveis.</strong><br />
+          <strong>Estas são as atividades disponíveis.</strong><br />
         </div>
       </div>
 
