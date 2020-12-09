@@ -169,7 +169,7 @@
             </div>
 
             <div class="txtb">
-              <input type="number" placeholder="Nota atribuída pelo professor" id="nota" name="nota" size="2" maxlength="2" required>
+              <input type="number" placeholder="Nota atribuída pelo professor" id="nota" name="nota" size="2" maxlength="2" step="any" required>
               <span></span>
             </div>
             

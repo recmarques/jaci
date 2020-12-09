@@ -49,7 +49,7 @@
       $Palavras = $vreg[3];
       $Ano = $vreg[4];
       $Materia = $vreg[5];
-      $Nota = $vreg[6];
+      $NotaProfessor = $vreg[6];
       $Categoria = $vreg[7];
       $Conhecimento = $vreg[8];
       $Texto = $vreg[9];
@@ -219,7 +219,7 @@ if($_SESSION['ID'] == $ID_Usuario_Projeto){
             </div>
 
             <div class="txtb">
-              <input type="number" placeholder="Nota atribuída pelo professor" id="nota" name="nota" size="2" maxlength="2">
+              <input type="number" placeholder="Nota atribuída pelo professor" value="<?php echo $NotaProfessor; ?>" id="nota" name="nota" size="2" maxlength="2" step="any" required>
               <span></span>
             </div>
             
