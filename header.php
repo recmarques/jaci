@@ -1496,23 +1496,6 @@
   </div>
  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
-
-      <script>
-        const slideValue = document.querySelector(".sliderValue-span");
-        const inputSlider = document.querySelector(".input-value");
-
-          inputSlider.oninput = (()=>{
-            let value = inputSlider.value;
-            slideValue.textContent = value;
-            slideValue.style.left = (value/2) + "%";
-            slideValue.classList.add("show");
-        });
-
-          inputSlider.onblur = (()=>{
-            slideValue.classList.remove("show");
-        });
-      </script>
 
     </body>
   </html>
