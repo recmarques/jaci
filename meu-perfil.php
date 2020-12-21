@@ -1071,22 +1071,6 @@
 
 			</script>
 
-      <script>
-
-        const slideValue = document.querySelector(".sliderValue-span");
-        const inputSlider = document.querySelector(".input-value");
-        inputSlider.oninput = (()=>{
-          let value = inputSlider.value;
-          slideValue.textContent = value;
-          slideValue.style.left = (value/2) + "%";
-          slideValue.classList.add("show");
-        });
-        inputSlider.onblur = (()=>{
-          slideValue.classList.remove("show");
-        });
-
-      </script>
-
       <script type="text/javascript">
 					function abrir(){
 						document.getElementById('popup-denuncias').style.display = 'block';
