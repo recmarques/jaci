@@ -64,10 +64,15 @@ $conta = new ContaBancaria(
 
 var_dump($conta);
 
+echo '<br /><br />';
+
 // utilizar echo para mostrar o return nos métodos
 echo $conta->obterSaldo();
+echo '<br /><br />';
 echo $conta->depositar(200.00);
+echo '<br /><br />';
 echo $conta->sacar(100.00);
+echo '<br /><br />';
 echo $conta->obterSaldo();
 
 
