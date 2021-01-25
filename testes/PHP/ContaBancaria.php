@@ -58,16 +58,16 @@ $conta = new ContaBancaria(
 // quebra de execução de código, nada abaixo disso é executado
 // exit();
 
-// $conta->saldo = 0;
-// var_dump($conta->nomeTitular);
-// var_dump($conta->saldo);
 
 var_dump($conta);
-
+echo '<br /><br />';
+var_dump($conta->saldo);
 echo '<br /><br />';
 
 // utilizar echo para mostrar o return nos métodos
 echo $conta->obterSaldo();
+
+exit();
 echo '<br /><br />';
 echo $conta->depositar(200.00);
 echo '<br /><br />';
