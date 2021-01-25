@@ -26,3 +26,21 @@ if(!$usuarioValidado){
     echo "Usuário Inválido!";
     return false;
 }
+
+
+$usuario1 = [
+    'codigo'=> 1,
+    'nome' => 'Renata Marques',
+    'idade' => 57,
+];
+
+$usuarioValidado1 = validarUsuario($usuario1);
+
+if(!$usuarioValidado1){
+    echo "Usuário Inválido!";
+    return false;
+}
+else{
+    echo "Usuário Válido!";
+    return true;
+}
