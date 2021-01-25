@@ -29,6 +29,15 @@ class ContaBancaria {
         $this->$saldo = $saldo;
     }
 
+    // objeto = instancia da classe
+    $conta = new ContaBancaria(
+        'Caixa Econômica Federal',
+        'Renata Castro',
+        '838-10',
+        '232389-10',
+        500.00
+    );
+
     public function obterSaldo():string
     {
         return 'Saldo atual da conta: R$' . $this->saldo;
@@ -47,18 +56,10 @@ class ContaBancaria {
     }
 }
 
-// objeto = instancia da classe
-$conta = new ContaBancaria(
-    'Caixa Econômica Federal',
-    'Renata Castro',
-    '838-10',
-    '232389-10',
-    300.00
-);
+
 // quebra de execução de código, nada abaixo disso é executado
 // exit();
 
-// $conta->saldo = 0;
 // var_dump($conta->nomeTitular);
 // var_dump($conta->saldo);
 
@@ -70,6 +71,8 @@ echo '<br /><br />';
 echo $conta->obterSaldo();
 echo '<br /><br />';
 echo $conta->depositar(200.00);
+echo '<br /><br />';
+echo $conta->obterSaldo();
 echo '<br /><br />';
 echo $conta->sacar(100.00);
 echo '<br /><br />';
