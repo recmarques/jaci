@@ -26,7 +26,7 @@ class ContaBancaria {
         $this->nomeTitular = $nomeTitular;
         $this->numeroAgencia = $numeroAgencia;
         $this->numeroConta = $numeroConta;
-        $this->$saldo = $saldo;
+        $this->saldo = $saldo;
     }
 
     public function obterSaldo()
@@ -61,13 +61,10 @@ $conta = new ContaBancaria(
 
 var_dump($conta);
 echo '<br /><br />';
-var_dump($conta->saldo);
-echo '<br /><br />';
 
 // utilizar echo para mostrar o return nos métodos
 echo $conta->obterSaldo();
 
-exit();
 echo '<br /><br />';
 echo $conta->depositar(200.00);
 echo '<br /><br />';
