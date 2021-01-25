@@ -71,5 +71,3 @@ echo '<br /><br />';
 echo $conta->sacar(100.00);
 echo '<br /><br />';
 echo $conta->obterSaldo();
-
-
